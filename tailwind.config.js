@@ -20,6 +20,9 @@ export default {
         Montserrat: ['Montserrat'],
         MontserratAlt: ['Montserrat Alternates']
       },
+      spacing: {
+        '1480': '92.5'
+      }
     },
   },
   plugins: [],
