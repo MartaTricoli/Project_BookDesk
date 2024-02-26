@@ -1,5 +1,5 @@
-import Shop from "./pages/Shop"
-import LandingPage from "./pages/LandingPage"
+import Shop from "./pages/Shop";
+import LandingPage from "./pages/LandingPage";
 
 const App = () => {
 
