@@ -47,7 +47,7 @@ const Sidebar = () => {
                         </svg>
                     </div>
                 </button>
-                
+
                 <div className="h-full px-3 py-4 overflow-y-auto bg-new_navy_blue">
                     <ul className="space-y-2 font-medium">
                         <li>
