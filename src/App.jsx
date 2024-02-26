@@ -1,3 +1,5 @@
+import LandingPage from "./pages/LandingPage";
+import Shop from "./pages/Shop";
 import { useState } from "react";
 import Sidebar from "./components/shared/Sidebar";
 import MySelf from "./pages/Profile";
@@ -11,6 +13,8 @@ const App = () => {
 
   return (
     <>
+      <LandingPage />
+      <Shop />
       <div className="flex flex-col">
         <div className="min-w-[1080px]:ml-[138px] ml-[65px] h-full">
           <MySelf />
