@@ -9,13 +9,13 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Informazioni</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Chi siamo</Link>
+                                <Link to="devatwork">Chi siamo</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Bacheca</Link>
+                                <Link to="devatwork">Bacheca</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/shop">Shop</Link>
+                                <Link to="shop">Shop</Link>
                             </li>
                         </ul>
                     </div>
@@ -23,19 +23,19 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Profilo</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="base/myprofile">Home</Link>
+                                <Link to="myprofile">Home</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Statistiche</Link>
+                                <Link to="devatwork">Statistiche</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/feed/follow">Feed</Link>
+                                <Link to="feed/follow">Feed</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Libreria</Link>
+                                <Link to="devatwork">Libreria</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Lista desideri</Link>
+                                <Link to="devatwork">Lista desideri</Link>
                             </li>
                         </ul>
                     </div>
@@ -43,10 +43,10 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Lavora con noi</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Case editrici</Link>
+                                <Link to="devatwork">Case editrici</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Sponsor</Link>
+                                <Link to="devatwork">Sponsor</Link>
                             </li>
                         </ul>
                     </div>
@@ -54,13 +54,13 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Note Legali</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Termini e Condizioni</Link>
+                                <Link to="devatwork">Termini e Condizioni</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Privacy</Link>
+                                <Link to="devatwork">Privacy</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">Cookie Policy</Link>
+                                <Link to="devatwork">Cookie Policy</Link>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Aiuto</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="base/devatwork">FAQ</Link>
+                                <Link to="devatwork">FAQ</Link>
                             </li>
                         </ul>
                     </div>
