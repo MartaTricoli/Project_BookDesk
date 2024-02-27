@@ -1,6 +1,6 @@
 import { PostCard } from "./PostCard"
 
-export const Tutti = () => {
+export const AllUsers = () => {
     return(
         <>
             <div className="pl-44 flex flex-col items-center">

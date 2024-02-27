@@ -1,4 +1,3 @@
-import Footer from "../components/ShopComponent/Footer";
 import SearchBar from "../components/ShopComponent/SearchBar";
 import BookCard from "../components/shared/BookCard";
 
@@ -13,7 +12,6 @@ const Shop = () => {
         <BookCard/>
         <BookCard/>
         </section>
-        <Footer/>
       </>
     )
   }

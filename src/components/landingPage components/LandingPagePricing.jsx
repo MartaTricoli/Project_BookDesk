@@ -126,21 +126,21 @@ const LandingPagePricing = () => {
             </button>
           </div>
 
-          <div class="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800">
-            <p class="mb-4 text-xl font-medium text-gray-800 dark:text-gray-50">
+          <div className="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800">
+            <p className="mb-4 text-xl font-medium text-gray-800 dark:text-gray-50">
               Entreprise
             </p>
-            <p class="text-3xl font-bold text-gray-900 dark:text-white">
+            <p className="text-3xl font-bold text-gray-900 dark:text-white">
               $0
-              <span class="text-sm text-gray-300">/ month</span>
+              <span className="text-sm text-gray-300">/ month</span>
             </p>
-            <p class="mt-4 text-xs text-gray-600 dark:text-gray-100">
+            <p className="mt-4 text-xs text-gray-600 dark:text-gray-100">
               For most businesses that want to optimize web queries.
             </p>
-            <ul class="w-full mt-6 mb-6 text-sm text-gray-600 dark:text-gray-100">
-              <li class="mb-3 flex items-center ">
+            <ul className="w-full mt-6 mb-6 text-sm text-gray-600 dark:text-gray-100">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -152,9 +152,9 @@ const LandingPagePricing = () => {
                 </svg>
                 All illimited components
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -166,9 +166,9 @@ const LandingPagePricing = () => {
                 </svg>
                 Own custom Tailwind styles
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -180,9 +180,9 @@ const LandingPagePricing = () => {
                 </svg>
                 Unlimited Templates
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -194,9 +194,9 @@ const LandingPagePricing = () => {
                 </svg>
                 Free premium dashboard
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -208,12 +208,12 @@ const LandingPagePricing = () => {
                 </svg>
                 Best ranking
               </li>
-              <li class="mb-3 flex items-center opacity-50">
+              <li className="mb-3 flex items-center opacity-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   fill="red"
                   viewBox="0 0 1792 1792"
                 >
@@ -221,12 +221,12 @@ const LandingPagePricing = () => {
                 </svg>
                 Prenium svg
               </li>
-              <li class="mb-3 flex items-center opacity-50">
+              <li className="mb-3 flex items-center opacity-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   fill="red"
                   viewBox="0 0 1792 1792"
                 >
@@ -237,27 +237,27 @@ const LandingPagePricing = () => {
             </ul>
             <button
               type="button"
-              class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+              className="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
             >
               Choose plan
             </button>
           </div>
 
-          <div class="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800">
-            <p class="mb-4 text-xl font-medium text-gray-800 dark:text-gray-50">
+          <div className="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800">
+            <p className="mb-4 text-xl font-medium text-gray-800 dark:text-gray-50">
               Entreprise
             </p>
-            <p class="text-3xl font-bold text-gray-900 dark:text-white">
+            <p className="text-3xl font-bold text-gray-900 dark:text-white">
               $0
-              <span class="text-sm text-gray-300">/ month</span>
+              <span className="text-sm text-gray-300">/ month</span>
             </p>
-            <p class="mt-4 text-xs text-gray-600 dark:text-gray-100">
+            <p className="mt-4 text-xs text-gray-600 dark:text-gray-100">
               For most businesses that want to optimize web queries.
             </p>
-            <ul class="w-full mt-6 mb-6 text-sm text-gray-600 dark:text-gray-100">
-              <li class="mb-3 flex items-center ">
+            <ul className="w-full mt-6 mb-6 text-sm text-gray-600 dark:text-gray-100">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -269,9 +269,9 @@ const LandingPagePricing = () => {
                 </svg>
                 All illimited components
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -283,9 +283,9 @@ const LandingPagePricing = () => {
                 </svg>
                 Own custom Tailwind styles
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -297,9 +297,9 @@ const LandingPagePricing = () => {
                 </svg>
                 Unlimited Templates
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -311,9 +311,9 @@ const LandingPagePricing = () => {
                 </svg>
                 Free premium dashboard
               </li>
-              <li class="mb-3 flex items-center ">
+              <li className="mb-3 flex items-center ">
                 <svg
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
@@ -325,12 +325,12 @@ const LandingPagePricing = () => {
                 </svg>
                 Best ranking
               </li>
-              <li class="mb-3 flex items-center opacity-50">
+              <li className="mb-3 flex items-center opacity-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   fill="red"
                   viewBox="0 0 1792 1792"
                 >
@@ -338,12 +338,12 @@ const LandingPagePricing = () => {
                 </svg>
                 Prenium svg
               </li>
-              <li class="mb-3 flex items-center opacity-50">
+              <li className="mb-3 flex items-center opacity-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
-                  class="w-6 h-6 mr-2"
+                  className="w-6 h-6 mr-2"
                   fill="red"
                   viewBox="0 0 1792 1792"
                 >
@@ -354,7 +354,7 @@ const LandingPagePricing = () => {
             </ul>
             <button
               type="button"
-              class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+              className="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
             >
               Choose plan
             </button>

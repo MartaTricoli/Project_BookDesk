@@ -11,7 +11,7 @@ const SearchBar = () => {
                     <form action="/search">
                         <label
                             className="mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded-2xl gap-2 shadow-2xl focus-within:border-gray-300"
-                            for="search-bar">
+                            htmlFor="search-bar">
 
                             <input id="search-bar" placeholder="Inserisci una parola chiave, titolo, autore..." name="q"
                                 className="px-6 py-2 w-full rounded-md flex-1 outline-none bg-white" required="" />
@@ -28,12 +28,12 @@ const SearchBar = () => {
                     <svg viewBox="0 0 1024 1024"
                         className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
                         aria-hidden="true">
-                        <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.8">
+                        <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fillOpacity="0.8">
                         </circle>
                         <defs>
                             <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-                                <stop stop-color="#3b82f6"></stop>
-                                <stop offset="1" stop-color="#171F43"></stop>
+                                <stop stopColor="#3b82f6"></stop>
+                                <stop offset="1" stopColor="#171F43"></stop>
                             </radialGradient>
                         </defs>
                     </svg>

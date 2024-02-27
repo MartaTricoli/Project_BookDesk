@@ -9,13 +9,13 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Informazioni</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Chi siamo</Link>
+                                <Link to="base/devatwork">Chi siamo</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Bacheca</Link>
+                                <Link to="base/devatwork">Bacheca</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Shop</Link>
+                                <Link to="base/shop">Shop</Link>
                             </li>
                         </ul>
                     </div>
@@ -23,19 +23,19 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Profilo</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Home</Link>
+                                <Link to="base/myprofile">Home</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Statistiche</Link>
+                                <Link to="base/devatwork">Statistiche</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="feed/seguiti">Feed</Link>
+                                <Link to="base/feed/follow">Feed</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Libreria</Link>
+                                <Link to="base/devatwork">Libreria</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Lista desideri</Link>
+                                <Link to="base/devatwork">Lista desideri</Link>
                             </li>
                         </ul>
                     </div>
@@ -43,10 +43,10 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Lavora con noi</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Case editrici</Link>
+                                <Link to="base/devatwork">Case editrici</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Sponsor</Link>
+                                <Link to="base/devatwork">Sponsor</Link>
                             </li>
                         </ul>
                     </div>
@@ -54,13 +54,13 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Note Legali</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Termini e Condizioni</Link>
+                                <Link to="base/devatwork">Termini e Condizioni</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Privacy</Link>
+                                <Link to="base/devatwork">Privacy</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Cookie Policy</Link>
+                                <Link to="base/devatwork">Cookie Policy</Link>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Aiuto</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">FAQ</Link>
+                                <Link to="base/devatwork">FAQ</Link>
                             </li>
                         </ul>
                     </div>
@@ -77,7 +77,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="flex w-[1480px] justify-between max-[1500px]:w-[1100px] max-[1120px]:w-[700px] max-[740px]:w-[500px] max-[510px]:w-[350px]">
-                    <Link to="">
+                    <Link to="/">
                         <div className="flex items-center">
                             <img src="https://cdn.discordapp.com/attachments/1159426482620350464/1207720319415226368/desk.jpg?ex=65e9e6b2&is=65d771b2&hm=9fe00f9818dc84c7f901a2bc18e2751d75e8b2acc6da9adc76d7bda34162393c&" alt="" className="w-[100px]"/>
                             <span className="text-new_orange font-adamina font-bold text-xl">Book Desk</span>
