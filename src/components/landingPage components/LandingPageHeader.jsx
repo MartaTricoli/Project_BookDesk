@@ -23,9 +23,9 @@ const LandingPageHeader = () => {
         </div>
         <a
           href="#_"
-          class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
+          class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-new_orange rounded-full shadow-md group"
         >
-          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_orange group-hover:translate-x-0 ease">
             <svg
               class="w-6 h-6"
               fill="none"
@@ -41,7 +41,7 @@ const LandingPageHeader = () => {
               ></path>
             </svg>
           </span>
-          <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span class="absolute flex items-center justify-center w-full h-full text-new_orange transition-all duration-300 transform group-hover:translate-x-full ease">
             Get Started
           </span>
           <span class="relative invisible">Button Text</span>

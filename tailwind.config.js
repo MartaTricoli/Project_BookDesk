@@ -23,17 +23,9 @@ export default {
         lanidingbg_dark: "url('../assets/LandingPage/landingbg-dark.png')",
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
-      },
-      keyframes: {
-        "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
-        },
-      },
-      animation: {
         "text-slide":
           "text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
       keyframes: {
         "text-slide": {
@@ -56,6 +48,17 @@ export default {
             transform: "translateY(-83.33%)",
           },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
+      boxShadow: {
+        shadowCardShop: "2px 0px 5px 0px #219ebc",
+        shadowCardShop1: "4px 4px 10px 2px #219ebc",
+      },
+      spacing: {
+        1480: "92.5",
       },
     },
   },

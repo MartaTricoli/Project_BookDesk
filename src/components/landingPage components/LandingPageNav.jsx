@@ -31,23 +31,18 @@ const LandingPageNav = () => {
           </a>
         </div>
         <div className="flex">
+          <button
+            type="button"
+            class="px-5 py-3 text-base font-medium text-center text-new_orange
+             bg-transparent rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            LogIn
+          </button>
           <a
             href="#_"
-            class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group"
+            class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-new_orange rounded-full shadow-md group "
           >
-            <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-              <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-            </span>
-            <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
-            <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-              Log In
-            </span>
-          </a>
-          <a
-            href="#_"
-            class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group "
-          >
-            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_orange group-hover:translate-x-0 ease">
               <svg
                 class="w-6 h-6"
                 fill="none"
@@ -63,7 +58,7 @@ const LandingPageNav = () => {
                 ></path>
               </svg>
             </span>
-            <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+            <span class="absolute flex items-center justify-center w-full h-full text-new_orange transition-all duration-300 transform group-hover:translate-x-full ease">
               Get Started
             </span>
             <span class="relative invisible">Get Started</span>
