@@ -15,7 +15,7 @@ export const Footer = () => {
                                 <Link to="devatwork">Bacheca</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Shop</Link>
+                                <Link to="shop">Shop</Link>
                             </li>
                         </ul>
                     </div>
@@ -23,13 +23,13 @@ export const Footer = () => {
                         <h3 className="font-bold text-new_beige">Profilo</h3>
                         <ul className="mt-4">
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Home</Link>
+                                <Link to="myprofile">Home</Link>
                             </li>
                             <li className="hover:text-new_orange">
                                 <Link to="devatwork">Statistiche</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="feed/seguiti">Feed</Link>
+                                <Link to="feed/follow">Feed</Link>
                             </li>
                             <li className="hover:text-new_orange">
                                 <Link to="devatwork">Libreria</Link>
@@ -77,7 +77,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="flex w-[1480px] justify-between max-[1500px]:w-[1100px] max-[1120px]:w-[700px] max-[740px]:w-[500px] max-[510px]:w-[350px]">
-                    <Link to="">
+                    <Link to="/">
                         <div className="flex items-center">
                             <img src="https://cdn.discordapp.com/attachments/1159426482620350464/1207720319415226368/desk.jpg?ex=65e9e6b2&is=65d771b2&hm=9fe00f9818dc84c7f901a2bc18e2751d75e8b2acc6da9adc76d7bda34162393c&" alt="" className="w-[100px]"/>
                             <span className="text-new_orange font-adamina font-bold text-xl">Book Desk</span>

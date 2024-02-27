@@ -8,10 +8,10 @@ const LandingPageHeader = () => {
         /*         style={{ backgroundImage: `url(${Header_Bg})` }}
          */
       >
-        <div class="w-full h-full font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-orange-500/60 to-50% to-orange-500">
+        <div className="w-full h-full font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-orange-500/60 to-50% to-orange-500">
           Trusted by the most passionate readers in:
-          <span class="ml-4 text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden ">
-            <ul class="block animate-text-slide text-left leading-tight [&_li]:block">
+          <span className="ml-4 text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden ">
+            <ul className="block animate-text-slide text-left leading-tight [&_li]:block">
               <li>Literary Discoveries</li>
               <li>Bookworm Communities</li>
               <li>Book Marketplace</li>
@@ -23,28 +23,28 @@ const LandingPageHeader = () => {
         </div>
         <a
           href="#_"
-          class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
+          className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
         >
-          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
             <svg
-              class="w-6 h-6"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               ></path>
             </svg>
           </span>
-          <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
             Get Started
           </span>
-          <span class="relative invisible">Button Text</span>
+          <span className="relative invisible">Button Text</span>
         </a>
       </header>
     </>

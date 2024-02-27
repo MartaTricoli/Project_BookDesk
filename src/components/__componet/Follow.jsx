@@ -1,6 +1,6 @@
 import { PostCard } from "./PostCard"
 
-export const Seguiti = () => {
+export const Follow = () => {
     return(
         <>
             <div className="pl-44 flex flex-col items-center">
