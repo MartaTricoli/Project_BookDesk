@@ -1,4 +1,3 @@
-import LandingPageNav from "../components/landingPage components/LandingPageNav";
 import Bg_Img from "../assets/LandingPage/landingbg-light.jpg";
 import LandingPageHeader from "../components/landingPage components/LandingPageHeader";
 import LandingPageKeySelling from "../components/landingPage components/LandingPageKeySelling";
@@ -16,7 +15,7 @@ const LandingPage = () => {
         style={{ backgroundImage: `url(${Bg_Img})` }}
       >
         <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
-          <LandingPageNav />
+          <Navbar />
           <LandingPageHeader />
           <LandingPageKeySelling />
           <LandingPageReviews />
