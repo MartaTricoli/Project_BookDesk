@@ -20,9 +20,10 @@ const Sidebar = () => {
 
     return (
         <>
-            <button
+        <div>
+            <button id="closeSidebar"
                 onClick={toggleSidebar}
-                className="fixed top-8 transform -translate-y-1/2 m-4 p-2 text-gray-900 bg-gray-200 dark:bg-gray-700 opacity-25 hover:opacity-100 rounded-md"
+                className="fixed z-[999] top-8 transform -translate-y-1/2 m-4 p-2 text-gray-900 bg-gray-200 dark:bg-gray-700 opacity-25 hover:opacity-100 rounded-md"
             >
                 <div className="w-6 h-6">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,8 +34,8 @@ const Sidebar = () => {
                 </div></button>
             <aside
                 id="separator-sidebar"
-                className={`fixed top-0 left-0 z-40 min-w-[fit-content] h-screen ${isSidebarOpen ? "" : "opacity-0 pointer-events-none"
-                    } transition-opacity duration-300 border`}
+                className={`mt-20 fixed top-0 left-0 z-40 min-w-[fit-content] h-screen ${isSidebarOpen ? "" : "opacity-0 pointer-events-none"
+                    } transition-opacity duration-300`}
             >
                 <button
                     onClick={toggleSidebar}
@@ -182,7 +183,8 @@ const Sidebar = () => {
                         </li>
                     </ul>
                 </div>
-            </aside>
+            </aside> 
+            </div>
         </>
     );
 };
