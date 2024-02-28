@@ -22,12 +22,12 @@ const LandingPage = () => {
           <LandingPagePricing />
         </div>
         <LandingPageNewsLetter />
-        <Footer />
         <div className=" absolute inset-0 flex justify-between h-full bg-new_navy_blue opacity-50 z-[-1]">
           <div className=" w-3/12 border-r border-dashed border-black"></div>
           <div className="w-3/12 border-l border-dashed border-black"></div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

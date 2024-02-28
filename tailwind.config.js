@@ -60,6 +60,13 @@ export default {
       spacing: {
         1480: "92.5",
       },
+      boxShadow: {
+        "shadowCardShop": "2px 0px 5px 0px #219ebc",
+        "shadowCardShop1": "4px 4px 10px 2px #219ebc",
+      },
+      spacing: {
+        '1480': '92.5'
+      }
     },
   },
   plugins: [],
