@@ -1,10 +1,10 @@
-import LandingPageNav from "../components/landingPage components/LandingPageNav";
 import Bg_Img from "../assets/LandingPage/landingbg-dark.png";
 import LandingPageHeader from "../components/landingPage components/LandingPageHeader";
 import LandingPageKeySelling from "../components/landingPage components/LandingPageKeySelling";
 import LandingPageReviews from "../components/landingPage components/LandingPageReviews";
 import LandingPagePricing from "../components/landingPage components/LandingPagePricing";
 import { Footer } from "../components/shared/Footer";
+import Navbar from "../components/shared/Navbar";
 
 const LandingPage = () => {
   return (
@@ -14,7 +14,7 @@ const LandingPage = () => {
         style={{ backgroundImage: `url(${Bg_Img})` }}
       >
         <div className="w-full flex flex-col justify-center items-center">
-          <LandingPageNav />
+          <Navbar />
           <LandingPageHeader />
           <LandingPageKeySelling />
           <LandingPageReviews />

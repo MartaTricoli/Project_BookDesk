@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const PostCard = ({id}) => {
+export const RatingCard = ({id}) => {
     const [likes, setLikes] = useState(42);
 
     const handleLikes = event => {
@@ -34,38 +34,40 @@ export const PostCard = ({id}) => {
         <>
             <div className="bg-white p-8 rounded-lg shadow-lg shadow-new_dark_blue max-w-md m-4">
                 {/* //user info with three dot menu */}
+                <p className="text-gray-500 text-sm pb-4">Posted 2 hours ago</p>
                 <div className="flex justify-between">
-                    <div className="flex items-center gap-2 mb-4">
+                    <div className="flex items-center gap-2 mb-4 justify-center">
                         <Link>
                             <img src="https://placekitten.com/40/40" alt="User Avatar" className="w-8 h-8 rounded-full" />
                         </Link>
-                        <div>
+                        <div className="flex">
                             <Link>
-                                <p className="text-gray-800 font-semibold">John Doe</p>
+                                <p className="text-gray-800 font-semibold">John Doe
+                                </p>
                             </Link>
-                            <p className="text-gray-500 text-sm">Posted 2 hours ago</p>
+                            <span className="font-normal pl-2">ha votato:</span>
                         </div>
-                    </div>
-                    <div className="text-gray-500 cursor-pointer">
-                        <button className="hover:bg-gray-50 rounded-full p-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="12" cy="7" r="1" />
-                                <circle cx="12" cy="12" r="1" />
-                                <circle cx="12" cy="17" r="1" />
-                            </svg>
-                        </button>
+                        <img src="https://community.fabric.microsoft.com/oxcrx34285/attachments/oxcrx34285/QuickMeasuresGallery/207/1/5-star-rating.png" alt="" className="w-32"/>
                     </div>
                 </div>
                 {/* //image */}
                 <div className="mb-4 flex justify-center">
-			        <img src="https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg" alt="Post Image" className="h-48 object-cover rounded-md" />
-		        </div>
-                {/* //Message */}
-                <div className="mb-4">
-                    <p className="text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam saepe quos dolorem! Inventore quia iusto ab, doloribus dignissimos, ducimus nisi, expedita aperiam voluptates veritatis facere et earum sunt? Id, sequi? <a href="" className="text-blue-600">#Soul</a>
-                        <a href="" className="text-blue-600">#NewPost</a>
-                    </p>
-		        </div>
+                    <Link>
+			            <img src="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg" alt="Post Image" className="h-48 object-cover rounded-md" />
+                    </Link>
+                    <div className="text-new_navy_blue pl-4 pt-2">
+                        <Link>
+                            <h3 className="font-bold">Il buio oltre la siepe,</h3>
+                        </Link>
+                        <Link>
+                            <h2 className="font-medium">Scott Whitehead</h2>
+                        </Link>
+                        <div className="flex items-center justify-center gap-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Rating_stars_2.5.svg/2560px-Rating_stars_2.5.svg.png" alt="" className="w-24 pt-10 pb-10"/>
+                            <span>(35)</span>
+                        </div>
+                    </div>
+                </div>
                 {/* //like and comment Section */}
                 <div className="flex items-center justify-between text-gray-500">
 			        <div className="flex items-center space-x-2">
@@ -98,7 +100,7 @@ export const PostCard = ({id}) => {
                             <img src="https://placekitten.com/32/32" alt="User Avatar" className="w-6 h-6 rounded-full" />
                             <div>
                                 <p className="text-gray-800 font-semibold">Jane Smith</p>
-                                <p className="text-gray-500 text-sm">Love this book!</p>
+                                <p className="text-gray-500 text-sm">Masterpiece.</p>
                             </div>
                         </div>
                         {/* //Comment 2 */}
@@ -106,7 +108,7 @@ export const PostCard = ({id}) => {
                             <img src="https://placekitten.com/32/32" alt="User Avatar" className="w-6 h-6 rounded-full" />
                             <div>
                                 <p className="text-gray-800 font-semibold">Bob Johnson</p>
-                                <p className="text-gray-500 text-sm">I can't wait for the second chapter of this saga!!</p>
+                                <p className="text-gray-500 text-sm">A book everyone should read...</p>
                             </div>
                         </div>
                         {/* //Reply from John Doe with indentation */}
@@ -114,7 +116,7 @@ export const PostCard = ({id}) => {
                             <img src="https://placekitten.com/40/40" alt="User Avatar" className="w-6 h-6 rounded-full" />
                             <div>
                                 <p className="text-gray-800 font-semibold">John Doe</p>
-                                <p className="text-gray-500 text-sm">Mee too!</p>
+                                <p className="text-gray-500 text-sm">words of wisdom</p>
                             </div>
                         </div> 
                         {/* //Add more comments and replies as needed  */}

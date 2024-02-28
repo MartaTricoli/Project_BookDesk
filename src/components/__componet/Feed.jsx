@@ -3,9 +3,9 @@ import { Link, Outlet } from "react-router-dom"
 export const Feed = () => {
     return(
         <>
-            <div className="bg-new_beige">
+            <div className="mt-20">
                 <div className="flex pl-44 pt-4 pb-12 justify-center items-center">
-                    <h3 className="text-center text-4xl font-bold py-4 text-new_navy_blue w-[500px] flex-nowrap">Scopri tutte le novità della comunity <span className="text-new_orange">BookDesk</span></h3>
+                    <h3 className="text-center text-4xl font-bold py-4 text-new_navy_blue w-[500px] flex-nowrap mr-8">Tutte le novità della comunity <span className="text-new_orange">BookDesk</span></h3>
                     <img className="w-[200px]" src="https://png.pngtree.com/png-vector/20230318/ourmid/pngtree-book-clipart-vector-png-image_6653535.png" alt="" />
                 </div>
                 <div className="flex justify-center gap-24 pb-4 pl-44">
