@@ -6,6 +6,7 @@ import LandingPageReviews from "../components/landingPage components/LandingPage
 import LandingPagePricing from "../components/landingPage components/LandingPagePricing";
 import LandingPageNewsLetter from "../components/landingPage components/LandingPageNewsLetter";
 import { Footer } from "../components/shared/Footer";
+import Navbar from "../components/shared/Navbar";
 
 const LandingPage = () => {
   return (
