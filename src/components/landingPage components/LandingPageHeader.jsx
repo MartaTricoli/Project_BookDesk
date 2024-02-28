@@ -1,13 +1,7 @@
-/* import Header_Bg from "../../assets/LandingPage/lightslibrary.avif";
- */
 const LandingPageHeader = () => {
   return (
     <>
-      <header
-        className="max-w-[1480px]  border-[1px] border-3xl min-h-[50vh]  flex flex-col justify-around items-center p-10 backdrop-blur-md rounded-3xl mb-24 mt-40"
-        /*         style={{ backgroundImage: `url(${Header_Bg})` }}
-         */
-      >
+      <header className="max-w-[1480px]  border-[1px] border-3xl min-h-[50vh]  flex flex-col justify-around items-center p-10 backdrop-blur-md rounded-3xl mb-24 mt-40">
         <div className="w-full h-full font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-orange-500/60 to-50% to-orange-500">
           Trusted by the most passionate readers in:
           <span className="ml-4 text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden ">
@@ -23,9 +17,9 @@ const LandingPageHeader = () => {
         </div>
         <a
           href="#_"
-          className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
+          class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-new_orange rounded-full shadow-md group"
         >
-          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_orange group-hover:translate-x-0 ease">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -41,7 +35,7 @@ const LandingPageHeader = () => {
               ></path>
             </svg>
           </span>
-          <span className="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span class="absolute flex items-center justify-center w-full h-full text-new_orange transition-all duration-300 transform group-hover:translate-x-full ease">
             Get Started
           </span>
           <span className="relative invisible">Button Text</span>

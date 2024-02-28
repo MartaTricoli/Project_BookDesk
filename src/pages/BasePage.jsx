@@ -7,13 +7,15 @@ import { useState } from "react"
 export const BasePage = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-   const toggleSidebar = () => {
-     setIsSidebarOpen(!isSidebarOpen);
-   };
-    return(
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
+    return (
         <>
             <Navbar />
-            <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            <div>
+                <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            </div>
             <Outlet />
             <Footer />
         </>

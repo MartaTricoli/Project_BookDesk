@@ -3,7 +3,7 @@ import Logo from "../../assets/LandingPage/logo_without_bg.png";
 const Navbar = () => {
   return (
     <>
-       <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid border-new_navy_blue text-white mb-24 bg-new_navy_blue top-0 fixed z-[998]">
+      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid border-new_navy_blue text-white mb-24 bg-new_navy_blue top-0 fixed z-[998]">
         <a>
           <div className="flex items-center text-new_orange ">
             <img className="h-20 w-30" src={Logo} alt="Website Logo" />
