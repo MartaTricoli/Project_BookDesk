@@ -26,7 +26,7 @@ export const Footer = () => {
                                 <Link to="myprofile">Home</Link>
                             </li>
                             <li className="hover:text-new_orange">
-                                <Link to="devatwork">Statistiche</Link>
+                                <Link to="stats">Statistiche</Link>
                             </li>
                             <li className="hover:text-new_orange">
                                 <Link to="feed/follow">Feed</Link>

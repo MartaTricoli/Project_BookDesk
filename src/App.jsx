@@ -7,6 +7,7 @@ import { Feed } from "./components/__componet/Feed";
 import { Follow } from "./components/__componet/Follow";
 import { AllUsers } from "./components/__componet/AllUsers";
 import MySelf from "./pages/Profile";
+import { Stats } from "./components/__componet/Stats";
 
 const App = () => {
   return(
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/feed/follow" element={<Follow />} />
             <Route path="/feed/allusers" element={<AllUsers />} />
           </Route>
+          <Route path="/stats" element={<Stats />} />
         </Route>
       </Routes>
     </>

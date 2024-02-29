@@ -12,6 +12,7 @@ export default {
         new_orange: "#fb8500",
         new_red: "#d62828",
         new_beige: "#eae2b7",
+        new_violet: "#6c63ff"
       },
       fontFamily: {
         Montserrat: ["Montserrat"],
