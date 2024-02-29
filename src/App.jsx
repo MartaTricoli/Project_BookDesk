@@ -10,15 +10,15 @@ import MySelf from "./pages/Profile";
 import { Stats } from "./components/__componet/Stats";
 
 const App = () => {
-  return(
+  return (
     <>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-      
+
         <Route path="/" element={<BasePage />}>
           <Route path="/devatwork" element={<DevAtWork />} />
           <Route path="/shop" element={<Shop />} />
-            <Route path="/myprofile" element={<MySelf />}/>
+          <Route path="/myprofile" element={<MySelf />} />
           <Route path="/feed" element={<Feed />}>
             <Route path="/feed/follow" element={<Follow />} />
             <Route path="/feed/allusers" element={<AllUsers />} />
@@ -27,7 +27,7 @@ const App = () => {
         </Route>
       </Routes>
     </>
-  )
-}
+  );
+};
 
 export default App;
