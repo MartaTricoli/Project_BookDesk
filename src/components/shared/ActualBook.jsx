@@ -36,9 +36,10 @@ const ActualBook = () => {
                     <li className="w-full border-b-2 border-neutral-100 border-opacity-100 px-6 py-3 dark:border-opacity-50">
                         Categoria
                     </li>
-                    <li className="w-full border-neutral-100 border-opacity-100 px-6 py-3 dark:border-opacity-50">
-                        Pagine Attuali
+                    <li className="w-full border-b-2 border-neutral-100 border-opacity-100 px-6 py-3 dark:border-opacity-50">
+                        Anno di pubblicazione
                     </li>
+
                 </ul>
                 <div className="p-6 flex flex-row max-sm:flex-col">
                     <a
@@ -54,6 +55,9 @@ const ActualBook = () => {
                         Guarda nel market
                     </a>
                 </div>
+                <li className="w-full border-b-2 border-neutral-100 border-opacity-100 px-6 py-3 dark:border-opacity-50">
+                    Pagine totali
+                </li>
                 <div style={{ width: `${progressValue}%` }} className="h-5 bg-new_light_blue flex"></div>
 
 
@@ -66,7 +70,7 @@ const ActualBook = () => {
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                             className="w-1/2 p-2 border rounded mr-2"
-                            placeholder="Inserisci il numero"
+                            placeholder="pagina"
                         />
 
                         <button className="relative inline-block text-lg group" onClick={updateProgress}>
