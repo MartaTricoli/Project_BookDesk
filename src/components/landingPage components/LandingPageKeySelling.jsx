@@ -1,7 +1,7 @@
 const LandingPageKeySelling = () => {
   return (
-    <>
-      <section className="max-w-[1480px] backdrop-blur-md rounded-3xl mb-24 flex flex-col items-center">
+    <div className="bg-[#f2f2f2] w-full flex justify-center py-10">
+      <section className="max-w-[1480px] rounded-3xl flex flex-col items-center">
         <h4 className="font-black text-4xl text-new_orange mt-10 mb-10 ">
           OUR NUMBERS
         </h4>
@@ -48,7 +48,7 @@ const LandingPageKeySelling = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
