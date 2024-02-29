@@ -12,8 +12,8 @@ const Cart = () => {
                         </div>
                         <div class="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
                             <div class="md:w-4/12 2xl:w-1/4 w-full">
-                                <img src="https://i.ibb.co/6gzWwSq/Rectangle-20-1.png" alt="Black Leather Purse" class="h-full object-center object-cover md:block hidden" />
-                                <img src="https://i.ibb.co/TTnzMTf/Rectangle-21.png" alt="Black Leather Purse" class="md:hidden w-full h-full object-center object-cover" />
+                                <img src="https://www.cure-naturali.it/.imaging/default/dam/cure-naturali/articoli/vita-naturale/libri-online.jpg/jcr:content.jpg" alt="Black Leather Purse" class="border-4 h-full object-center object-cover md:block hidden" />
+                                <img src="https://www.cure-naturali.it/.imaging/default/dam/cure-naturali/articoli/vita-naturale/libri-online.jpg/jcr:content.jpg" alt="Black Leather Purse" class="border-4 md:hidden w-full h-full object-center object-cover" />
                             </div>
                             <div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
                                 <p class="text-xs leading-3 text-gray-800 dark:text-white md:pt-0 pt-4">RF293</p>
@@ -40,8 +40,8 @@ const Cart = () => {
 
                         <div class="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
                             <div class="md:w-4/12 2xl:w-1/4 w-full">
-                                <img src="https://i.ibb.co/6gzWwSq/Rectangle-20-1.png" alt="Black Leather Purse" class="h-full object-center object-cover md:block hidden" />
-                                <img src="https://i.ibb.co/TTnzMTf/Rectangle-21.png" alt="Black Leather Purse" class="md:hidden w-full h-full object-center object-cover" />
+                                <img src="https://www.cure-naturali.it/.imaging/default/dam/cure-naturali/articoli/vita-naturale/libri-online.jpg/jcr:content.jpg" alt="Black Leather Purse" class="border-4 h-full object-center object-cover md:block hidden" />
+                                <img src="https://www.cure-naturali.it/.imaging/default/dam/cure-naturali/articoli/vita-naturale/libri-online.jpg/jcr:content.jpg" alt="Black Leather Purse" class="border-4 md:hidden w-full h-full object-center object-cover" />
                             </div>
                             <div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
                                 <p class="text-xs leading-3 text-gray-800 dark:text-white md:pt-0 pt-4">RF293</p>
