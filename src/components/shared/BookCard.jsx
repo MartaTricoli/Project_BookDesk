@@ -15,7 +15,7 @@ const BookCard = () => {
                             </del>
                             <div className="ml-auto pr-2">
                                 <button className="px-2 py-2 bg-gradient-to-r from-new_light_blue to-new_dark_blue text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
-                                    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+                                    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="20px" height="20px" viewBox="0 0 902.86 902.86"
                                         xmlSpace="preserve">
                                         <g>

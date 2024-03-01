@@ -25,7 +25,7 @@ const LandingPageNav = () => {
 
   return (
     <>
-      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-[#0077b5] top-0 fixed z-[998]">
+      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-new_pastel_blue top-0 fixed z-[998]">
         <Logo />
         <div
           className="flex items-center font-medium gap-20 text-2xl
@@ -45,10 +45,13 @@ const LandingPageNav = () => {
           </a>
         </div>
         <div className="flex">
+          <a href="#_" className=" inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold leading-6 text-white bg-new_pastel_blue border-2 border-transparent rounded-full md:w-auto hover:bg-new_pastel_blue hover:text-new_light_blue hover:border-white focus:outline-none focus:ring-2 focus:ring-new_pastel_blue">
+            Login
+          </a>
           <button
             onClick={handleLogInBtnClick}
             type="button"
-            class="px-5 py-3 text-base font-medium text-center text-white
+            className="px-5 py-3 text-base font-medium text-center text-white
              bg-transparent rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             LogIn
@@ -64,7 +67,7 @@ const LandingPageNav = () => {
           <a
             onClick={handleGetStartedBtnClick}
             href="#_"
-            class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-full shadow-md group "
+            class="ml-4 relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-full shadow-md group "
           >
             <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
               <svg
@@ -82,7 +85,7 @@ const LandingPageNav = () => {
                 ></path>
               </svg>
             </span>
-            <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
+            <span className="text-lg absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
               Get Started
             </span>
             <span className="relative invisible">Get Started</span>

@@ -1,7 +1,7 @@
 const LandingPagePricing = () => {
   return (
     <>
-      <section className="max-w-[1480px] backdrop-blur-md rounded-3xl mb-24 flex flex-col items-center mt-10 mb-10">
+      <section className="max-w-[1480px] rounded-3xl mb-24 flex flex-col items-center mt-10 mb-10">
         <div className="mb-5 mt-5">
           <span className="font-black text-4xl text-new_dark_blue mt-10 mb-10 text-center flex flex-col justify-center items-center">
             Here at BookDesk YOU can Unlock Your Reading Potential:
@@ -10,11 +10,11 @@ const LandingPagePricing = () => {
         </div>
         <div className="mt-5 mb-5 flex justify-between gap-10">
           <div className="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800">
-            <p className="mb-4 text-xl font-medium text-gray-800 dark:text-gray-50">
+            <p className="mb-4 text-xl font-medium text-new_pastel_blue dark:text-gray-50">
               Entreprise
             </p>
             <p className="text-3xl font-bold text-gray-900 dark:text-white">
-              $0
+              $9,49
               <span className="text-sm text-gray-300">/ month</span>
             </p>
             <p className="mt-4 text-xs text-gray-600 dark:text-gray-100">
@@ -120,7 +120,7 @@ const LandingPagePricing = () => {
             </ul>
             <button
               type="button"
-              className="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+              className="py-2 px-4 bg-new_light_blue hover:bg-new_pastel_blue focus:ring-new_pastel_blue focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
             >
               Choose plan
             </button>

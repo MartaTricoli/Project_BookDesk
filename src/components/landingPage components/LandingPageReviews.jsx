@@ -1,13 +1,15 @@
+import BgGradientDx from "../shared/BgGradientDx";
+
 const LandingPageReviews = () => {
   return (
     <>
       <section
         id="testimonies"
-        className="w-full backdrop-blur-md flex flex-col justify-center items-center mb-10 mt-10"
+        className="w-full flex flex-col justify-center items-center mb-10 mt-10 z-10"
       >
         <div className="container w-full flex justify-center items-center ">
           <h3 className="font-black text-4xl text-new_dark_blue mt-10 mb-10">
-            Why do our users choose us
+            WHY DO OUR USERS CHOOSE US
           </h3>
         </div>
         <div className="w-full inline-flex flex-nowrap mb-10 gap-6">
@@ -1311,6 +1313,7 @@ const LandingPageReviews = () => {
           </ul>
         </div>
       </section>
+      <BgGradientDx />
     </>
   );
 };
