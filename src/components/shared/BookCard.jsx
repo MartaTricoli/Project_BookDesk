@@ -17,7 +17,7 @@ const BookCard = () => {
                                 <button className="px-2 py-2 bg-gradient-to-r from-new_light_blue to-new_dark_blue text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
                                     <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="20px" height="20px" viewBox="0 0 902.86 902.86"
-                                        xml:space="preserve">
+                                        xmlSpace="preserve">
                                         <g>
                                             <g>
                                                 <path d="M671.504,577.829l110.485-432.609H902.86v-68H729.174L703.128,179.2L0,178.697l74.753,399.129h596.751V577.829z

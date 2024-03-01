@@ -1,7 +1,7 @@
 import Cart from "../components/ShopComponent/Cart";
-import Footer from "../components/ShopComponent/Footer";
 import SearchBar from "../components/ShopComponent/SearchBar";
 import BookCard from "../components/shared/BookCard";
+import { Footer } from "../components/shared/Footer";
 
 const Shop = () => {
 
@@ -15,7 +15,6 @@ const Shop = () => {
         <BookCard/>
         </section>
         <Cart/>
-        <Footer/>
       </>
     )
   }
