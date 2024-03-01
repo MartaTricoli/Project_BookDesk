@@ -45,16 +45,8 @@ const LandingPageNav = () => {
           </a>
         </div>
         <div className="flex">
-          <a href="#_" className=" inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold leading-6 text-white bg-new_pastel_blue border-2 border-transparent rounded-full md:w-auto hover:bg-new_pastel_blue hover:text-new_light_blue hover:border-white focus:outline-none focus:ring-2 focus:ring-new_pastel_blue">
-            Login
-          </a>
-          <button
-            onClick={handleLogInBtnClick}
-            type="button"
-            className="px-5 py-3 text-base font-medium text-center text-white
-             bg-transparent rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            LogIn
+          <button onClick={handleLogInBtnClick} className=" inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold leading-6 text-white bg-new_pastel_blue border-2 border-transparent rounded-full md:w-auto hover:bg-new_pastel_blue hover:text-new_light_blue hover:border-white focus:outline-none focus:ring-2 focus:ring-new_pastel_blue">
+            Login      
           </button>
           {showLoginModal && (
             <div
