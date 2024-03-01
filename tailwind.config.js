@@ -26,7 +26,7 @@ export default {
       animation: {
         "text-slide":
           "text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll": "infinite-scroll 100s linear infinite",
       },
       keyframes: {
         "text-slide": {
@@ -62,12 +62,12 @@ export default {
         1480: "92.5",
       },
       boxShadow: {
-        "shadowCardShop": "2px 0px 5px 0px #219ebc",
-        "shadowCardShop1": "4px 4px 10px 2px #219ebc",
+        shadowCardShop: "2px 0px 5px 0px #219ebc",
+        shadowCardShop1: "4px 4px 10px 2px #219ebc",
       },
       spacing: {
-        '1480': '92.5'
-      }
+        1480: "92.5",
+      },
     },
   },
   plugins: [],
