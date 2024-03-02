@@ -1,0 +1,276 @@
+[
+    {
+        "publisher": "Penguin Random House",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Classic",
+        "isbn": "9780061120084",
+        "cover": "https://example.com/to-kill-a-mockingbird-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 336,
+            "year": 1960
+        }
+    },
+    {
+        "publisher": "Vintage",
+        "title": "1984",
+        "author": "George Orwell",
+        "genre": "Dystopian",
+        "isbn": "9780451524935",
+        "cover": "https://example.com/1984-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 328,
+            "year": 1949
+        }
+    },
+    {
+        "publisher": "HarperCollins",
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Fiction",
+        "isbn": "9780743273565",
+        "cover": "https://example.com/the-great-gatsby-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 180,
+            "year": 1925
+        }
+    },
+    {
+        "publisher": "Houghton Mifflin Harcourt",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Classic",
+        "isbn": "9780544179623",
+        "cover": "https://example.com/to-kill-a-mockingbird-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 324,
+            "year": 1960
+        } 
+    },
+    {
+        "publisher": "Random House",
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "genre": "Fiction",
+        "isbn": "9780316769488",
+        "cover": "https://example.com/the-catcher-in-the-rye-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 224,
+            "year": 1951
+        }
+    },
+    {
+        "publisher": "Penguin Books",
+        "title": "Animal Farm",
+        "author": "George Orwell",
+        "genre": "Political satire",
+        "isbn": "9780141036137",
+        "cover": "https://example.com/animal-farm-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 112,
+            "year": 1945
+        }
+    },
+    {
+        "publisher": "Hachette Book Group",
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "isbn": "9780345534835",
+        "cover": "https://example.com/the-hobbit-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 320,
+            "year": 1937
+        }
+    },
+    {
+        "publisher": "Simon & Schuster",
+        "title": "Lord of the Flies",
+        "author": "William Golding",
+        "genre": "Allegorical novel",
+        "isbn": "9780399501487",
+        "cover": "https://example.com/lord-of-the-flies-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 224,
+            "year": 1954
+        }
+    },
+    {
+        "publisher": "Penguin Random House",
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "genre": "Fantasy",
+        "isbn": "9780747532743",
+        "cover": "https://example.com/harry-potter-and-the-philosophers-stone-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 320,
+            "year": 1997
+        }
+    },
+    {
+        "publisher": "HarperCollins",
+        "title": "The Lion, the Witch and the Wardrobe",
+        "author": "C.S. Lewis",
+        "genre": "Fantasy",
+        "isbn": "9780064471046",
+        "cover": "https://example.com/the-lion-the-witch-and-the-wardrobe-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 208,
+            "year": 1950
+        }
+    },
+    {
+        "publisher": "Scholastic Corporation",
+        "title": "Harry Potter and the Chamber of Secrets",
+        "author": "J.K. Rowling",
+        "genre": "Fantasy",
+        "isbn": "9780439064866",
+        "cover": "https://example.com/harry-potter-and-the-chamber-of-secrets-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 352,
+            "year": 1998
+        }
+    },
+    {
+        "publisher": "HarperCollins",
+        "title": "Moby-Dick; or, The Whale",
+        "author": "Herman Melville",
+        "genre": "Adventure fiction",
+        "isbn": "9780142437247",
+        "cover": "https://example.com/moby-dick-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 720,
+            "year": 1851
+        }
+    },
+    {
+        "publisher": "Houghton Mifflin Harcourt",
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "isbn": "9780618645619",
+        "cover": "https://example.com/the-lord-of-the-rings-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 1178,
+            "year": 1954
+        }
+    },
+    {
+        "publisher": "HarperCollins",
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "genre": "Dystopian",
+        "isbn": "9780007491568",
+        "cover": "https://example.com/fahrenheit-451-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 249,
+            "year": 1953
+        }        
+    },
+    {
+        "publisher": "Vintage",
+        "title": "The Road",
+        "author": "Cormac McCarthy",
+        "genre": "Post-apocalyptic fiction",
+        "isbn": "9780307387899",
+        "cover": "https://example.com/the-road-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 287,
+            "year": 2006
+        }
+    },
+    {
+        "publisher": "Random House",
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "genre": "Dystopian",
+        "isbn": "9780060850524",
+        "cover": "https://example.com/brave-new-world-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 288,
+            "year": 1932
+        }
+    },
+    {
+        "publisher": "HarperCollins",
+        "title": "Alice's Adventures in Wonderland",
+        "author": "Lewis Carroll",
+        "genre": "Fantasy",
+        "isbn": "9780061120084",
+        "cover": "https://example.com/alices-adventures-in-wonderland-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 272,
+            "year": 1865
+        }
+    },
+    {
+        "publisher": "Penguin Classics",
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "Romance",
+        "isbn": "9780141439518",
+        "cover": "https://example.com/pride-and-prejudice-cover.jpg",
+        "info": {
+            "language": "English",
+            "pages": 279,
+            "year": 1813
+        }
+    },
+    {
+        "publisher": "HarperCollins",
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "genre": "Children's literature",
+        "isbn": "9780156012195",
+        "cover": "https://example.com/the-little-prince-cover.jpg",
+        "info": {
+            "language": "French",
+            "pages": 96,
+            "year": 1943
+        }
+    },
+    {
+        "publisher": "Penguin Books",
+        "title": "One Hundred Years of Solitude",
+        "author": "Gabriel García Márquez",
+        "genre": "Magical realism",
+        "isbn": "9780141184999",
+        "cover": "https://example.com/one-hundred-years-of-solitude-cover.jpg",
+        "info": {
+            "language": "Spanish",
+            "pages": 417,
+            "year": 1967
+        }
+    },
+    {
+        "publisher": "HarperCollins",
+        "title": "The Odyssey",
+        "author": "Homer",
+        "genre": "Epic poetry",
+        "isbn": "9780140268867",
+        "cover": "https://example.com/the-odyssey-cover.jpg",
+        "info": {
+            "language": "Ancient Greek",
+            "pages": 541,
+            "year": -800
+        }
+    }
+  ]
+  

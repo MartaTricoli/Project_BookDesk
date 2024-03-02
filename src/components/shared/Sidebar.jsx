@@ -203,13 +203,28 @@ const Sidebar = () => {
                             {dropdownsOpen[1] && (
                                 <ul className="pl-4">
                                     <li>
-                                        <Link to="/sub-item-1" className="text-gray-100 hover:text-black">
-                                            Sub Item 1
+                                        <Link to="allmybooks" className="text-gray-100 hover:text-black">
+                                            Tutti
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/sub-item-2" className="text-gray-100 hover:text-black">
-                                            Sub Item 2
+                                        <Link to="mybooksread" className="text-gray-100 hover:text-black">
+                                            Letti
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="mybooksnotread" className="text-gray-100 hover:text-black">
+                                            Da leggere
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="myfavouritebooks" className="text-gray-100 hover:text-black">
+                                            Preferiti
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="mywishlist" className="text-gray-100 hover:text-black">
+                                            Wishlist
                                         </Link>
                                     </li>
                                 </ul>

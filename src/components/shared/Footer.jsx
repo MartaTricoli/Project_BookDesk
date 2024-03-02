@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 export const Footer = () => {
@@ -33,7 +33,7 @@ export const Footer = () => {
                 <Link to="feed/follow">Feed</Link>
               </li>
               <li className="hover:text-new_dark_blue">
-                <Link to="devatwork">Libreria</Link>
+                <Link to="allmybooks">Libreria</Link>
               </li>
               <li className="hover:text-new_dark_blue">
                 <Link to="devatwork">Lista desideri</Link>
