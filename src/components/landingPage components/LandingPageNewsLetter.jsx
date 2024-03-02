@@ -1,7 +1,7 @@
 const LandingPageNewsLetter = () => {
   return (
     <>
-      <section class="bg-new_navy_blue">
+      <section class="bg-new_navy_blue shadow-sky-300">
         <div class="py-8 px-4 mx-auto w-1480 lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-md sm:text-center">
             <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-new_dark_blue">
