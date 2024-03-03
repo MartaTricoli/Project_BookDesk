@@ -1,5 +1,5 @@
+import Tabs from "../components/__componet/Tabs"
 import ActualBook from "../components/shared/ActualBook"
-import Tabs from "./Library"
 
 const MySelf = () => {
 
@@ -57,9 +57,10 @@ const MySelf = () => {
                 <Tabs />
             </div>
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mb-8">
                 <ActualBook />
             </div>
+
 
 
         </>
