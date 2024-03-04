@@ -188,33 +188,50 @@ const Sidebar = () => {
                                     </div>
                                     <span className="ms-3 max-[1080px]:hidden text-white">libreria</span>
                                 </div>
-                                {dropdownsOpen[1] && (
-                                    <ul className="pl-4">
-                                        <li>
-                                            <Link to="/sub-item-1" className="text-gray-100 hover:text-black">
-                                                Sub Item 1
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/sub-item-2" className="text-gray-100 hover:text-black">
-                                                Sub Item 2
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                )}
-                            </li>
-                            <hr
-                                className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
-                            <li>
-                                <div
-                                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                                    onClick={() => toggleDropdown(2)}
-                                >
-                                    <div className="w-6 h-6">
-                                        <svg fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                                            viewBox="0 0 483.688 483.688" xmlSpace="preserve">
-                                            <g>
-                                                <path d="M473.6,92.43c-8.7-10.6-21.9-16.5-35.6-16.5H140.7c-8.5,0-16.6,2.4-23.6,6.7l-15.2-53.1c-2.5-8.7-10.4-14.7-19.4-14.7H59.4
+                                <span className="ms-3 max-[1080px]:hidden text-white">libreria</span>
+                            </div>
+                            {dropdownsOpen[1] && (
+                                <ul className="pl-4">
+                                    <li>
+                                        <Link to="allmybooks" className="text-gray-100 hover:text-black">
+                                            Tutti
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="mybooksread" className="text-gray-100 hover:text-black">
+                                            Letti
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="mybooksnotread" className="text-gray-100 hover:text-black">
+                                            Da leggere
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="myfavouritebooks" className="text-gray-100 hover:text-black">
+                                            Preferiti
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="mywishlist" className="text-gray-100 hover:text-black">
+                                            Wishlist
+                                        </Link>
+                                    </li>
+                                </ul>
+                            )}
+                        </li>
+                        <hr
+                            className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+                        <li>
+                            <div
+                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
+                                onClick={() => toggleDropdown(2)}
+                            >
+                                <div className="w-6 h-6">
+                                    <svg fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 483.688 483.688" xmlSpace="preserve">
+                                        <g>
+                                            <path d="M473.6,92.43c-8.7-10.6-21.9-16.5-35.6-16.5H140.7c-8.5,0-16.6,2.4-23.6,6.7l-15.2-53.1c-2.5-8.7-10.4-14.7-19.4-14.7H59.4
 		H15.3c-8.4,0-15.3,6.8-15.3,15.3v1.6c0,8.4,6.8,15.3,15.3,15.3h57.8l29.5,104.3l40.6,143.9c-23.1,5.8-40.2,26.7-40.2,51.5
 		c0,28.1,21.9,51.2,49.6,53c-2.3,6.6-3.4,13.9-2.8,21.4c2,25.4,22.7,45.9,48.1,47.6c30.3,2.1,55.6-22,55.6-51.8c0-6-1-11.7-2.9-17.1
 		h60.8c-2.5,7.1-3.5,15-2.6,23.1c2.8,24.6,23.1,44,47.9,45.8c30.3,2.1,55.7-21.9,55.7-51.8c0-28.9-24-52-52.8-52H156.5

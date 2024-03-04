@@ -32,9 +32,9 @@ const LandingPageHeader = () => {
         <a
           onClick={handleGetStartedBtnClick}
           href="#_"
-          class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_pastel_blue rounded-full shadow-md group"
+          className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_pastel_blue rounded-full shadow-md group"
         >
-          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_pastel_blue group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_pastel_blue group-hover:translate-x-0 ease">
             <svg
               className="w-8 h-8"
               fill="none"
@@ -50,7 +50,7 @@ const LandingPageHeader = () => {
               ></path>
             </svg>
           </span>
-          <span class="absolute flex items-center justify-center w-full h-full text-new_pastel_blue transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center w-full h-full text-new_pastel_blue transition-all duration-300 transform group-hover:translate-x-full ease">
             Get Started
           </span>
           <span className="relative invisible">Button Text</span>

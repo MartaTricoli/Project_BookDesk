@@ -2,6 +2,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import GetStarted from "../landingPage components/GetStarted";
 import Login from "../landingPage components/Login";
+import { Link } from "react-router-dom";
 
 const LandingPageNav = () => {
   const [showGetStartedModal, setShowGetStartedModal] = useState(false);
@@ -26,7 +27,9 @@ const LandingPageNav = () => {
   return (
     <>
       <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-new_pastel_blue top-0 fixed z-[998]">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <div
           className="flex items-center font-medium gap-20 text-2xl
           "
@@ -62,9 +65,9 @@ const LandingPageNav = () => {
           <a
             onClick={handleGetStartedBtnClick}
             href="#_"
-            class="ml-4 relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-full shadow-md group "
+            className="ml-4 relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-full shadow-md group "
           >
-            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
+            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
               <svg
                 className="w-6 h-6"
                 fill="#0077b5"
