@@ -27,6 +27,9 @@ export default {
         "text-slide":
           "text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
         "infinite-scroll": "infinite-scroll 100s linear infinite",
+        "gradient-x": "gradient-x 5s ease infinite",
+        "gradient-y": "gradient-y 5s ease infinite",
+        "gradient-xy": "gradient-xy 5s ease infinite",
       },
       keyframes: {
         "text-slide": {
@@ -52,6 +55,36 @@ export default {
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
+        },
+        "gradient-y": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "center top",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "center center",
+          },
+        },
+        "gradient-x": {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
+        "gradient-xy": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
         },
       },
       boxShadow: {
