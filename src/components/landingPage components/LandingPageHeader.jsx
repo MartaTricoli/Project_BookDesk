@@ -59,11 +59,10 @@ const LandingPageHeader = () => {
         {/* Sign Up Modal */}
         {showModal && (
           <div
-            onClick={handleCloseModal}
             id="getStarted_container"
-            className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]"
+            className="absolute -top-40 -left-56 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]"
           >
-            <GetStarted />
+            <GetStarted handleCloseGetStartedModal={handleCloseModal}/>
           </div>
         )}
       </header>
