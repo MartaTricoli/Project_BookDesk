@@ -10,9 +10,7 @@ import BgGradient from "../components/shared/BgGradientDx";
 const LandingPage = () => {
   return (
     <>
-      <div
-        className=" relative bg-white"
-      >
+      <div className=" relative bg-white">
         <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
           <Navbar />
           <LandingPageHeader />
