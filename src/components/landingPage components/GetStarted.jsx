@@ -2,7 +2,7 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
   return (
     <>
       <div className="relative flex  items-center justify-between bg-white p-12 max-w-[1480px] rounded-2xl ">
-        <button className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10" >
+        <button className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10" onClick={handleCloseGetStartedModal} >
           X
         </button>
         <div className="px-4 py-4 flex-initial">
