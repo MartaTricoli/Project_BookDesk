@@ -49,7 +49,7 @@ const BarChart = () => {
     setBackgroundColors(dataValues.map(() => generateRandomColor()));
   }, [dataValues]);
 
-  const labels = dataValues.map((_, index) => `202${index + 1}`);
+  const labels = dataValues.map((_, index) => String(2020+index+1));
 
   return (
     <div className="flex justify-between max-[700px]:flex-col">
