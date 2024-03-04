@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <>
       <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen z-[1000] ">
-        <section className="bg-black bg-opacity-50 w-full h-screen flex justify-center items-center">
+        <section className="zbg-black bg-opacity-50 w-full h-screen flex justify-center items-center">
           <div className="flex justify-center items-center max-w-[1480px] h-[80vh] bg-white w-full">
             <div className="absolute left-64">
               <svg
