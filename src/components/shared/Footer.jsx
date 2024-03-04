@@ -7,74 +7,74 @@ export const Footer = () => {
       <footer className="bg-new_navy_blue flex flex-col items-center">
         <div className="flex text-white p-6 justify-center gap-24 border-white border-b w-[1480px] max-[1500px]:w-[1100px] max-[1120px]:w-[700px] max-[1120px]:flex-wrap max-[1120px]:px-24 max-[1120px]:gap-10 max-[740px]:w-[500px] max-[510px]:flex-col max-[510px]:w-[350px]">
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_beige">Informazioni</h3>
+            <h3 className="font-bold text-new_light_blue">Informazioni</h3>
             <ul className="mt-4">
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Chi siamo</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Bacheca</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="shop">Shop</Link>
               </li>
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_beige">Profilo</h3>
+            <h3 className="font-bold text-new_light_blue">Profilo</h3>
             <ul className="mt-4">
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="myprofile">Home</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="stats">Statistiche</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="feed/follow">Feed</Link>
               </li>
               <li className="hover:text-new_dark_blue">
                 <Link to="allmybooks">Libreria</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Lista desideri</Link>
               </li>
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_beige">Lavora con noi</h3>
+            <h3 className="font-bold text-new_light_blue">Lavora con noi</h3>
             <ul className="mt-4">
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Case editrici</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Sponsor</Link>
               </li>
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_beige">Note Legali</h3>
+            <h3 className="font-bold text-new_light_blue">Note Legali</h3>
             <ul className="mt-4">
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Termini e Condizioni</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Privacy</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Cookie Policy</Link>
               </li>
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_beige">Aiuto</h3>
+            <h3 className="font-bold text-new_light_blue">Aiuto</h3>
             <ul className="mt-4">
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="devatwork">FAQ</Link>
               </li>
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_beige">Lingua</h3>
+            <h3 className="font-bold text-new_light_blue">Lingua</h3>
           </div>
         </div>
         <div className="flex w-[1480px] justify-between max-[1500px]:w-[1100px] max-[1120px]:w-[700px] max-[740px]:w-[500px] max-[510px]:w-[350px]">

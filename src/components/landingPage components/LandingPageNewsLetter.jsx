@@ -1,13 +1,13 @@
 const LandingPageNewsLetter = () => {
   return (
     <>
-      <section class="bg-new_navy_blue shadow-sky-300">
-        <div class="py-8 px-4 mx-auto w-1480 lg:py-16 lg:px-6">
+      <section class="top-0 left-0 right-0 bg-gradient-to-t from-new_navy_blue to-transparent ">
+        <div class="py-8 px-4 mx-auto w-1480 lg:py-16 lg:px-6 ">
           <div class="mx-auto max-w-screen-md sm:text-center">
-            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-new_dark_blue">
+            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-new_navy_blue z-20">
               Sign up for our newsletter
             </h2>
-            <p class="mx-auto mb-8 max-w-2xl font-light text-new_light_blue md:mb-12 sm:text-xl dark:text-gray-400">
+            <p class="mx-auto mb-8 max-w-2xl font-normal text-new_navy_blue md:mb-12 sm:text-xl dark:text-gray-400">
               Stay up to date with the roadmap progress, announcements and
               exclusive discounts feel free to sign up with your email.
             </p>
@@ -22,7 +22,7 @@ const LandingPageNewsLetter = () => {
                   </label>
                   <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                     <svg
-                      class="w-5 h-5 text-new_light_blue dark:text-gray-400"
+                      class="w-5 h-5 text-new_navy_blue dark:text-gray-400"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -42,13 +42,13 @@ const LandingPageNewsLetter = () => {
                 <div>
                   <button
                     type="submit"
-                    class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-new_navy_blue focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   >
                     Subscribe
                   </button>
                 </div>
               </div>
-              <div class="mx-auto max-w-screen-sm text-sm text-left text-new_light_blue newsletter-form-footer dark:text-gray-300">
+              <div class="mx-auto max-w-screen-sm text-sm text-left font-medium text-white newsletter-form-footer dark:text-gray-300">
                 We care about the protection of your data.{" "}
                 <a
                   href="#"

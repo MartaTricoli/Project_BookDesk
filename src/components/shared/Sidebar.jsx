@@ -20,35 +20,35 @@ const Sidebar = () => {
 
     return (
         <>
-        <div>
-             <button id="closeSidebar"
-                onClick={toggleSidebar}
-                className="fixed z-[999] top-8 transform -translate-y-1/2 m-4 p-2 text-gray-900 bg-gray-200 dark:bg-gray-700 opacity-25 hover:opacity-100 rounded-md min-[1400px]:hidden"
-            >
-                <div className="w-6 h-6">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 18L20 18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M4 12L20 12" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M4 6L20 6" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
-                </div></button>
-            <aside
-                id="separator-sidebar"
-                className={`mt-20 fixed top-0 left-0 z-40 min-w-[fit-content] h-screen ${isSidebarOpen ? "" : "opacity-0 pointer-events-none"
-                    } transition-opacity duration-300`}
-            >
-                    <div className="h-full px-3 py-4 overflow-y-auto bg-new_navy_blue">
-                    <ul className="space-y-2 font-medium">
-                        <li>
-                            <div
-                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
-                                <div className="w-6 h-6">
+            <div>
+                <button id="closeSidebar"
+                    onClick={toggleSidebar}
+                    className="fixed z-[999] top-8 transform -translate-y-1/2 m-4 p-2 text-gray-900 bg-gray-200 dark:bg-gray-700 opacity-25 hover:opacity-100 rounded-md min-[1400px]:hidden"
+                >
+                    <div className="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 18L20 18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M4 12L20 12" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M4 6L20 6" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
+                        </svg>
+                    </div></button>
+                <aside
+                    id="separator-sidebar"
+                    className={`mt-20 fixed top-0 left-0 z-40 min-w-[fit-content] h-screen ${isSidebarOpen ? "" : "opacity-0 pointer-events-none"
+                        } transition-opacity duration-300`}
+                >
+                    <div className="h-full px-3 py-4 overflow-y-auto bg-[#0077b5]">
+                        <ul className="space-y-2 font-medium">
+                            <li>
+                                <div
+                                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
+                                    <div className="w-6 h-6">
 
-                                    <svg fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                                        viewBox="0 0 512 512" xmlSpace="preserve">
-                                        <g>
+                                        <svg fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 512 512" xmlSpace="preserve">
                                             <g>
-                                                <path d="M461.913,0H83.478C55.86,0,33.391,22.469,33.391,50.087v38.957H16.696C7.475,89.044,0,96.519,0,105.739
+                                                <g>
+                                                    <path d="M461.913,0H83.478C55.86,0,33.391,22.469,33.391,50.087v38.957H16.696C7.475,89.044,0,96.519,0,105.739
 			s7.475,16.696,16.696,16.696h16.696v66.783H16.696C7.475,189.217,0,196.693,0,205.913c0,9.22,7.475,16.696,16.696,16.696h16.696
 			v66.783H16.696C7.475,289.391,0,296.867,0,306.087s7.475,16.696,16.696,16.696h16.696v66.783H16.696
 			C7.475,389.565,0,397.04,0,406.261s7.475,16.696,16.696,16.696h16.696v38.956C33.391,489.531,55.86,512,83.478,512h378.435
@@ -58,11 +58,11 @@ const Sidebar = () => {
 			c9.22,0,16.696-7.475,16.696-16.696c0-9.22-7.475-16.696-16.696-16.696H66.783v-66.783h16.696c9.22,0,16.696-7.475,16.696-16.696
 			s-7.475-16.696-16.696-16.696H66.783V50.087c0-9.206,7.49-16.696,16.696-16.696h50.087V478.609z M478.609,461.913
 			c0,9.206-7.49,16.696-16.696,16.696H166.957V33.391h294.956c9.206,0,16.696,7.49,16.696,16.696V461.913z"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g>
                                             <g>
-                                                <path d="M426.519,223.678c-13.007-14.458-31.014-22.42-50.702-22.42c-20.965,0-39.234,9.257-53.034,26.82
+                                                <g>
+                                                    <path d="M426.519,223.678c-13.007-14.458-31.014-22.42-50.702-22.42c-20.965,0-39.234,9.257-53.034,26.82
 			c-13.801-17.563-32.069-26.82-53.034-26.82c-19.689,0-37.696,7.962-50.703,22.42c-12.269,13.638-19.027,31.826-19.027,51.213
 			c0,41.805,31.826,67.606,75.876,103.318c10.852,8.797,23.152,18.77,36.023,29.801c3.127,2.68,6.995,4.019,10.865,4.019
 			c3.87,0,7.739-1.34,10.866-4.019c12.87-11.03,25.17-21.003,36.023-29.801c44.05-35.711,75.876-61.513,75.876-103.318
@@ -71,29 +71,29 @@ const Sidebar = () => {
 			c26.86,0,36.527,31.8,36.978,33.337c2.042,7.17,8.583,12.164,16.046,12.164c7.487,0,14.047-4.942,16.066-12.151
 			c0.397-1.361,10.042-33.349,36.981-33.349c23.603,0,36.339,20.733,36.339,40.241C412.156,299.68,391.536,317.496,348.642,352.271z
 			"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g>
                                             <g>
-                                                <path d="M428.522,89.044H217.043c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696h211.478
+                                                <g>
+                                                    <path d="M428.522,89.044H217.043c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696h211.478
 			c9.22,0,16.696-7.475,16.696-16.696S437.742,89.044,428.522,89.044z"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                    </svg>
+                                        </svg>
+                                    </div>
+                                    <span className="ms-3 max-[1080px]:hidden text-white">Dashboard</span>
                                 </div>
-                                <span className="ms-3 max-[1080px]:hidden text-white">Dashboard</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div
-                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
-                                <div className="w-6 h-6">
+                            </li>
+                            <li>
+                                <div
+                                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
+                                    <div className="w-6 h-6">
 
-                                    <svg fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                                        viewBox="0 0 512 512" xmlSpace="preserve">
-                                        <g>
+                                        <svg fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 512 512" xmlSpace="preserve">
                                             <g>
-                                                <path d="M461.913,0H83.478C55.86,0,33.391,22.469,33.391,50.087v38.957H16.696C7.475,89.044,0,96.519,0,105.739
+                                                <g>
+                                                    <path d="M461.913,0H83.478C55.86,0,33.391,22.469,33.391,50.087v38.957H16.696C7.475,89.044,0,96.519,0,105.739
 			s7.475,16.696,16.696,16.696h16.696v66.783H16.696C7.475,189.217,0,196.693,0,205.913c0,9.22,7.475,16.696,16.696,16.696h16.696
 			v66.783H16.696C7.475,289.391,0,296.867,0,306.087s7.475,16.696,16.696,16.696h16.696v66.783H16.696
 			C7.475,389.565,0,397.04,0,406.261s7.475,16.696,16.696,16.696h16.696v38.956C33.391,489.531,55.86,512,83.478,512h378.435
@@ -103,11 +103,11 @@ const Sidebar = () => {
 			c9.22,0,16.696-7.475,16.696-16.696c0-9.22-7.475-16.696-16.696-16.696H66.783v-66.783h16.696c9.22,0,16.696-7.475,16.696-16.696
 			s-7.475-16.696-16.696-16.696H66.783V50.087c0-9.206,7.49-16.696,16.696-16.696h50.087V478.609z M478.609,461.913
 			c0,9.206-7.49,16.696-16.696,16.696H166.957V33.391h294.956c9.206,0,16.696,7.49,16.696,16.696V461.913z"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g>
                                             <g>
-                                                <path d="M426.519,223.678c-13.007-14.458-31.014-22.42-50.702-22.42c-20.965,0-39.234,9.257-53.034,26.82
+                                                <g>
+                                                    <path d="M426.519,223.678c-13.007-14.458-31.014-22.42-50.702-22.42c-20.965,0-39.234,9.257-53.034,26.82
 			c-13.801-17.563-32.069-26.82-53.034-26.82c-19.689,0-37.696,7.962-50.703,22.42c-12.269,13.638-19.027,31.826-19.027,51.213
 			c0,41.805,31.826,67.606,75.876,103.318c10.852,8.797,23.152,18.77,36.023,29.801c3.127,2.68,6.995,4.019,10.865,4.019
 			c3.87,0,7.739-1.34,10.866-4.019c12.87-11.03,25.17-21.003,36.023-29.801c44.05-35.711,75.876-61.513,75.876-103.318
@@ -116,31 +116,31 @@ const Sidebar = () => {
 			c26.86,0,36.527,31.8,36.978,33.337c2.042,7.17,8.583,12.164,16.046,12.164c7.487,0,14.047-4.942,16.066-12.151
 			c0.397-1.361,10.042-33.349,36.981-33.349c23.603,0,36.339,20.733,36.339,40.241C412.156,299.68,391.536,317.496,348.642,352.271z
 			"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g>
                                             <g>
-                                                <path d="M428.522,89.044H217.043c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696h211.478
+                                                <g>
+                                                    <path d="M428.522,89.044H217.043c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696h211.478
 			c9.22,0,16.696-7.475,16.696-16.696S437.742,89.044,428.522,89.044z"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                    </svg>
+                                        </svg>
+                                    </div>
+                                    <span className="ms-3 max-[1080px]:hidden text-white">Impostazioni</span>
                                 </div>
-                                <span className="ms-3 max-[1080px]:hidden text-white">Impostazioni</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div
-                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                                onClick={() => toggleDropdown(0)}
-                            >
-                                <div className="w-6 h-6">
+                            </li>
+                            <li>
+                                <div
+                                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
+                                    onClick={() => toggleDropdown(0)}
+                                >
+                                    <div className="w-6 h-6">
 
-                                    <svg fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                                        viewBox="0 0 512 512" xmlSpace="preserve">
-                                        <g>
+                                        <svg fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 512 512" xmlSpace="preserve">
                                             <g>
-                                                <path d="M461.913,0H83.478C55.86,0,33.391,22.469,33.391,50.087v38.957H16.696C7.475,89.044,0,96.519,0,105.739
+                                                <g>
+                                                    <path d="M461.913,0H83.478C55.86,0,33.391,22.469,33.391,50.087v38.957H16.696C7.475,89.044,0,96.519,0,105.739
 			s7.475,16.696,16.696,16.696h16.696v66.783H16.696C7.475,189.217,0,196.693,0,205.913c0,9.22,7.475,16.696,16.696,16.696h16.696
 			v66.783H16.696C7.475,289.391,0,296.867,0,306.087s7.475,16.696,16.696,16.696h16.696v66.783H16.696
 			C7.475,389.565,0,397.04,0,406.261s7.475,16.696,16.696,16.696h16.696v38.956C33.391,489.531,55.86,512,83.478,512h378.435
@@ -150,11 +150,11 @@ const Sidebar = () => {
 			c9.22,0,16.696-7.475,16.696-16.696c0-9.22-7.475-16.696-16.696-16.696H66.783v-66.783h16.696c9.22,0,16.696-7.475,16.696-16.696
 			s-7.475-16.696-16.696-16.696H66.783V50.087c0-9.206,7.49-16.696,16.696-16.696h50.087V478.609z M478.609,461.913
 			c0,9.206-7.49,16.696-16.696,16.696H166.957V33.391h294.956c9.206,0,16.696,7.49,16.696,16.696V461.913z"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g>
                                             <g>
-                                                <path d="M426.519,223.678c-13.007-14.458-31.014-22.42-50.702-22.42c-20.965,0-39.234,9.257-53.034,26.82
+                                                <g>
+                                                    <path d="M426.519,223.678c-13.007-14.458-31.014-22.42-50.702-22.42c-20.965,0-39.234,9.257-53.034,26.82
 			c-13.801-17.563-32.069-26.82-53.034-26.82c-19.689,0-37.696,7.962-50.703,22.42c-12.269,13.638-19.027,31.826-19.027,51.213
 			c0,41.805,31.826,67.606,75.876,103.318c10.852,8.797,23.152,18.77,36.023,29.801c3.127,2.68,6.995,4.019,10.865,4.019
 			c3.87,0,7.739-1.34,10.866-4.019c12.87-11.03,25.17-21.003,36.023-29.801c44.05-35.711,75.876-61.513,75.876-103.318
@@ -163,40 +163,30 @@ const Sidebar = () => {
 			c26.86,0,36.527,31.8,36.978,33.337c2.042,7.17,8.583,12.164,16.046,12.164c7.487,0,14.047-4.942,16.066-12.151
 			c0.397-1.361,10.042-33.349,36.981-33.349c23.603,0,36.339,20.733,36.339,40.241C412.156,299.68,391.536,317.496,348.642,352.271z
 			"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g>
                                             <g>
-                                                <path d="M428.522,89.044H217.043c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696h211.478
+                                                <g>
+                                                    <path d="M428.522,89.044H217.043c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696h211.478
 			c9.22,0,16.696-7.475,16.696-16.696S437.742,89.044,428.522,89.044z"/>
+                                                </g>
                                             </g>
-                                        </g>
-                                    </svg>
+                                        </svg>
+                                    </div>
+                                    <span className="ms-3 max-[1080px]:hidden text-white">
+                                        <Link to="myprofile" />Profilo
+                                    </span>
                                 </div>
-                                <span className="ms-3 max-[1080px]:hidden text-white">Profilo</span>
-                            </div>
-                            {dropdownsOpen[0] && (
-                                <ul className="pl-4">
-                                    <li>
-                                        <Link to="/sub-item-1" className="text-gray-100 hover:text-black">
-                                            Sub Item 1
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/sub-item-2" className="text-gray-100 hover:text-black">
-                                            Sub Item 2
-                                        </Link>
-                                    </li>
-                                </ul>
-                            )}
-                        </li>
-                        <li>
-                            <div
-                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                                onClick={() => toggleDropdown(1)}
-                            >
-                                <div className="w-6 h-6">
-                                    <svg fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6,23H18a3,3,0,0,0,3-3V4a3,3,0,0,0-3-3H6A3,3,0,0,0,3,4V20A3,3,0,0,0,6,23ZM19,9.5v5h-.132L17.9,12.553a1,1,0,0,0-1.79.894l.527,1.053H15V12a1,1,0,0,0-2,0v2.5H12V13a1,1,0,0,0-2,0v1.5H5v-5ZM18,21H14V19a1,1,0,0,0-2,0v2H11V19a1,1,0,0,0-2,0v2H8V20a1,1,0,0,0-2,0v1a1,1,0,0,1-1-1V16.5H19V20A1,1,0,0,1,18,21ZM6,3H18a1,1,0,0,1,1,1V7.5H14.868L13.9,5.553a1,1,0,1,0-1.79.894L12.632,7.5H11V5A1,1,0,0,0,9,5V7.5H8V6A1,1,0,0,0,6,6V7.5H5V4A1,1,0,0,1,6,3Z" /></svg>
+                            </li>
+                            <li>
+                                <div
+                                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
+                                    onClick={() => toggleDropdown(1)}
+                                >
+                                    <div className="w-6 h-6">
+                                        <svg fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6,23H18a3,3,0,0,0,3-3V4a3,3,0,0,0-3-3H6A3,3,0,0,0,3,4V20A3,3,0,0,0,6,23ZM19,9.5v5h-.132L17.9,12.553a1,1,0,0,0-1.79.894l.527,1.053H15V12a1,1,0,0,0-2,0v2.5H12V13a1,1,0,0,0-2,0v1.5H5v-5ZM18,21H14V19a1,1,0,0,0-2,0v2H11V19a1,1,0,0,0-2,0v2H8V20a1,1,0,0,0-2,0v1a1,1,0,0,1-1-1V16.5H19V20A1,1,0,0,1,18,21ZM6,3H18a1,1,0,0,1,1,1V7.5H14.868L13.9,5.553a1,1,0,1,0-1.79.894L12.632,7.5H11V5A1,1,0,0,0,9,5V7.5H8V6A1,1,0,0,0,6,6V7.5H5V4A1,1,0,0,1,6,3Z" /></svg>
+                                    </div>
+                                    <span className="ms-3 max-[1080px]:hidden text-white">libreria</span>
                                 </div>
                                 <span className="ms-3 max-[1080px]:hidden text-white">libreria</span>
                             </div>
@@ -254,29 +244,29 @@ const Sidebar = () => {
 		h64.7V151.13z M336,293.53h-27.5v-35.3h34.9L336,293.53z M350.8,223.33h-42.3v-37.4h50.2L350.8,223.33z M308.5,151.13v-40.4h66
 		l-8.5,40.4H308.5z M408.2,285.93c-1.1,4.5-5.1,7.7-9.8,7.7h-26.8l7.5-35.3h36L408.2,285.93z M423.7,223.33h-37.3l7.9-37.4H433
 		L423.7,223.33z M448.5,123.23l-6.9,27.8h-40l8.5-40.4h28.6c4.3,0,6.8,2.4,7.9,3.9C447.8,116.03,449.6,119.13,448.5,123.23z"/>
-                                        </g>
-                                    </svg>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <span className="ms-3 max-[1080px]:hidden text-white">Mercato</span>
                                 </div>
-                                <span className="ms-3 max-[1080px]:hidden text-white">Mercato</span>
-                            </div>
-                            {dropdownsOpen[2] && (
-                                <ul className="pl-4">
-                                    <li>
-                                        <Link to="/sub-item-1" className="text-gray-100 hover:text-black">
-                                            Sub Item 1
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/sub-item-2" className="text-gray-100 hover:text-black">
-                                            Sub Item 2
-                                        </Link>
-                                    </li>
-                                </ul>
-                            )}
-                        </li>
-                    </ul>
-                </div>
-            </aside> 
+                                {dropdownsOpen[2] && (
+                                    <ul className="pl-4">
+                                        <li>
+                                            <Link to="/sub-item-1" className="text-gray-100 hover:text-black">
+                                                Sub Item 1
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/sub-item-2" className="text-gray-100 hover:text-black">
+                                                Sub Item 2
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
         </>
     );
