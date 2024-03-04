@@ -1,11 +1,14 @@
-const GetStarted = () => {
+const GetStarted = ({handleCloseGetStartedModal}) => {
   return (
     <>
-      <div className="flex  items-center justify-between bg-white p-12 max-w-[1480px] rounded-2xl ">
+      <div className="relative flex  items-center justify-between bg-white p-12 max-w-[1480px] rounded-2xl ">
+        <button className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10" >
+          X
+        </button>
         <div className="px-4 py-4 flex-initial">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             data-name="Layer 1"
             width="654.23657"
             height="682.11354"
@@ -128,7 +131,7 @@ const GetStarted = () => {
             <div className="flex justify-end"></div>
             <div className="mb-5">
               <label
-                for="name"
+               htmlFor="name"
                 className="mb-3 block text-base font-medium text-new_dark_blue"
               >
                 Full Name
@@ -145,7 +148,7 @@ const GetStarted = () => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                    for="date"
+                   htmlFor="date"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
                     Password
@@ -161,7 +164,7 @@ const GetStarted = () => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                    for="time"
+                   htmlFor="time"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
                     Confirm Password
@@ -177,7 +180,7 @@ const GetStarted = () => {
             </div>
             <div className="mb-5">
               <label
-                for="email"
+               htmlFor="email"
                 className="mb-3 block text-base font-medium text-new_dark_blue"
               >
                 Email Address
@@ -194,7 +197,7 @@ const GetStarted = () => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                    for="date"
+                   htmlFor="date"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
                     Date of Birth
@@ -210,7 +213,7 @@ const GetStarted = () => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                    for="time"
+                   htmlFor="time"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
                     Gender

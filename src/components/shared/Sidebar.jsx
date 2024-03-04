@@ -62,6 +62,7 @@ const Sidebar = () => {
                                     </div>
                                     <span className="ms-3 max-[1080px]:hidden text-white">libreria</span>
                                 </div>
+
                             </li>
                             {dropdownsOpen[1] && (
                                 <ul className="pl-4">

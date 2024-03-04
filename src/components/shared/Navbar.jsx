@@ -56,10 +56,9 @@ const LandingPageNav = () => {
           </button>
           {showLoginModal && (
             <div
-              onClick={handleCloseLoginModal}
               className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]"
             >
-              <Login />
+              <Login handleCloseLoginModal={handleCloseLoginModal}/>
             </div>
           )}
           <a
@@ -90,10 +89,9 @@ const LandingPageNav = () => {
           </a>
           {showGetStartedModal && (
             <div
-              onClick={handleCloseGetStartedModal}
               className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]"
             >
-              <GetStarted />
+              <GetStarted handleCloseGetStartedModal={handleCloseGetStartedModal}/>
             </div>
           )}
         </div>

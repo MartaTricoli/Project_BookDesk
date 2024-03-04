@@ -1,16 +1,19 @@
 import Logo from "../shared/Logo";
 
-const Login = () => {
+const Login = ({handleCloseLoginModal}) => {
   return (
     <>
-      <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen z-[1000] ">
-        <section className="zbg-black bg-opacity-50 w-full h-screen flex justify-center items-center">
-          <div className="flex justify-center items-center max-w-[1480px] h-[80vh] bg-white w-full">
-            <div className="absolute left-64">
+      <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen z-[999] ">
+        <section className="bg-black bg-opacity-50 w-full h-screen flex justify-center items-center">
+          <div className=" relative flex justify-center items-center max-w-[1480px] h-[80vh] bg-white w-full">
+            <button className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10" onClick={handleCloseLoginModal}>
+            X
+            </button>
+            <div className="absolute left-20">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="600"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                width="500"
                 height="500"
                 viewBox="0 0 731.67004 625.99672"
               >
@@ -133,7 +136,7 @@ const Login = () => {
                     <form className="space-y-4 md:space-y-6" action="#">
                       <div>
                         <label
-                          for="email"
+                         htmlFor="email"
                           className="block mb-2 text-sm font-medium text-new_dark_blue dark:text-white"
                         >
                           Your email
@@ -142,14 +145,14 @@ const Login = () => {
                           type="email"
                           name="email"
                           id="email"
-                          className="bg-gray-50 border border-gray-300 text-new_dark_blue sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="z-[1000] bg-gray-50 border border-gray-300 text-new_dark_blue sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="name@company.com"
                           required=""
                         />
                       </div>
                       <div>
                         <label
-                          for="password"
+                         htmlFor="password"
                           className="block mb-2 text-sm font-medium text-new_dark_blue dark:text-white"
                         >
                           Password
@@ -176,7 +179,7 @@ const Login = () => {
                           </div>
                           <div className="ml-3 text-sm">
                             <label
-                              for="remember"
+                             htmlFor="remember"
                               className="text-gray-500 dark:text-gray-300"
                             >
                               Remember me
