@@ -82,6 +82,14 @@ const Sidebar = () => {
                   <ul className="pl-4 mt-2 space-y-2">
                     <li>
                       <Link
+                        to="myprofile"
+                        className="text-gray-100 hover:text-black"
+                      >
+                       Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
                         to="mystats"
                         className="text-gray-100 hover:text-black"
                       >
