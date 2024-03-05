@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import Logo from "../shared/Logo";
 
 const Login = ({ handleCloseLoginModal }) => {
+  // const handleLogin = async () => {
+
+  // }
+
   return (
     <>
       <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen z-[999] ">
