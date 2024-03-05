@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const InternNavbar = () => {
   return (
     <>
-      <nav className="h-20 w-full flex items-center justify-between items-center border-black border-4 text-white mb-24 bg-new_pastel_blue top-0 fixed z-[999]">
+      <nav className="h-20 w-full flex items-center justify-between items-center text-white mb-24 bg-new_pastel_blue top-0 fixed z-[999]">
         {/* logo */}
         <div className="">
           <Link to="/">
