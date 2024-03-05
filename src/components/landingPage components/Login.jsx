@@ -1,10 +1,43 @@
 import { Link } from "react-router-dom";
 import Logo from "../shared/Logo";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { login } from "../../store/reducers/authSlice";
 
 const Login = ({ handleCloseLoginModal }) => {
-  // const handleLogin = async () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // }
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+
+    setForm((form) => ({ ...form, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const results = await axios({
+        url: "http://localhost:3000/auth/users/token",
+        method: "POST",
+        data: form,
+      });
+
+      const data = results.data; // -> { user: { ... }, token: ... }
+      dispatch(login(data));
+      navigate("/myprofile");
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <>
@@ -141,7 +174,11 @@ const Login = ({ handleCloseLoginModal }) => {
                     <h1 className="text-xl font-bold leading-tight tracking-tight text-new_dark_blue md:text-2xl dark:text-white">
                       Sign in to your account
                     </h1>
-                    <form className="space-y-4 md:space-y-6" action="#">
+                    <form
+                      className="space-y-4 md:space-y-6"
+                      action="#"
+                      onSubmit={handleSubmit}
+                    >
                       <div>
                         <label
                           htmlFor="email"
@@ -152,10 +189,11 @@ const Login = ({ handleCloseLoginModal }) => {
                         <input
                           type="email"
                           name="email"
-                          id="email"
+                          id="email_login"
                           className="z-[1000] bg-gray-50 border border-gray-300 text-new_dark_blue sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="name@company.com"
                           required=""
+                          onInput={handleInput}
                         />
                       </div>
                       <div>
@@ -172,6 +210,7 @@ const Login = ({ handleCloseLoginModal }) => {
                           placeholder="••••••••"
                           className="bg-gray-50 border border-gray-300 text-new_dark_blue sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           required=""
+                          onInput={handleInput}
                         />
                       </div>
                       <div className="flex items-center justify-between">
@@ -205,7 +244,7 @@ const Login = ({ handleCloseLoginModal }) => {
                         type="submit"
                         className="w-full text-white bg-new_pastel_blue hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                       >
-                        <Link to="myprofile">Sign In</Link>
+                        Sign In
                       </button>
                       <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                         Don’t have an account yet?{" "}
