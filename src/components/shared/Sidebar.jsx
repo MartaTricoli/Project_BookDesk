@@ -81,9 +81,12 @@ const Sidebar = () => {
                 {dropdownsOpen[0] && (
                   <ul className="pl-4 mt-2 space-y-2">
                     <li>
-                      <span className="text-sm text-white hover:text-black">
-                        le mie Letture
-                      </span>
+                      <Link
+                        to="mystats"
+                        className="text-gray-100 hover:text-black"
+                      >
+                        My Reads
+                      </Link>
                     </li>
                     <li>
                       <span className="text-sm text-white hover:text-black">
@@ -93,26 +96,6 @@ const Sidebar = () => {
                   </ul>
                 )}
               </li>
-              {dropdownsOpen[0] && (
-                <ul className="pl-4">
-                  <li>
-                    <Link
-                      to=""
-                      className="text-gray-100 hover:text-black"
-                    >
-                      le mie statistiche 
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to=""
-                      className="text-gray-100 hover:text-black"
-                    >
-                      letture negli anni
-                    </Link>
-                  </li>
-                </ul>
-              )}
               <li>
                 <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
                   <div className="w-6 h-6">

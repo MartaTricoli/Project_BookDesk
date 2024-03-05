@@ -53,7 +53,7 @@ const BarChart = () => {
 
   return (
     <div className="flex justify-between max-[700px]:flex-col">
-      <div>
+      <div className="">
         <Bar
           data={{
             labels: labels,

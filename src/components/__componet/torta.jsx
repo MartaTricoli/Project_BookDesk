@@ -23,8 +23,8 @@ const Torta = () => {
   };
 
   return (
-    <div className="flex justify-between max-[700px]:flex-col">
-      <div>
+    <div className="flex justify-between max-w-[700px] flex-col mb-20">
+      <div className="w-[300px] mb-10">
         <Doughnut
           data={{
             labels: labels,
@@ -47,6 +47,7 @@ const Torta = () => {
           }}
         />
       </div>
+
       <div className="flex flex-col items-center justify-center">
         {dataValues.map((value, index) => (
           <div key={index} className="mb-4 flex">

@@ -32,7 +32,7 @@ const MySelf = () => {
 
                         </div>
                         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-8 mt-32 md:mt-0">
-                            <button className="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
+                            <button className="text-white py-2 px-4 uppercase rounded bg-blue-400 dark:bg-black hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
                                 Connect
                             </button>
                             <button className="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
@@ -47,16 +47,11 @@ const MySelf = () => {
                         <p className="mt-2 text-gray-500">Universita' della strada</p>
                     </div>
                     <div className="mt-12 flex flex-col justify-center">
-                        <p className="text-gray-600 text-center font-light lg:px-16">
-                            È LA BACCHETTA A SCEGLIERE IL MAGO, SIGNOR POTTER. NON È SEMPRE CHIARO IL PERCHÉ, MA CREDO CHE SIA CHIARO CHE POSSIAMO ASPETTARCI GRANDI COSE DA LEI. (MR. OLLIVANDER, HARRY POTTER E LA PIETRA FILOSOFALE)                        </p>
-                        <button className="text-indigo-500 py-2 px-4 font-medium mt-4">Show more</button>
+                        <Tabs />
                     </div>
+
                 </div>
             </div>
-            <div className="flex justify-center mt-10">
-                <Tabs />
-            </div>
-
             <div className="flex justify-center items-center mb-8">
                 <ActualBook />
             </div>
