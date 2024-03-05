@@ -3,19 +3,20 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-    const dropdownsInitialState = [false, false, false, false, false, false, false];
-    const [dropdownsOpen, setDropdownsOpen] = useState(dropdownsInitialState);
+  const dropdownsInitialState = [false, false, false, false];
+  const [dropdownsOpen, setDropdownsOpen] = useState(dropdownsInitialState);
 
-    const toggleDropdown = (index) => {
-        const updatedDropdowns = dropdownsOpen.map((state, i) =>
-            i === index ? !state : false
-        );
-        setDropdownsOpen(updatedDropdowns);
-    };
+  const toggleDropdown = (index) => {
+    const updatedDropdowns = dropdownsOpen.map((state, i) =>
+      i === index ? !state : false
+    );
+    setDropdownsOpen(updatedDropdowns);
+  };
 
   return (
     <>
@@ -77,6 +78,20 @@ const Sidebar = () => {
                     Dashboard
                   </span>
                 </div>
+                {dropdownsOpen[0] && (
+                  <ul className="pl-4 mt-2 space-y-2">
+                    <li>
+                      <span className="text-sm text-white hover:text-black">
+                        le mie Letture
+                      </span>
+                    </li>
+                    <li>
+                      <span className="text-sm text-white hover:text-black">
+                        Letture negli anni
+                      </span>
+                    </li>
+                  </ul>
+                )}
               </li>
               {dropdownsOpen[0] && (
                 <ul className="pl-4">
@@ -270,7 +285,9 @@ const Sidebar = () => {
                     </svg>
                   </div>
                   <span className="ms-3 max-[1080px]:hidden text-white">
-                    Mercato
+                    <Link to="shop">
+                      Mercato
+                    </Link>
                   </span>
                 </div>
                 {dropdownsOpen[3] && (
