@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import Torta from './torta';
-import BarChart from './AnnualReads';
 import { DevAtWork } from './DevAtWork';
 import PersonalQuotes from './PersonalQuotes';
 
+import notebook from "../../assets/LandingPage/landingbg-light.jpg"
 
 const Tabs = () => {
   const [openTab, setOpenTab] = useState(null);
@@ -43,7 +42,9 @@ const Tabs = () => {
 
       <div id='openedTabs' className='flex justify-center'>
         {openTab === 'tabs-home02' && (
-          <div className="container mx-auto p-4 flex justify-center h-auto bg-[#EFEDC6]">
+          <div className="container mx-auto p-4 flex justify-center h-auto relative bg-center"
+            style={{ backgroundImage: `url(${notebook})`}}
+          >
             <div className="">
 
               {/* <div id='svgCitazioni' className='' >
