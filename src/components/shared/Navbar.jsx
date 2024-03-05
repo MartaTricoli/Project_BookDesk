@@ -4,7 +4,7 @@ import GetStarted from "../landingPage components/GetStarted";
 import Login from "../landingPage components/Login";
 import { Link } from "react-router-dom";
 
-const LandingPageNav = () => {
+const Navbar = () => {
   const [showGetStartedModal, setShowGetStartedModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
 
@@ -55,10 +55,8 @@ const LandingPageNav = () => {
             Login
           </button>
           {showLoginModal && (
-            <div
-              className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]"
-            >
-              <Login handleCloseLoginModal={handleCloseLoginModal}/>
+            <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]">
+              <Login handleCloseLoginModal={handleCloseLoginModal} />
             </div>
           )}
           <a
@@ -88,10 +86,10 @@ const LandingPageNav = () => {
             <span className="relative invisible">Get Started</span>
           </a>
           {showGetStartedModal && (
-            <div
-              className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]"
-            >
-              <GetStarted handleCloseGetStartedModal={handleCloseGetStartedModal}/>
+            <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]">
+              <GetStarted
+                handleCloseGetStartedModal={handleCloseGetStartedModal}
+              />
             </div>
           )}
         </div>
@@ -100,4 +98,4 @@ const LandingPageNav = () => {
   );
 };
 
-export default LandingPageNav;
+export default Navbar;

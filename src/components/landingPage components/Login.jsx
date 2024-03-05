@@ -1,13 +1,17 @@
+import { Link } from "react-router-dom";
 import Logo from "../shared/Logo";
 
-const Login = ({handleCloseLoginModal}) => {
+const Login = ({ handleCloseLoginModal }) => {
   return (
     <>
       <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen z-[999] ">
         <section className="bg-black bg-opacity-50 w-full h-screen flex justify-center items-center">
           <div className=" relative flex justify-center items-center max-w-[1480px] h-[80vh] bg-white w-full">
-            <button className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10" onClick={handleCloseLoginModal}>
-            X
+            <button
+              className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10"
+              onClick={handleCloseLoginModal}
+            >
+              X
             </button>
             <div className="absolute left-20">
               <svg
@@ -136,7 +140,7 @@ const Login = ({handleCloseLoginModal}) => {
                     <form className="space-y-4 md:space-y-6" action="#">
                       <div>
                         <label
-                         htmlFor="email"
+                          htmlFor="email"
                           className="block mb-2 text-sm font-medium text-new_dark_blue dark:text-white"
                         >
                           Your email
@@ -152,7 +156,7 @@ const Login = ({handleCloseLoginModal}) => {
                       </div>
                       <div>
                         <label
-                         htmlFor="password"
+                          htmlFor="password"
                           className="block mb-2 text-sm font-medium text-new_dark_blue dark:text-white"
                         >
                           Password
@@ -179,7 +183,7 @@ const Login = ({handleCloseLoginModal}) => {
                           </div>
                           <div className="ml-3 text-sm">
                             <label
-                             htmlFor="remember"
+                              htmlFor="remember"
                               className="text-gray-500 dark:text-gray-300"
                             >
                               Remember me
@@ -195,9 +199,9 @@ const Login = ({handleCloseLoginModal}) => {
                       </div>
                       <button
                         type="submit"
-                        className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        className="w-full text-white bg-new_pastel_blue hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                       >
-                        Sign in
+                        <Link to="myprofile">Sign In</Link>
                       </button>
                       <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                         Don’t have an account yet?{" "}
