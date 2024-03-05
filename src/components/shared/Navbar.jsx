@@ -46,6 +46,11 @@ const Navbar = () => {
           <a className="hover:text-new_light_blue" href="#">
             Contact
           </a>
+          <div className="hover:text-new_light_blue" href="#">
+            <Link to="business">
+              Business
+            </Link>
+          </div>
         </div>
         <div className="flex">
           <button

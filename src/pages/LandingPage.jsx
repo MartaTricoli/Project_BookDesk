@@ -5,7 +5,6 @@ import LandingPagePricing from "../components/landingPage components/LandingPage
 import LandingPageNewsLetter from "../components/landingPage components/LandingPageNewsLetter";
 import { Footer } from "../components/shared/Footer";
 import Navbar from "../components/shared/Navbar";
-import BgGradient from "../components/shared/BgGradientDx";
 
 const LandingPage = () => {
   return (
