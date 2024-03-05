@@ -32,7 +32,7 @@ export const Footer = () => {
               <li className="hover:text-new_light_blue">
                 <Link to="feed/follow">Feed</Link>
               </li>
-              <li className="hover:text-new_dark_blue">
+              <li className="hover:text-new_light_blue">
                 <Link to="allmybooks">Libreria</Link>
               </li>
               <li className="hover:text-new_light_blue">
