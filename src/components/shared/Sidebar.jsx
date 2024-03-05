@@ -8,7 +8,7 @@ const Sidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const dropdownsInitialState = [false, false, false];
+  const dropdownsInitialState = [false, false, false, false];
   const [dropdownsOpen, setDropdownsOpen] = useState(dropdownsInitialState);
 
   const toggleDropdown = (index) => {
@@ -62,7 +62,10 @@ const Sidebar = () => {
           <div className="h-full px-3 py-4 overflow-y-auto bg-[#0077b5]">
             <ul className="space-y-2 font-medium">
               <li>
-                <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
+                <div
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
+                  onClick={() => toggleDropdown(0)}
+                >
                   <div className="w-6 h-6">
                     <svg
                       fill="white"
@@ -94,6 +97,20 @@ const Sidebar = () => {
                     Dashboard
                   </span>
                 </div>
+                {dropdownsOpen[0] && (
+                  <ul className="pl-4 mt-2 space-y-2">
+                    <li>
+                      <span className="text-sm text-white hover:text-black">
+                        le mie Letture
+                      </span>
+                    </li>
+                    <li>
+                      <span className="text-sm text-white hover:text-black">
+                        Letture negli anni
+                      </span>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li>
                 <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
@@ -132,7 +149,7 @@ const Sidebar = () => {
               <li>
                 <div
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                  onClick={() => toggleDropdown(0)}
+                  onClick={() => toggleDropdown(1)}
                 >
                   <div className="w-6 h-6">
                     <svg
@@ -170,7 +187,7 @@ const Sidebar = () => {
               <li>
                 <div
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                  onClick={() => toggleDropdown(1)}
+                  onClick={() => toggleDropdown(2)}
                 >
                   <div className="w-6 h-6">
                     <svg
@@ -186,7 +203,7 @@ const Sidebar = () => {
                   </span>
                 </div>
               </li>
-              {dropdownsOpen[1] && (
+              {dropdownsOpen[2] && (
                 <ul className="pl-4">
                   <li>
                     <Link
@@ -234,7 +251,7 @@ const Sidebar = () => {
               <li>
                 <div
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                  onClick={() => toggleDropdown(2)}
+                  onClick={() => toggleDropdown(3)}
                 >
                   <div className="w-6 h-6">
                     <svg
@@ -266,10 +283,12 @@ const Sidebar = () => {
                     </svg>
                   </div>
                   <span className="ms-3 max-[1080px]:hidden text-white">
-                    Mercato
+                    <Link to="shop">
+                      Mercato
+                    </Link>
                   </span>
                 </div>
-                {dropdownsOpen[2] && (
+                {dropdownsOpen[3] && (
                   <ul className="pl-4">
                     <li>
                       <Link
