@@ -94,7 +94,7 @@ const Sidebar = () => {
                       to=""
                       className="text-gray-100 hover:text-black"
                     >
-                      letture ne gli anni
+                      letture negli anni
                     </Link>
                   </li>
                 </ul>
