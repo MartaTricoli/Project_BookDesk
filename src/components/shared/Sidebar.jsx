@@ -60,144 +60,10 @@ const Sidebar = () => {
           <div className="h-full px-3 py-4 overflow-y-auto bg-[#0077b5]">
             <ul className="space-y-2 font-medium">
               <li>
-                <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
-                  <div className="w-6 h-6">{/* Icon */}</div>
-                  <span className="ms-3 max-[1080px]:hidden text-white">
-                    Dashboard
-                  </span>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
-                  <div className="w-6 h-6">{/* Icon */}</div>
-                  <span className="ms-3 max-[1080px]:hidden text-white">
-                    Impostazioni
-                  </span>
-                </div>
-              </li>
-              <li>
                 <div
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
                   onClick={() => toggleDropdown(0)}
                 >
-                  <div className="w-6 h-6">{/* Icon */}</div>
-                  <span className="ms-3 max-[1080px]:hidden text-white">
-                    <Link to="myprofile" />
-                    Profilo
-                  </span>
-                </div>
-              </li>
-              <li>
-                <div
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                  onClick={() => toggleDropdown(1)}
-                >
-                  <div className="w-6 h-6">{/* Icon */}</div>
-                  <span className="ms-3 max-[1080px]:hidden text-white">
-                    Libreria
-                  </span>
-                </div>
-                {dropdownsOpen[1] && (
-                  <ul className="pl-4 mt-2 space-y-2">
-                    <li>
-                      <Link to="/librerie" />
-                      <span className="text-sm text-white hover:text-[#0077b5]">
-                        Librerie
-                      </span>
-                    </li>
-                    <li>
-                      <Link to="/libri" />
-                      <span className="text-sm text-white hover:text-[#0077b5]">
-                        Libri
-                      </span>
-                    </li>
-                    <li>
-                      <Link to="/prestiti" />
-                      <span className="text-sm text-white hover:text-[#0077b5]">
-                        Prestiti
-                      </span>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li>
-                <div
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer"
-                  onClick={() => toggleDropdown(2)}
-                >
-                  <div className="w-6 h-6">{/* Icon */}</div>
-                  <span className="ms-3 max-[1080px]:hidden text-white">
-                    Altro
-                  </span>
-                </div>
-                {dropdownsOpen[2] && (
-                  <ul className="pl-4 mt-2 space-y-2">
-                    <li>
-                      <Link to="/about" />
-                      <span className="text-sm text-white hover:text-[#0077b5]">
-                        About
-                      </span>
-                    </li>
-                    <li>
-                      <Link to="/support" />
-                      <span className="text-sm text-white hover:text-[#0077b5]">
-                        Support
-                      </span>
-                    </li>
-                  </ul>
-                )}
-              </li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </>
-  );
-  return (
-    <>
-      <div>
-        <button
-          id="closeSidebar"
-          onClick={toggleSidebar}
-          className="fixed z-[999] top-8 transform -translate-y-1/2 m-4 p-2 text-gray-900 bg-gray-200 dark:bg-gray-700 opacity-25 hover:opacity-100 rounded-md min-[1400px]:hidden"
-        >
-          <div className="w-6 h-6">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 18L20 18"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M4 12L20 12"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M4 6L20 6"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
-        </button>
-        <aside
-          id="separator-sidebar"
-          className={`mt-20 fixed top-0 left-0 z-40 min-w-[fit-content] h-screen ${
-            isSidebarOpen ? "" : "opacity-0 pointer-events-none"
-          } transition-opacity duration-300`}
-        >
-          <div className="h-full px-3 py-4 overflow-y-auto bg-[#0077b5]">
-            <ul className="space-y-2 font-medium">
-              <li>
-                <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
                   <div className="w-6 h-6">
                     <svg
                       fill="white"
@@ -399,41 +265,41 @@ const Sidebar = () => {
 		h64.7V151.13z M336,293.53h-27.5v-35.3h34.9L336,293.53z M350.8,223.33h-42.3v-37.4h50.2L350.8,223.33z M308.5,151.13v-40.4h66
 		l-8.5,40.4H308.5z M408.2,285.93c-1.1,4.5-5.1,7.7-9.8,7.7h-26.8l7.5-35.3h36L408.2,285.93z M423.7,223.33h-37.3l7.9-37.4H433
 		L423.7,223.33z M448.5,123.23l-6.9,27.8h-40l8.5-40.4h28.6c4.3,0,6.8,2.4,7.9,3.9C447.8,116.03,449.6,119.13,448.5,123.23z"
-                                                />
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <span className="ms-3 max-[1080px]:hidden text-white">
-                                        Mercato
-                                    </span>
-                                </div>
-                                {dropdownsOpen[2] && (
-                                    <ul className="pl-4">
-                                        <li>
-                                            <Link
-                                                to="/sub-item-1"
-                                                className="text-gray-100 hover:text-black"
-                                            >
-                                                Sub Item 1
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                to="/sub-item-2"
-                                                className="text-gray-100 hover:text-black"
-                                            >
-                                                Sub Item 2
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                )}
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-        </>
-    );
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <span className="ms-3 max-[1080px]:hidden text-white">
+                    Mercato
+                  </span>
+                </div>
+                {dropdownsOpen[3] && (
+                  <ul className="pl-4">
+                    <li>
+                      <Link
+                        to="/sub-item-1"
+                        className="text-gray-100 hover:text-black"
+                      >
+                        Sub Item 1
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/sub-item-2"
+                        className="text-gray-100 hover:text-black"
+                      >
+                        Sub Item 2
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </>
+  );
 };
 
 export default Sidebar;
