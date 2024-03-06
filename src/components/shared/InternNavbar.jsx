@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../store/reducers/authSlice";
 
 const InternNavbar = () => {
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
+
+  const handleLogout = () => {
+    dispatch(logout());
+  }
   return (
     <>
       <nav className="h-20 w-full text-white mb-24 bg-new_pastel_blue top-0 fixed z-[999]">
@@ -14,23 +22,23 @@ const InternNavbar = () => {
         </div>
         {/* searchbar */}
         <div className="">
-          <form class="max-w-7xl mx-auto">
-            <div class="flex">
+          <form className="max-w-7xl mx-auto">
+            <div className="flex">
               <label
-                for="search-dropdown"
-                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+               htmlFor="search-dropdown"
+                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
                 >
                 Your Email
               </label>
               <button
                 id="dropdown-button"
                 data-dropdown-toggle="dropdown"
-                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100"
+                className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100"
                 type="button"
                 >
                 All categories{" "}
                 <svg
-                  class="w-2.5 h-2.5 ms-2.5"
+                  className="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -38,25 +46,25 @@ const InternNavbar = () => {
                   >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m1 1 4 4 4-4"
                     />
                 </svg>
               </button>
               <div
                 id="dropdown"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
                 >
                 <ul
-                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdown-button"
                 >
                   <li>
                     <button
                       type="button"
-                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                      className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
                       Autore
                     </button>
@@ -64,7 +72,7 @@ const InternNavbar = () => {
                   <li>
                     <button
                       type="button"
-                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                      className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
                       Casa Editrice
                     </button>
@@ -72,7 +80,7 @@ const InternNavbar = () => {
                   <li>
                     <button
                       type="button"
-                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                      className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
                       Libro
                     </button>
@@ -80,27 +88,27 @@ const InternNavbar = () => {
                   <li>
                     <button
                       type="button"
-                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                      className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
                       >
                       Utente
                     </button>
                   </li>
                 </ul>
               </div>
-              <div class="relative w-full">
+              <div className="relative w-full">
                 <input
                   type="search"
                   id="search-dropdown"
-                  class="block p-2.5 w-[520px] z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  className="block p-2.5 w-[520px] z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Search Mockups, Logos, Design Templates..."
                   required
                   />
                 <button
                   type="submit"
-                  class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                 >
                   <svg
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -108,13 +116,13 @@ const InternNavbar = () => {
                     >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                     />
                   </svg>
-                  <span class="sr-only">Search</span>
+                  <span className="sr-only">Search</span>
                 </button>
               </div>
             </div>
@@ -122,18 +130,18 @@ const InternNavbar = () => {
         </div>
         {/* Logout */}
         <div className="">
-          <button className="flex items-center justify-center gap-4">
+          <button className="flex items-center justify-center gap-4" onClick={handleLogout}>
             <svg
               className="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               fill="#000000"
               height="800px"
               width="800px"
               version="1.1"
               id="Capa_1"
               viewBox="0 0 384.971 384.971"
-              xml:space="preserve"
+              xmlSpace="preserve"
             >
               <g>
                 <g id="Sign_Out">

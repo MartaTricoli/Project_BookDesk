@@ -31,7 +31,7 @@ const Login = ({ handleCloseLoginModal }) => {
         data: form,
       });
 
-      const data = results.data; // -> { user: { ... }, token: ... }
+      const data = results.data; 
       dispatch(login(data));
       navigate("/myprofile");
     } catch (err) {
