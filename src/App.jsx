@@ -16,6 +16,7 @@ import Wishlist from "./pages/Wishlist";
 import User from "./layout/User";
 import BusinessLandingPage from "./pages/BusinessLandingPage";
 import { useSelector } from "react-redux";
+import BookInfo from "./pages/BookInfo";
 
 const App = () => {
 
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/mybooksnotread" element={<BooksNotRead />} />
           <Route path="/myfavouritebooks" element={<FavouriteBooks />} />
           <Route path="/mywishlist" element={<Wishlist />} />
+          <Route path="/infobook" element={<BookInfo />} />
         </Route>
       </Routes>
     </>
