@@ -110,21 +110,23 @@ const BookInfo = () => {
           <p className="font-bold text-4xl pb-8">
             by <span className="text-new_pastel_blue">Scott Whitehead</span>
           </p>
-          <select
-            name=""
-            id=""
-            className="text-lg font-semibold border-2 border-black"
-            onChange={handleAddToBookshelf}
-          >
-            <option value="">Add..</option>
-            <option value="bookshelf" className="bg-new_light_blue">
-              Add to your bookshelf
-            </option>
-            <option value="whishlist" className="bg-new_light_blue">
-              Add to your whishlist
-            </option>
-          </select>
-          <div id="rating" className="flex items-center mt-20 hidden">
+          <div>
+            <select
+                name=""
+                id=""
+                className="text-lg font-semibold border-2 border-black"
+                onChange={handleAddToBookshelf}
+            >
+                <option value="add">add</option>
+                <option value="bookshelf" className="bg-new_light_blue">
+                Add to your bookshelf
+                </option>
+                <option value="whishlist" className="bg-new_light_blue">
+                Add to your whishlist
+                </option>
+            </select>
+          </div>
+          <div id="rating" className="flex items-center mt-12 hidden">
             <svg
               id="one_star"
               className="w-8 h-8 ms-3 text-gray-300"
@@ -176,7 +178,7 @@ const BookInfo = () => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
           </div>
-          <table className="text-2xl mt-20">
+          <table className="text-2xl mt-12">
             <tbody>
               <tr className="border-black border-b-2">
                 <td className="font-bold p-4">Publisher:</td>

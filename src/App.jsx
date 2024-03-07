@@ -53,7 +53,7 @@ const App = () => {
           <Route path="/mybooksnotread" element={<BooksNotRead />} />
           <Route path="/myfavouritebooks" element={<FavouriteBooks />} />
           <Route path="/mywishlist" element={<Wishlist />} />
-          <Route path="/infobook" element={<BookInfo />} />
+          <Route path="/infobook" element={<BookInfo bookCover="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg" bookTitle="The light beyond the garden wall" author="Scott Whitehead" />} />
         </Route>
       </Routes>
     </>
