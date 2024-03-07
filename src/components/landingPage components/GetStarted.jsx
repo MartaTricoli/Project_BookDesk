@@ -1,4 +1,54 @@
+import { useState } from "react";
+import { constants } from "../../constants";
+import { createNewUser } from "../../utilities/users";
+
 const GetStarted = ({handleCloseGetStartedModal}) => {
+  const [data, setData] = useState({ 
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+    _password: "",
+    birth_date: "",
+    gender: "",
+    region: ""
+  })
+
+  const handleInput = (event) => {
+    const { name, value } = event.target;
+
+    setData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (data.password !== data._password) {
+      //gestire l'errore
+      alert("le password non corrispondono");
+      return;
+    }
+
+    const { _password, ...formData } = data;
+
+    formData.birth_date = formData.birth_date.split("-").reverse().join("-");
+
+    createNewUser(formData, (error, response) => {
+      if (error) {
+        //metti a display l'errore per l'utente
+        console.log(error);
+        return;
+      }
+
+      //cosa fare se la registrazione va buon fine
+      alert("utente registrato");
+      console.log(response);
+    })
+  }
+
   return (
     <>
       <div className="relative flex  items-center justify-between bg-white p-12 max-w-[1480px] rounded-2xl ">
@@ -127,19 +177,38 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
           </svg>
         </div>
         <div className="px-4 py-4 flex-1">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="flex justify-end"></div>
             <div className="mb-5">
               <label
                htmlFor="name"
                 className="mb-3 block text-base font-medium text-new_dark_blue"
               >
-                Full Name
+                First Name
               </label>
               <input
+                required
                 type="text"
-                name="name"
-                id="name"
+                name="first_name"
+                value={data.first_name}
+                onInput={handleInput}
+                placeholder="Full Name"
+                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+            </div>
+            <div className="mb-5">
+              <label
+               htmlFor="name"
+                className="mb-3 block text-base font-medium text-new_dark_blue"
+              >
+                Last Name
+              </label>
+              <input
+                required
+                type="text"
+                name="last_name"
+                value={data.last_name}
+                onInput={handleInput}
                 placeholder="Full Name"
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
@@ -154,9 +223,11 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
                     Password
                   </label>
                   <input
+                    required
                     type="password"
                     name="password"
-                    id="password"
+                    value={data.password}
+                    onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -170,9 +241,11 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
                     Confirm Password
                   </label>
                   <input
+                    required
                     type="password"
-                    name="confirm_password"
-                    id="confirm_password"
+                    name="_password"
+                    value={data._password}
+                    onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -186,9 +259,11 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
                 Email Address
               </label>
               <input
+                required
                 type="email"
                 name="email"
-                id="email"
+                value={data.email}
+                onInput={handleInput}
                 placeholder="Enter your email"
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
@@ -203,9 +278,11 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
                     Date of Birth
                   </label>
                   <input
+                    required
                     type="date"
-                    name="date"
-                    id="date"
+                    name="birth_date"
+                    value={data.birth_date}
+                    onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -219,8 +296,10 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
                     Gender
                   </label>
                   <select
+                    required
                     name="gender"
-                    id="gender"
+                    value={data.gender}
+                    onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   >
                     <option value="">Select gender</option>
@@ -239,46 +318,20 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
               <div className="-mx-3 flex flex-wrap">
                 <div className="w-full px-3 sm:w-1/2">
                   <div className="mb-5">
-                    <input
-                      type="text"
-                      name="area"
-                      id="area"
-                      placeholder="Enter area"
+                    <select
+                      required
+                      name="region"
+                      value={data.region}
+                      onChange={handleInput}
                       className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                    />
-                  </div>
-                </div>
-                <div className="w-full px-3 sm:w-1/2">
-                  <div className="mb-5">
-                    <input
-                      type="text"
-                      name="city"
-                      id="city"
-                      placeholder="Enter city"
-                      className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                    />
-                  </div>
-                </div>
-                <div className="w-full px-3 sm:w-1/2">
-                  <div className="mb-5">
-                    <input
-                      type="text"
-                      name="state"
-                      id="state"
-                      placeholder="Enter state"
-                      className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                    />
-                  </div>
-                </div>
-                <div className="w-full px-3 sm:w-1/2">
-                  <div className="mb-5">
-                    <input
-                      type="text"
-                      name="post-code"
-                      id="post-code"
-                      placeholder="Post Code"
-                      className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                    />
+                    >
+                      <option value="">Select a region...</option>
+                      {
+                        constants.REGION_IT.map(region => (
+                          <option key={region} value={region}>{region}</option>
+                        ))
+                      }
+                    </select>
                   </div>
                 </div>
               </div>
