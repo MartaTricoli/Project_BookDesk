@@ -12,8 +12,8 @@ const InternNavbar = () => {
           </Link>
         </div>
         {/* searchbar */}
-        <div className="">
-          <form class="max-w-7xl mx-auto">
+        <div className="flex items-center">
+          <form class="max-w-7xl mx-auto flex">
             <div class="flex">
               <label
                 for="search-dropdown"
