@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../store/reducers/authSlice";
 
-const Login = ({ handleCloseLoginModal }) => {
+const BusinessLogin = ({ handleCloseLoginModal }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -267,4 +267,4 @@ const Login = ({ handleCloseLoginModal }) => {
   );
 };
 
-export default Login;
+export default BusinessLogin;

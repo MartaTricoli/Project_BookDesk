@@ -4,14 +4,14 @@ import LandingPageReviews from "../components/landingPage components/LandingPage
 import LandingPagePricing from "../components/landingPage components/LandingPagePricing";
 import LandingPageNewsLetter from "../components/landingPage components/LandingPageNewsLetter";
 import { Footer } from "../components/shared/Footer";
-import Navbar from "../components/shared/Navbar";
+import BusinessNavbar from "../components/shared/BusinessNavbar";
 
 const BusinessLandingPage = () => {
   return (
     <>
       <div className=" relative bg-white">
         <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
-          <Navbar />
+          <BusinessNavbar />
           <LandingPageHeader />
           <LandingPageKeySelling />
           <LandingPageReviews />
