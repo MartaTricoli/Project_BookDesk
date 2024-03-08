@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const BookCardLibrary = () => {
+    const navigate = useNavigate();
+
+    const showBookInfo = () => {
+        navigate("/infobook");
+    }
+
     return(
         <>
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg hover:shadow-new_pastel_blue shadow-new_pastel_blue max-w-md m-4">
                 {/* //image */}
                 <div className="mb-4 flex justify-center">
-                    <Link>
-			            <img src="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg" alt="Post Image" className="h-48 object-cover rounded-md" />
-                    </Link>
+			        <img src="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg" alt="Post Image" className="h-48 object-cover rounded-md cursor-pointer" onClick={showBookInfo} />
                     <div className="text-new_navy_blue pl-4 pt-2">
                         <Link>
                             <h3 className="font-bold">Il buio oltre la siepe,</h3>
