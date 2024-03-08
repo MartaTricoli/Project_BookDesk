@@ -16,7 +16,7 @@ const ActualBook = () => {
 
     return (
         <>
-            <div className="flex flex-row max-w-[50rem] justify-center rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div className="flex flex-row max-w-[50rem] justify-center rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                 <div className='flex flex-col justify-center center-intems'>
                     <div className="relative overflow-hidden bg-cover bg-no-repeat w-[400px]">
                         <img
@@ -29,7 +29,7 @@ const ActualBook = () => {
 
 
                 <div>
-                    <div className="mt-2 h-auto w-full bg-neutral-200 dark:bg-neutral-600 flex flex-row">
+                    <div className="mt-2 h-auto w-full bg-neutral-200 flex flex-row">
                         <input
                             type="number"
                             min="0"

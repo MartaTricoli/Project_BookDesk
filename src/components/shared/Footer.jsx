@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
+import DarkModeToggle from "./DarkmodeToggle";
 
 export const Footer = () => {
   return (
@@ -81,6 +82,9 @@ export const Footer = () => {
           <Link to="/">
             <Logo />
           </Link>
+          <div className="mt-2">
+            <DarkModeToggle/>
+          </div>
           <div className="flex items-center gap-4">
             <a href="https://it-it.facebook.com/" target="_blank">
               <svg

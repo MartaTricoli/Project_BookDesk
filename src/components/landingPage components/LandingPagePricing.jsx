@@ -5,7 +5,7 @@ const LandingPagePricing = () => {
     <>
       <section className="max-w-[1480px] relative rounded-3xl mb-24 flex flex-col items-center mt-10 mb-10 z-10">
         <div className="mb-5 mt-5">
-          <span className="font-black text-4xl text-new_dark_blue mt-10 mb-10 text-center flex flex-col justify-center items-center">
+          <span className="font-black text-4xl text-new_dark_blue dark:text-new_yellow mt-10 mb-10 text-center flex flex-col justify-center items-center">
             Here at BookDesk YOU can Unlock Your Reading Potential:
             <span>Discover Affordable Adventures in Every Page!"</span>
           </span>

@@ -1,6 +1,7 @@
 import BgGradient from "../shared/BgGradientDx";
 import { useState } from "react";
 import GetStarted from "../landingPage components/GetStarted";
+import DarkModeToggle from "../shared/DarkmodeToggle";
 
 const LandingPageHeader = () => {
   const [showModal, setShowModal] = useState(false);
@@ -13,12 +14,27 @@ const LandingPageHeader = () => {
     setShowModal(false);
   };
 
+
+  const [isLinguettaClicked, setIsLinguettaClicked] = useState(false);
+
+  const handleLinguettaClick = () => {
+    const isDarkModeEnabled = document.body.classList.contains('dark');
+
+    setIsLinguettaClicked(!isLinguettaClicked);
+    if (isDarkModeEnabled) {
+      document.body.classList.remove('dark');
+    } else {
+      document.body.classList.add('dark');
+    }
+  };
+
+
   return (
     <>
-      <header className="relative bg-white max-w-[1480px] w-full min-h-[40vh] flex flex-col justify-center gap-8 items-start p-10 rounded-3xl mb-24 mt-40">
-        <div className="w-full h-full font-extrabold text-6xl md:text-6xl [text-wrap:balance] bg-clip-text text-transparent bg-new_dark_blue z-10">
+      <header className="relative bg-white max-w-[1480px] w-full min-h-[40vh] flex flex-col justify-center gap-8 items-start p-10 rounded-3xl mb-24 mt-40 dark:bg-new_navy_blue">
+        <div className="w-full h-full font-extrabold text-6xl md:text-6xl [text-wrap:balance] bg-clip-text text-transparent bg-new_dark_blue dark:bg-new_yellow z-10">
           Trusted by the most passionate <br /> readers in:
-          <span className="ml-4 text-new_pastel_blue inline-flex flex-col h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden ">
+          <span className="ml-4 text-new_pastel_blue dark:text-white inline-flex flex-col h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden ">
             <ul className="block animate-text-slide text-left leading-relaxed [&_li]:block">
               <li>Literary Discoveries</li>
               <li>Bookworm Communities</li>
@@ -32,9 +48,9 @@ const LandingPageHeader = () => {
         <a
           onClick={handleGetStartedBtnClick}
           href="#_"
-          className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_pastel_blue rounded-full shadow-md group"
+          className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_pastel_blue dark:border-new_light_blue rounded-full shadow-md group"
         >
-          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_pastel_blue group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_pastel_blue dark:bg-new_light_blue group-hover:translate-x-0 ease">
             <svg
               className="w-8 h-8"
               fill="none"
@@ -50,7 +66,7 @@ const LandingPageHeader = () => {
               ></path>
             </svg>
           </span>
-          <span className="absolute flex items-center justify-center w-full h-full text-new_pastel_blue transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center w-full h-full text-new_pastel_blue dark:text-new_light_blue transition-all duration-300 transform group-hover:translate-x-full ease">
             Get Started
           </span>
           <span className="relative invisible">Button Text</span>
@@ -72,16 +88,25 @@ const LandingPageHeader = () => {
             transform="translate(-224.43432 -171.79265)"
             fill="#e6e6e6"
           />
-          <circle cx="454.30672" cy="125.64797" r="18.27638" fill="#FFCF3D" />
-          <path
-            d="M650.59371,329.30158V294.6722h5.38462v34.62938a7.17949,7.17949,0,1,1-5.38462,0Z"
-            transform="translate(-224.43432 -171.79265)"
-            fill="#e6e6e6"
+          <circle
+            cx="454.30672"
+            cy="125.64797"
+            r="18.27638"
+            fill={isLinguettaClicked ? '#FFFF00' : '#F3E7A7'}
+
+
           />
+          <path id="linguetta" d="M650.59371,329.30158V294.6722h5.38462v34.62938a7.17949,7.17949,0,1,1-5.38462,0Z" transform="translate(-224.43432 -171.79265)" fill="#e6e6e6"
+            onClick={handleLinguettaClick}
+            style={{ cursor: 'pointer' }}
+          >
+          </path>
           <path
+            id="linguetta"
             d="M624.56456,268.06762a30.05968,30.05968,0,0,1,30.02549-30.02549h49.60733a30.02549,30.02549,0,1,1,0,60.051H654.59005A30.05968,30.05968,0,0,1,624.56456,268.06762Z"
             transform="translate(-224.43432 -171.79265)"
             fill="#0077b5"
+
           />
           <path
             d="M554.66992,454.00457c4.98069-63.72268,30.44665-94.08347,14.14038-113.123-15.61943-18.23757-59.61664-14.47019-87.87233,3.03008-76.21224,47.20238-104.13353,235.33248-6.06016,327.24868C568.07246,758.50409,744.69459,730.52967,783.946,659.04c9.15849-16.6806,16.43412-45.92231,3.03008-63.63168-33.27833-43.96718-154.271,35.66934-208.06552-14.14038C547.03,551.749,551.93653,488.97545,554.66992,454.00457Z"

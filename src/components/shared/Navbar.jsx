@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-new_pastel_blue top-0 fixed z-[998]">
+      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-new_pastel_blue dark:bg-new_dark_blue  top-0 fixed z-[998]">
         <Link to="/">
           <Logo />
         </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="flex">
           <button
             onClick={handleLogInBtnClick}
-            className=" inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold leading-6 text-white bg-new_pastel_blue border-2 border-transparent rounded-full md:w-auto hover:bg-new_pastel_blue hover:text-new_light_blue hover:border-white focus:outline-none focus:ring-2 focus:ring-new_pastel_blue"
+            className=" inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold leading-6 text-white bg-new_pastel_blue dark:bg-new_dark_blue border-2 border-transparent rounded-full md:w-auto hover:bg-new_pastel_blue hover:text-new_light_blue hover:border-white focus:outline-none focus:ring-2 focus:ring-new_pastel_blue"
           >
             Login
           </button>
