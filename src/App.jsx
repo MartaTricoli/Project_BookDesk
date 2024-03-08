@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import { DevAtWork } from "./components/__componet/DevAtWork";
 import { BasePage } from "./pages/BasePage";
@@ -13,14 +13,32 @@ import BooksRead from "./pages/BooksRead";
 import BooksNotRead from "./pages/BooksNotRead";
 import FavouriteBooks from "./pages/FavouriteBooks";
 import Wishlist from "./pages/Wishlist";
+import User from "./layout/User";
+import BusinessLandingPage from "./pages/BusinessLandingPage";
+import { useSelector } from "react-redux";
 
 const App = () => {
+
+  const ProtectedRoute = ({ children, identity }) => {
+    const auth = useSelector((state) => state.auth);
+  
+    if (auth.token === null || auth.identity !== identity) {
+      return <Navigate to="/" />;
+    }
+  
+    return children;
+  };
+
   return (
     <>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-
-        <Route path="/" element={<BasePage />}>
+        <Route path="/business" element={<BusinessLandingPage />} />
+        <Route path="/" element={
+          <ProtectedRoute identity="user">
+            <BasePage />
+          </ProtectedRoute>}
+        >
           <Route path="/devatwork" element={<DevAtWork />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/myprofile" element={<MySelf />} />

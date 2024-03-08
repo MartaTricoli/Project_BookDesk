@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Logo from "./Logo";
-import GetStarted from "../landingPage components/GetStarted";
-import Login from "../landingPage components/Login";
 import { Link } from "react-router-dom";
+import BusinessLogin from "../landingPage components/BusinessLogin";
+import BusinessGetStarted from "../landingPage components/BusinessGetStarted";
 
-const Navbar = () => {
+const BusinessNavbar = () => {
   const [showGetStartedModal, setShowGetStartedModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
 
@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-new_pastel_blue top-0 fixed z-[998]">
+      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-new_red top-0 fixed z-[998]">
         <Link to="/">
           <Logo />
         </Link>
@@ -47,9 +47,7 @@ const Navbar = () => {
             Contact
           </a>
           <div className="hover:text-new_light_blue" href="#">
-            <Link to="business">
-              Business
-            </Link>
+            <Link to="/">User</Link>
           </div>
         </div>
         <div className="flex">
@@ -61,7 +59,7 @@ const Navbar = () => {
           </button>
           {showLoginModal && (
             <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]">
-              <Login handleCloseLoginModal={handleCloseLoginModal} />
+              <BusinessLogin handleCloseLoginModal={handleCloseLoginModal} />
             </div>
           )}
           <a
@@ -92,7 +90,7 @@ const Navbar = () => {
           </a>
           {showGetStartedModal && (
             <div className="absolute top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]">
-              <GetStarted
+              <BusinessGetStarted
                 handleCloseGetStartedModal={handleCloseGetStartedModal}
               />
             </div>
@@ -103,4 +101,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default BusinessNavbar;

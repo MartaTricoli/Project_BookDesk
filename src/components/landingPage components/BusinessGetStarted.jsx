@@ -2,8 +2,8 @@ import { useState } from "react";
 import { constants } from "../../constants";
 import { createNewUser } from "../../utilities/users";
 
-const GetStarted = ({handleCloseGetStartedModal}) => {
-  const [data, setData] = useState({ 
+const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
+  const [data, setData] = useState({
     first_name: "",
     last_name: "",
     email: "",
@@ -11,17 +11,17 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
     _password: "",
     birth_date: "",
     gender: "",
-    region: ""
-  })
+    region: "",
+  });
 
   const handleInput = (event) => {
     const { name, value } = event.target;
 
     setData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,13 +46,16 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
       //cosa fare se la registrazione va buon fine
       alert("utente registrato");
       console.log(response);
-    })
-  }
+    });
+  };
 
   return (
     <>
       <div className="relative flex  items-center justify-between bg-white p-12 max-w-[1480px] rounded-2xl ">
-        <button className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10" onClick={handleCloseGetStartedModal} >
+        <button
+          className="absolute w-4 h-4 text-black font-bold bg-transparent top-10 right-10"
+          onClick={handleCloseGetStartedModal}
+        >
           X
         </button>
         <div className="px-4 py-4 flex-initial">
@@ -177,91 +180,61 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
           </svg>
         </div>
         <div className="px-4 py-4 flex-1">
+          {/* FIXME */}
           <form onSubmit={handleSubmit}>
-            <div className="flex justify-end"></div>
-            <div className="mb-5">
-              <label
-               htmlFor="name"
-                className="mb-3 block text-base font-medium text-new_dark_blue"
-              >
-                First Name
-              </label>
-              <input
-                required
-                type="text"
-                name="first_name"
-                value={data.first_name}
-                onInput={handleInput}
-                placeholder="Full Name"
-                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              />
-            </div>
-            <div className="mb-5">
-              <label
-               htmlFor="name"
-                className="mb-3 block text-base font-medium text-new_dark_blue"
-              >
-                Last Name
-              </label>
-              <input
-                required
-                type="text"
-                name="last_name"
-                value={data.last_name}
-                onInput={handleInput}
-                placeholder="Full Name"
-                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              />
-            </div>
+            <label className="mb-5 block text-base font-semibold text-new_dark_blue sm:text-xl">
+              Owner Info:
+            </label>
             <div className="-mx-3 flex flex-wrap">
-              <div className="w-full px-3 sm:w-1/2">
-                <div className="mb-5">
-                  <label
-                   htmlFor="date"
-                    className="mb-3 block text-base font-medium text-new_dark_blue"
-                  >
-                    Password
-                  </label>
-                  <input
-                    required
-                    type="password"
-                    name="password"
-                    value={data.password}
-                    onInput={handleInput}
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  />
-                </div>
+              <div className="mb-5 w-full px-3 sm:w-1/2">
+                <label
+                  htmlFor="name"
+                  className="mb-3 block text-base font-medium text-new_dark_blue"
+                >
+                  Owner First Name
+                </label>
+                <input
+                  required
+                  type="text"
+                  name="first_name"
+                  /* FIXME */
+                  value={data.first_name}
+                  onInput={handleInput}
+                  placeholder="First Name"
+                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
               </div>
-              <div className="w-full px-3 sm:w-1/2">
-                <div className="mb-5">
-                  <label
-                   htmlFor="time"
-                    className="mb-3 block text-base font-medium text-new_dark_blue"
-                  >
-                    Confirm Password
-                  </label>
-                  <input
-                    required
-                    type="password"
-                    name="_password"
-                    value={data._password}
-                    onInput={handleInput}
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  />
-                </div>
+              <div className="mb-5 w-full px-3 sm:w-1/2">
+                <label
+                  htmlFor="name"
+                  className="mb-3 block text-base font-medium text-new_dark_blue"
+                >
+                  Owner Last Name
+                </label>
+                <input
+                  required
+                  type="text"
+                  name="last_name"
+                  /* FIXME */
+                  value={data.last_name}
+                  onInput={handleInput}
+                  placeholder="Lst Name"
+                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
               </div>
             </div>
             <div className="mb-5">
               <label
-               htmlFor="email"
+                htmlFor="email"
                 className="mb-3 block text-base font-medium text-new_dark_blue"
               >
-                Email Address
+                Business Email Address
               </label>
               <input
                 required
                 type="email"
                 name="email"
+                /* FIXME */
                 value={data.email}
                 onInput={handleInput}
                 placeholder="Enter your email"
@@ -272,16 +245,17 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                   htmlFor="date"
+                    htmlFor="date"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
-                    Date of Birth
+                    Password
                   </label>
                   <input
                     required
-                    type="date"
-                    name="birth_date"
-                    value={data.birth_date}
+                    type="password"
+                    name="password"
+                    /* FIXME */
+                    value={data.password}
                     onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
@@ -290,49 +264,128 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                   htmlFor="time"
+                    htmlFor="time"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
-                    Gender
+                    Confirm Password
                   </label>
-                  <select
+                  <input
                     required
-                    name="gender"
-                    value={data.gender}
+                    type="password"
+                    name="_password"
+                    /* FIXME */
+                    value={data._password}
                     onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  >
-                    <option value="">Select gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="nd">Non-binary</option>
-                  </select>
+                  />
                 </div>
               </div>
             </div>
-
-            <div className="mb-5 pt-3">
-              <label className="mb-5 block text-base font-semibold text-new_dark_blue sm:text-xl">
-                Address Details
+            <label className="mb-5 block text-base font-semibold text-new_dark_blue sm:text-xl">
+              Company Info:
+            </label>
+            <div className="-mx-3 flex flex-wrap">
+              <div className="w-full px-3 sm:w-1/2">
+                <div className="mb-5">
+                  <label
+                    htmlFor="name"
+                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                  >
+                    Business Name
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    name="first_name"
+                    /* FIXME */
+                    value={data.first_name}
+                    onInput={handleInput}
+                    placeholder="Full Name"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  />
+                </div>
+              </div>
+              <div className="w-full px-3 sm:w-1/2">
+                <label
+                  htmlFor="Iva"
+                  className="mb-3 block text-base font-medium text-new_dark_blue"
+                >
+                  Business P-Iva
+                </label>
+                <input
+                  required
+                  type="text"
+                  name="Iva"
+                  /* FIXME */
+                  value={data.last_name}
+                  onInput={handleInput}
+                  placeholder="Partita Iva"
+                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+            </div>
+            <div className="mb-5">
+              <label
+                htmlFor="email"
+                className="mb-3 block text-base font-medium text-new_dark_blue"
+              >
+                Business Address
               </label>
+              <input
+                required
+                type="email"
+                name="email"
+                /* FIXME */
+                value={data.email}
+                onInput={handleInput}
+                placeholder="Enter your email"
+                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+            </div>
+            <div className="mb-5 pt-3">
               <div className="-mx-3 flex flex-wrap">
                 <div className="w-full px-3 sm:w-1/2">
+                  <label
+                    htmlFor="city"
+                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                  >
+                    Business City
+                  </label>
                   <div className="mb-5">
                     <select
                       required
-                      name="region"
+                      name="city"
+                      /* FIXME */
                       value={data.region}
                       onChange={handleInput}
                       className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     >
-                      <option value="">Select a region...</option>
-                      {
-                        constants.REGION_IT.map(region => (
-                          <option key={region} value={region}>{region}</option>
-                        ))
-                      }
+                      <option value="">Select a City...</option>
+                      {constants.CITY_IT.map((city) => (
+                        <option key={city} value={city}>
+                          {city}
+                        </option>
+                      ))}
                     </select>
                   </div>
+                </div>
+                <div className="mb-5 w-full px-3 sm:w-1/2">
+                  <label
+                    htmlFor="cap"
+                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                  >
+                    Cap
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    name="Cap"
+                    /* FIXME */
+                    value={data.last_name}
+                    onInput={handleInput}
+                    placeholder="Cap"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  />
                 </div>
               </div>
             </div>
@@ -349,4 +402,4 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
   );
 };
 
-export default GetStarted;
+export default BusinessGetStarted;
