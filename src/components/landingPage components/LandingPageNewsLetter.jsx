@@ -1,7 +1,7 @@
 const LandingPageNewsLetter = () => {
   return (
     <>
-      <section className="top-0 left-0 right-0 bg-gradient-to-t from-new_navy_blue dark:from-new_dark_blue to-transparent">
+      <section className="top-0 left-0 right-0 bg-gradient-to-t from-new_navy_blue to-transparent">
         <div className="py-8 px-4 mx-auto w-1480 lg:py-16 lg:px-6 ">
           <div className="mx-auto max-w-screen-md sm:text-center">
             <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-new_navy_blue dark:text-new_yellow z-20">
