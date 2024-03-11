@@ -3,11 +3,11 @@ const LandingPageNewsLetter = () => {
     <>
       <section className="top-0 left-0 right-0 bg-gradient-to-t from-new_navy_blue to-transparent">
         <div className="py-8 px-4 mx-auto w-1480 lg:py-16 lg:px-6 ">
-          <div className="mx-auto max-w-screen-md sm:text-center">
-            <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-new_navy_blue dark:text-new_yellow z-20">
+          <div className="mx-auto max-w-screen-md text-center">
+            <h2 className="mb-4 text-2xl sm:text-4xl tracking-tight font-extrabold text-new_navy_blue dark:text-new_yellow z-20">
               Sign up for our newsletter
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl font-normal text-new_navy_blue dark:text-new_light_blue md:mb-12 sm:text-xl dark:text-gray-400">
+            <p className="mx-auto mb-8 max-w-2xl font-normal text-new_navy_blue dark:text-new_light_blue md:mb-12 text-md sm:text-xl dark:text-gray-400">
               Stay up to date with the roadmap progress, announcements and
               exclusive discounts feel free to sign up with your email.
             </p>

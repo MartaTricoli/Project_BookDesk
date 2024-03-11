@@ -5,14 +5,14 @@ const LandingPagePricing = () => {
     <>
       <section className="max-w-[1480px] relative rounded-3xl mb-24 flex flex-col items-center mt-10 mb-10 z-10">
         <div className="mb-5 mt-5">
-          <span className="font-black text-4xl text-new_dark_blue dark:text-new_yellow mt-10 mb-10 text-center flex flex-col justify-center items-center">
+          <span className="text-xl sm:text-2xl md:text-4xl font-extrabold sm:font-black text-new_dark_blue dark:text-new_yellow mt-10 mb-10 text-center flex flex-col justify-center items-center">
             Here at BookDesk YOU can Unlock Your Reading Potential:
             <span>Discover Affordable Adventures in Every Page!"</span>
           </span>
         </div>
         <div className="mt-5 mb-5 flex justify-between gap-10">
           {/* Fisrt Card */}
-          <div className="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800 hover:shadow-shadowCardPricing">
+          <div className="sm:w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800 hover:shadow-shadowCardPricing">
             <p className="mb-4 text-xl font-medium text-new_pastel_blue dark:text-gray-50">
               Entreprise
             </p>
@@ -129,7 +129,7 @@ const LandingPagePricing = () => {
             </button>
           </div>
           {/* Second Card */}
-          <div className="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800 hover:shadow-shadowCardPricing">
+          <div className="sm:w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800 hover:shadow-shadowCardPricing">
             <p className="mb-4 text-xl font-medium text-new_pastel_blue dark:text-gray-50">
               Entreprise
             </p>
@@ -246,7 +246,7 @@ const LandingPagePricing = () => {
             </button>
           </div>
           {/* Third Card */}
-          <div className="w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800 hover:shadow-shadowCardPricing">
+          <div className="sm:w-64 p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800 hover:shadow-shadowCardPricing">
             <p className="mb-4 text-xl font-medium text-new_pastel_blue dark:text-gray-50">
               Entreprise
             </p>

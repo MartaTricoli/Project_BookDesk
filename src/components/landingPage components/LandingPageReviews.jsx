@@ -8,7 +8,7 @@ const LandingPageReviews = () => {
         className="relative w-full flex flex-col justify-center items-center mb-10 mt-10 z-10 dark:bg-new_navy_blue"
       >
         <div className="container w-full flex justify-center items-center ">
-          <h3 className="font-black text-4xl text-new_dark_blue dark:text-new_yellow mt-10 mb-10">
+          <h3 className="font-black text-3xl sm:text-4xl text-new_dark_blue dark:text-new_yellow mt-10 mb-10">
             WHY DO OUR USERS CHOOSE US
           </h3>
         </div>
@@ -1315,7 +1315,7 @@ const LandingPageReviews = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          className="rotate-[10deg] absolute w-[480px] h-auto right-60 -bottom-52"
+          className="rotate-[10deg] absolute sm:w-[480px] w-[400px] h-auto sm:right-60 right-0 sm:-bottom-52 -bottom-44"
           data-name="Layer 1"
           viewBox="0 0 895.01001 602.68057"
         >
