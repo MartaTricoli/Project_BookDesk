@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/reducers/authSlice";
+import DarkModeToggle from "./DarkmodeToggle";
 
 const InternNavbar = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const InternNavbar = () => {
   };
   return (
     <>
-      <nav className="h-20 w-full px-8 flex items-center justify-between items-center text-white mb-24 bg-new_pastel_blue top-0 fixed z-[999]">
+      <nav className="h-20 w-full px-8 flex items-center justify-between items-center text-white mb-24 bg-new_pastel_blue dark:bg-new_dark_blue top-0 fixed z-[999]">
         {/* logo */}
         <div className="">
           <Link to="/">
@@ -58,8 +59,9 @@ const InternNavbar = () => {
               Logout
             </button>
           </div>
-          <div className="max-w-lg w-full"></div>
-        
+        <div className="">
+          <DarkModeToggle/>
+        </div>
       </nav>
     </>
   );

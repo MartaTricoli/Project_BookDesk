@@ -53,7 +53,7 @@ const BusinessNavbar = () => {
         <div className="flex">
           <button
             onClick={handleLogInBtnClick}
-            className=" inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold leading-6 text-white bg-new_pastel_blue border-2 border-transparent rounded-full md:w-auto hover:bg-new_pastel_blue hover:text-new_light_blue hover:border-white focus:outline-none focus:ring-2 focus:ring-new_pastel_blue"
+            className=" inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold leading-6 text-white bg-new_red border-2 border-transparent rounded-full md:w-auto hover:bg-new_red hover:text-new_light_blue hover:border-white focus:outline-none focus:ring-2 focus:ring-new_red"
           >
             Login
           </button>
