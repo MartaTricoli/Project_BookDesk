@@ -9,7 +9,7 @@ import BusinessNavbar from "../components/shared/BusinessNavbar";
 const BusinessLandingPage = () => {
   return (
     <>
-      <div className=" relative bg-white">
+      <div className=" relative bg-white dark:bg-new_navy_blue">
         <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
           <BusinessNavbar />
           <LandingPageHeader />
