@@ -14,20 +14,18 @@ const LandingPageHeader = () => {
     setShowModal(false);
   };
 
-
   const [isLinguettaClicked, setIsLinguettaClicked] = useState(false);
 
   const handleLinguettaClick = () => {
-    const isDarkModeEnabled = document.body.classList.contains('dark');
+    const isDarkModeEnabled = document.body.classList.contains("dark");
 
     setIsLinguettaClicked(!isLinguettaClicked);
     if (isDarkModeEnabled) {
-      document.body.classList.remove('dark');
+      document.body.classList.remove("dark");
     } else {
-      document.body.classList.add('dark');
+      document.body.classList.add("dark");
     }
   };
-
 
   return (
     <>
@@ -92,21 +90,21 @@ const LandingPageHeader = () => {
             cx="454.30672"
             cy="125.64797"
             r="18.27638"
-            fill={isLinguettaClicked ? '#FFFF00' : '#F3E7A7'}
-
-
+            fill={isLinguettaClicked ? "#FFFF00" : "#F3E7A7"}
           />
-          <path id="linguetta" d="M650.59371,329.30158V294.6722h5.38462v34.62938a7.17949,7.17949,0,1,1-5.38462,0Z" transform="translate(-224.43432 -171.79265)" fill="#e6e6e6"
+          <path
+            id="linguetta"
+            d="M650.59371,329.30158V294.6722h5.38462v34.62938a7.17949,7.17949,0,1,1-5.38462,0Z"
+            transform="translate(-224.43432 -171.79265)"
+            fill="#e6e6e6"
             onClick={handleLinguettaClick}
-            style={{ cursor: 'pointer' }}
-          >
-          </path>
+            style={{ cursor: "pointer" }}
+          ></path>
           <path
             id="linguetta"
             d="M624.56456,268.06762a30.05968,30.05968,0,0,1,30.02549-30.02549h49.60733a30.02549,30.02549,0,1,1,0,60.051H654.59005A30.05968,30.05968,0,0,1,624.56456,268.06762Z"
             transform="translate(-224.43432 -171.79265)"
             fill="#0077b5"
-
           />
           <path
             d="M554.66992,454.00457c4.98069-63.72268,30.44665-94.08347,14.14038-113.123-15.61943-18.23757-59.61664-14.47019-87.87233,3.03008-76.21224,47.20238-104.13353,235.33248-6.06016,327.24868C568.07246,758.50409,744.69459,730.52967,783.946,659.04c9.15849-16.6806,16.43412-45.92231,3.03008-63.63168-33.27833-43.96718-154.271,35.66934-208.06552-14.14038C547.03,551.749,551.93653,488.97545,554.66992,454.00457Z"
