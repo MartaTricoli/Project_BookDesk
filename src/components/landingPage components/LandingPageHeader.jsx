@@ -31,11 +31,11 @@ const LandingPageHeader = () => {
 
   return (
     <>
-      <header className="relative bg-white max-w-[1480px] w-full min-h-[40vh] flex flex-col justify-center gap-8 items-start p-10 rounded-3xl mb-24 mt-40 dark:bg-new_navy_blue">
-        <div className="w-full h-full font-extrabold text-6xl md:text-6xl [text-wrap:balance] bg-clip-text text-transparent bg-new_dark_blue dark:bg-new_yellow z-10">
+      <header className="relative bg-white sm:w-full max-w-[1480px] w-full min-h-[40vh] flex flex-col justify-center gap-8 items-start p-10 rounded-3xl mb-12 sm:mb-24 mt-20 sm:mt-40 dark:bg-new_navy_blue">
+        <div className="w-full h-full font-extrabold text-3xl sm:text-6xl [text-wrap:balance] bg-clip-text text-transparent bg-new_dark_blue dark:bg-new_yellow z-10">
           Trusted by the most passionate <br /> readers in:
-          <span className="ml-4 text-new_pastel_blue dark:text-white inline-flex flex-col h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden ">
-            <ul className="block animate-text-slide text-left leading-relaxed [&_li]:block">
+          <span className="ml-4 text-new_pastel_blue dark:text-white inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.normal))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden">
+            <ul className="block animate-text-slide text-left leading-normal sm:leading-relaxed [&_li]:block">
               <li>Literary Discoveries</li>
               <li>Bookworm Communities</li>
               <li>Book Marketplace</li>
@@ -48,9 +48,9 @@ const LandingPageHeader = () => {
         <a
           onClick={handleGetStartedBtnClick}
           href="#_"
-          className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_pastel_blue dark:border-new_light_blue rounded-full shadow-md group"
+          className="relative inline-flex sm:w-[200px] w-[180px] items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_pastel_blue dark:border-new_light_blue rounded-full shadow-md group"
         >
-          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-new_pastel_blue dark:bg-new_light_blue group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center sm:w-full h-full text-white duration-300 -translate-x-full bg-new_pastel_blue dark:bg-new_light_blue group-hover:translate-x-0 ease">
             <svg
               className="w-8 h-8"
               fill="none"
@@ -66,13 +66,13 @@ const LandingPageHeader = () => {
               ></path>
             </svg>
           </span>
-          <span className="absolute flex items-center justify-center w-full h-full text-new_pastel_blue dark:text-new_light_blue transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center sm:text-2xl text-xl h-full text-new_pastel_blue dark:text-new_light_blue transition-all duration-300 transform group-hover:translate-x-full ease">
             Get Started
           </span>
-          <span className="relative invisible">Button Text</span>
+          <span className="relative invisible">Get Started</span>
         </a>
         <svg
-          className="absolute scale-x-[-1] -right-48 w-[600px] top-14 h-auto z-10"
+          className="w-80 absolute scale-x-[-1] sm:-right-48 -right-12 sm:w-[600px] sm:top-14 top-48 h-auto z-10"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           data-name="Layer 1"
@@ -228,7 +228,7 @@ const LandingPageHeader = () => {
           </div>
         )}
       </header>
-      <BgGradient />
+        <BgGradient />
     </>
   );
 };
