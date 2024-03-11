@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="h-20 w-full py-10 px-16 flex items-center justify-between border-b-2 border-solid text-white mb-24 bg-new_pastel_blue dark:bg-new_dark_blue  top-0 fixed z-[998]">
+      <nav className="h-20 w-full py-10 px-16 flex w-screen items-center justify-between border-b-2 border-solid text-white mb-8 sm:mb-24 bg-new_pastel_blue dark:bg-new_dark_blue  top-0 fixed z-[998]">
         <Link to="/">
           <Logo />
         </Link>
@@ -47,9 +47,7 @@ const Navbar = () => {
             Contact
           </a>
           <div className="hover:text-new_light_blue" href="#">
-            <Link to="business">
-              Business
-            </Link>
+            <Link to="business">Business</Link>
           </div>
         </div>
         <div className="flex">
