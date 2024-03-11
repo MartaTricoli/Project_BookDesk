@@ -5,6 +5,7 @@ import LandingPagePricing from "../components/landingPage components/LandingPage
 import LandingPageNewsLetter from "../components/landingPage components/LandingPageNewsLetter";
 import { Footer } from "../components/shared/Footer";
 import Navbar from "../components/shared/Navbar";
+import LowerNavbar from "../components/landingPage components/LowerNavbar";
 
 const LandingPage = () => {
   return (
@@ -16,12 +17,13 @@ const LandingPage = () => {
           <LandingPageKeySelling />
           <LandingPageReviews />
           <LandingPagePricing />
+          <LowerNavbar />
         </div>
         <LandingPageNewsLetter />
-        <div className=" absolute inset-0 flex justify-between h-full bg-new_navy_blue opacity-50 z-[-1]">
+        {/* <div className=" absolute inset-0 flex justify-between h-full bg-new_navy_blue opacity-50 z-[-1]">
           <div className=" w-3/12 border-r border-dashed border-black"></div>
           <div className="w-3/12 border-l border-dashed border-black"></div>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>

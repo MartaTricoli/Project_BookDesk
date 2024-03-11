@@ -90,7 +90,7 @@ const LandingPageHeader = () => {
             cx="454.30672"
             cy="125.64797"
             r="18.27638"
-            fill={isLinguettaClicked ? "#FFFF00" : "#F3E7A7"}
+            fill={isLinguettaClicked ? "#FFFF00" : "#cccccc"}
           />
           <path
             id="linguetta"

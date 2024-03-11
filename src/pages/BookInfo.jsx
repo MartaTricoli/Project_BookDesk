@@ -97,18 +97,18 @@ const BookInfo = () => {
 
   return (
     <>
-      <div className="pt-28 pl-52 flex">
+      <div className="pt-28 pl-52 flex dark:bg-new_navy_blue">
         <img
           src="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg"
           alt="book cover"
           className="pb-8 h-[850px]"
         />
         <div className="pl-10">
-          <h3 className="font-bold text-5xl py-12">
+          <h3 className="font-bold text-5xl py-12 dark:text-white">
             The light beyond the garden wall
           </h3>
-          <p className="font-bold text-4xl pb-8">
-            by <span className="text-new_pastel_blue">Scott Whitehead</span>
+          <p className="font-bold text-4xl pb-8 dark:text-white">
+            by <span className="text-new_pastel_blue dark:text-new_yellow">Scott Whitehead</span>
           </p>
           <div>
             <select
@@ -181,30 +181,30 @@ const BookInfo = () => {
           <table className="text-2xl mt-12">
             <tbody>
               <tr className="border-black border-b-2">
-                <td className="font-bold p-4">Publisher:</td>
-                <td className="p-4">Lion Throne Press</td>
+                <td className="font-bold p-4 dark:text-white">Publisher:</td>
+                <td className="p-4 dark:text-new_yellow">Lion Throne Press</td>
               </tr>
               <tr className="border-black border-b-2">
-                <td className="font-bold p-4">Genre:</td>
-                <td className="p-4">Narrative</td>
+                <td className="font-bold p-4 dark:text-white">Genre:</td>
+                <td className="p-4 dark:text-new_yellow">Narrative</td>
               </tr>
               <tr className="border-black border-b-2">
-                <td className="font-bold p-4">ISBN:</td>
-                <td className="p-4">0578489783</td>
+                <td className="font-bold p-4 dark:text-white">ISBN:</td>
+                <td className="p-4 dark:text-new_yellow">0578489783</td>
               </tr>
               <tr className="border-black border-b-2">
-                <td className="font-bold p-4">Language:</td>
-                <td className="p-4">English</td>
+                <td className="font-bold p-4 dark:text-white">Language:</td>
+                <td className="p-4 dark:text-new_yellow">English</td>
               </tr>
               <tr className="border-black border-b-2">
-                <td className="font-bold p-4">Pages:</td>
-                <td className="p-4">176</td>
+                <td className="font-bold p-4 dark:text-white">Pages:</td>
+                <td className="p-4 dark:text-new_yellow">176</td>
               </tr>
               <tr className="border-black border-b-2">
-                <td className="font-bold pr-20 p-4">
+                <td className="font-bold pr-20 p-4 dark:text-white">
                   Firsth pubblication year:
                 </td>
-                <td className="p-4">2019</td>
+                <td className="p-4 dark:text-new_yellow">2019</td>
               </tr>
             </tbody>
           </table>

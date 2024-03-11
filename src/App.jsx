@@ -18,6 +18,8 @@ import User from "./layout/User";
 import BusinessLandingPage from "./pages/BusinessLandingPage";
 import { useSelector } from "react-redux";
 import BookInfo from "./pages/BookInfo";
+import Pokedex2 from "./components/shared/BookSearchEMilio";
+import BookSearchEMilio from "./components/shared/BookSearchEMilio";
 
 const App = () => {
 
@@ -43,7 +45,7 @@ const App = () => {
           </ProtectedRoute>}
         >
           <Route path="/devatwork" element={<DevAtWork />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop" element={<BookSearchEMilio />} />
           <Route path="/myprofile" element={<MySelf />} />
           <Route path="/feed" element={<Feed />}>
             <Route path="/feed/follow" element={<Follow />} />

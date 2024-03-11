@@ -5,7 +5,7 @@ const StatsPage = () => {
 
 
     return (
-        <div className="flex flex-col items-center mt-32 ">
+        <div className="flex flex-col items-center mt-32 dark:bg-new_navy_blue">
             libri quest anno
             <Torta />
             libri ne gli anni
