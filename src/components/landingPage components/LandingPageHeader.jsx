@@ -14,28 +14,26 @@ const LandingPageHeader = () => {
     setShowModal(false);
   };
 
-
   const [isLinguettaClicked, setIsLinguettaClicked] = useState(false);
 
   const handleLinguettaClick = () => {
-    const isDarkModeEnabled = document.body.classList.contains('dark');
+    const isDarkModeEnabled = document.body.classList.contains("dark");
 
     setIsLinguettaClicked(!isLinguettaClicked);
     if (isDarkModeEnabled) {
-      document.body.classList.remove('dark');
+      document.body.classList.remove("dark");
     } else {
-      document.body.classList.add('dark');
+      document.body.classList.add("dark");
     }
   };
 
-
   return (
     <>
-      <header className="relative bg-white max-w-[1480px] w-full min-h-[40vh] flex flex-col justify-center gap-8 items-start p-10 rounded-3xl mb-24 mt-40 dark:bg-new_navy_blue">
-        <div className="w-full h-full font-extrabold text-6xl md:text-6xl [text-wrap:balance] bg-clip-text text-transparent bg-new_dark_blue dark:bg-new_yellow z-10">
+      <header className="relative bg-white max-w-[1480px] w-full min-h-[40vh] flex flex-col justify-center gap-8 items-start p-10 rounded-3xl mb:12 sm:mb-24 mt-16 sm:mt-40 dark:bg-new_navy_blue">
+        <div className="w-full h-full font-extrabold sm:text-6xl text-3xl [text-wrap:balance] bg-clip-text text-transparent bg-new_dark_blue dark:bg-new_yellow z-10">
           Trusted by the most passionate <br /> readers in:
-          <span className="ml-4 text-new_pastel_blue dark:text-white inline-flex flex-col h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden ">
-            <ul className="block animate-text-slide text-left leading-relaxed [&_li]:block">
+          <span className="ml-4 text-new_pastel_blue dark:text-white inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.snug))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden ">
+            <ul className="block animate-text-slide text-left leading-snug sm:relaxed [&_li]:block">
               <li>Literary Discoveries</li>
               <li>Bookworm Communities</li>
               <li>Book Marketplace</li>
@@ -72,7 +70,7 @@ const LandingPageHeader = () => {
           <span className="relative invisible">Button Text</span>
         </a>
         <svg
-          className="absolute scale-x-[-1] -right-48 w-[600px] top-14 h-auto z-10"
+          className="absolute scale-x-[-1] -right-48 w-[600px] top-14 h-auto z-10 sm:block hidden"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           data-name="Layer 1"
@@ -92,21 +90,21 @@ const LandingPageHeader = () => {
             cx="454.30672"
             cy="125.64797"
             r="18.27638"
-            fill={isLinguettaClicked ? '#FFFF00' : '#F3E7A7'}
-
-
+            fill={isLinguettaClicked ? "#FFFF00" : "#F3E7A7"}
           />
-          <path id="linguetta" d="M650.59371,329.30158V294.6722h5.38462v34.62938a7.17949,7.17949,0,1,1-5.38462,0Z" transform="translate(-224.43432 -171.79265)" fill="#e6e6e6"
+          <path
+            id="linguetta"
+            d="M650.59371,329.30158V294.6722h5.38462v34.62938a7.17949,7.17949,0,1,1-5.38462,0Z"
+            transform="translate(-224.43432 -171.79265)"
+            fill="#e6e6e6"
             onClick={handleLinguettaClick}
-            style={{ cursor: 'pointer' }}
-          >
-          </path>
+            style={{ cursor: "pointer" }}
+          ></path>
           <path
             id="linguetta"
             d="M624.56456,268.06762a30.05968,30.05968,0,0,1,30.02549-30.02549h49.60733a30.02549,30.02549,0,1,1,0,60.051H654.59005A30.05968,30.05968,0,0,1,624.56456,268.06762Z"
             transform="translate(-224.43432 -171.79265)"
             fill="#0077b5"
-
           />
           <path
             d="M554.66992,454.00457c4.98069-63.72268,30.44665-94.08347,14.14038-113.123-15.61943-18.23757-59.61664-14.47019-87.87233,3.03008-76.21224,47.20238-104.13353,235.33248-6.06016,327.24868C568.07246,758.50409,744.69459,730.52967,783.946,659.04c9.15849-16.6806,16.43412-45.92231,3.03008-63.63168-33.27833-43.96718-154.271,35.66934-208.06552-14.14038C547.03,551.749,551.93653,488.97545,554.66992,454.00457Z"
