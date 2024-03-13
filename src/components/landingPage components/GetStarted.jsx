@@ -28,7 +28,7 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
 
     if (data.password !== data._password) {
       //gestire l'errore
-      alert("le password non corrispondono");
+      alert("passwords do not match");
       return;
     }
 
@@ -44,7 +44,7 @@ const GetStarted = ({handleCloseGetStartedModal}) => {
       }
 
       //cosa fare se la registrazione va buon fine
-      alert("utente registrato");
+      alert("user registration completed");
       console.log(response);
     })
   }

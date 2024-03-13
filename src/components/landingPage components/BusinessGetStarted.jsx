@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { constants } from "../../constants";
-import { createNewUser } from "../../utilities/users";
+import { createNewPublisher } from "../../utilities/publisher";
 
 const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
   const [data, setData] = useState({
-    first_name: "",
-    last_name: "",
+    name: "",
     email: "",
     password: "",
     _password: "",
-    birth_date: "",
-    gender: "",
-    region: "",
+    business_info: {
+      business_name: "",
+      city: "",
+      p_iva: "",
+      address: "",
+      cap: ""
+    }
   });
 
   const handleInput = (event) => {
@@ -28,15 +31,13 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
 
     if (data.password !== data._password) {
       //gestire l'errore
-      alert("le password non corrispondono");
+      alert("passwords do not match");
       return;
     }
 
     const { _password, ...formData } = data;
 
-    formData.birth_date = formData.birth_date.split("-").reverse().join("-");
-
-    createNewUser(formData, (error, response) => {
+    createNewPublisher(formData, (error, response) => {
       if (error) {
         //metti a display l'errore per l'utente
         console.log(error);
@@ -44,7 +45,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
       }
 
       //cosa fare se la registrazione va buon fine
-      alert("utente registrato");
+      alert("publisher registration completed");
       console.log(response);
     });
   };
@@ -180,7 +181,6 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
           </svg>
         </div>
         <div className="px-4 py-4 flex-1">
-          {/* FIXME */}
           <form onSubmit={handleSubmit}>
             <label className="mb-5 block text-base font-semibold text-new_dark_blue sm:text-xl">
               Owner Info:
@@ -191,35 +191,16 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                   htmlFor="name"
                   className="mb-3 block text-base font-medium text-new_dark_blue"
                 >
-                  Owner First Name
+                  Name
                 </label>
                 <input
                   required
                   type="text"
-                  name="first_name"
-                  /* FIXME */
-                  value={data.first_name}
+                  name="name"
+                  value={data.name}
                   onInput={handleInput}
-                  placeholder="First Name"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                />
-              </div>
-              <div className="mb-5 w-full px-3 sm:w-1/2">
-                <label
-                  htmlFor="name"
-                  className="mb-3 block text-base font-medium text-new_dark_blue"
-                >
-                  Owner Last Name
-                </label>
-                <input
-                  required
-                  type="text"
-                  name="last_name"
-                  /* FIXME */
-                  value={data.last_name}
-                  onInput={handleInput}
-                  placeholder="Lst Name"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  placeholder="Name"
+                  className="w-[550px] rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                 />
               </div>
             </div>
@@ -234,7 +215,6 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 required
                 type="email"
                 name="email"
-                /* FIXME */
                 value={data.email}
                 onInput={handleInput}
                 placeholder="Enter your email"
@@ -254,7 +234,6 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                     required
                     type="password"
                     name="password"
-                    /* FIXME */
                     value={data.password}
                     onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -273,7 +252,6 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                     required
                     type="password"
                     name="_password"
-                    /* FIXME */
                     value={data._password}
                     onInput={handleInput}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -288,7 +266,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                    htmlFor="name"
+                    htmlFor="business_name"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
                     Business Name
@@ -296,11 +274,10 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                   <input
                     required
                     type="text"
-                    name="first_name"
-                    /* FIXME */
-                    value={data.first_name}
+                    name="business_name"
+                    value={data.business_info.business_name}
                     onInput={handleInput}
-                    placeholder="Full Name"
+                    placeholder="Business Name"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -315,33 +292,31 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <input
                   required
                   type="text"
-                  name="Iva"
-                  /* FIXME */
-                  value={data.last_name}
+                  name="p_iva"
+                  value={data.business_info.p_iva}
                   onInput={handleInput}
                   placeholder="Partita Iva"
                   className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                 />
               </div>
             </div>
-            <div className="mb-5">
-              <label
-                htmlFor="email"
-                className="mb-3 block text-base font-medium text-new_dark_blue"
-              >
-                Business Address
-              </label>
-              <input
-                required
-                type="email"
-                name="email"
-                /* FIXME */
-                value={data.email}
-                onInput={handleInput}
-                placeholder="Enter your email"
-                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              />
-            </div>
+              <div className="mb-5 w-full px-3 sm:w-1/2">
+                <label
+                  htmlFor="address"
+                  className="mb-3 block text-base font-medium text-new_dark_blue"
+                >
+                  Address
+                </label>
+                <input
+                  required
+                  type="text"
+                  name="address"
+                  value={data.business_info.address}
+                  onInput={handleInput}
+                  placeholder="Address"
+                  className="w-[550px] rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
             <div className="mb-5 pt-3">
               <div className="-mx-3 flex flex-wrap">
                 <div className="w-full px-3 sm:w-1/2">
@@ -355,8 +330,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                     <select
                       required
                       name="city"
-                      /* FIXME */
-                      value={data.region}
+                      value={data.city}
                       onChange={handleInput}
                       className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     >
@@ -379,9 +353,10 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                   <input
                     required
                     type="text"
-                    name="Cap"
-                    /* FIXME */
-                    value={data.last_name}
+
+                    
+                    name="cap"
+                    value={data.business_info.cap}
                     onInput={handleInput}
                     placeholder="Cap"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"

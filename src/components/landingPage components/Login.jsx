@@ -26,14 +26,14 @@ const Login = ({ handleCloseLoginModal }) => {
 
     try {
       const results = await axios({
-        url: "http://localhost:3000/auth/users/token",
+        url: "http://localhost:3000/auth/publisher/token",
         method: "POST",
         data: form,
       });
 
       const data = results.data;
       dispatch(login(data));
-      navigate("/myprofile");
+      navigate("/business/myprofile");
     } catch (err) {
       console.error(err);
     }
