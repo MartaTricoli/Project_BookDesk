@@ -20,10 +20,20 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
   const handleInput = (event) => {
     const { name, value } = event.target;
 
-    setData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    if (name === "name" || name === "email" || name === "password" || name === "_password") {
+      setData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    } else {
+      setData((prevData) => ({
+        ...prevData,
+        business_info: {
+          ...data.business_info,
+          [name]: value
+        }
+      }));
+    }
   };
 
   const handleSubmit = (event) => {
@@ -266,7 +276,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
               <div className="w-full px-3 sm:w-1/2">
                 <div className="mb-5">
                   <label
-                    htmlFor="business_name"
+                    htmlFor="business_info.business_name"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
                     Business Name
