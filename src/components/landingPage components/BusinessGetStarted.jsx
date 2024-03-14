@@ -17,24 +17,18 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
     }
   });
 
+  const _setRecrusiveKey = (key, value) => {
+    return key.split(".").reverse().reduce((a,c) => ({[c]:a}), value);
+  }
+
   const handleInput = (event) => {
     const { name, value } = event.target;
 
-    if (name === "name" || name === "email" || name === "password" || name === "_password") {
-      setData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    } else {
-      setData((prevData) => ({
-        ...prevData,
-        business_info: {
-          ...data.business_info,
-          [name]: value
-        }
-      }));
-    }
-  };
+    setData({ 
+      ...data,
+      ..._setRecrusiveKey(name, value),
+    });
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -284,7 +278,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                   <input
                     required
                     type="text"
-                    name="business_name"
+                    name="business_info.business_name"
                     value={data.business_info.business_name}
                     onInput={handleInput}
                     placeholder="Business Name"
@@ -302,7 +296,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <input
                   required
                   type="text"
-                  name="p_iva"
+                  name="business_info.p_iva"
                   value={data.business_info.p_iva}
                   onInput={handleInput}
                   placeholder="Partita Iva"
@@ -320,7 +314,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <input
                   required
                   type="text"
-                  name="address"
+                  name="business_info.address"
                   value={data.business_info.address}
                   onInput={handleInput}
                   placeholder="Address"
@@ -339,7 +333,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                   <div className="mb-5">
                     <select
                       required
-                      name="city"
+                      name="business_info.city"
                       value={data.city}
                       onChange={handleInput}
                       className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -355,7 +349,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 </div>
                 <div className="mb-5 w-full px-3 sm:w-1/2">
                   <label
-                    htmlFor="cap"
+                    htmlFor="business_info.cap"
                     className="mb-3 block text-base font-medium text-new_dark_blue"
                   >
                     Cap
