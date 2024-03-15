@@ -80,7 +80,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
               ry="120"
               fill="#3f3d56"
             />
-            <rect x="235" y="592.11354" width="70" height="64" fill="#0077b5" />
+            <rect x="235" y="592.11354" width="70" height="64" fill="#d62828" />
             <polygon
               points="396.5 607.614 392.5 629.614 418.5 633.614 435.5 623.614 434.5 607.614 396.5 607.614"
               fill="#575a89"
@@ -139,7 +139,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
             <path
               d="M562.38171,372.55677l-41,57,59,29s5.51572,3,9.75786,0l39.24214-18,37-53-37,19s-4-8-12-4Z"
               transform="translate(-272.88171 -108.94323)"
-              fill="#0077b5"
+              fill="#d62828"
             />
             <path
               d="M625.38171,473.55677l8-21s18-23,8-34-21,32-21,32Z"
@@ -182,14 +182,14 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
         <div className="px-4 py-4 flex-1">
           {/* FIXME */}
           <form onSubmit={handleSubmit}>
-            <label className="mb-5 block text-base font-semibold text-new_dark_blue sm:text-xl">
+            <label className="mb-5 block text-base font-semibold text-new_red sm:text-xl">
               Owner Info:
             </label>
             <div className="-mx-3 flex flex-wrap">
               <div className="mb-5 w-full px-3 sm:w-1/2">
                 <label
                   htmlFor="name"
-                  className="mb-3 block text-base font-medium text-new_dark_blue"
+                  className="mb-3 block text-base font-medium text-new_red"
                 >
                   Owner First Name
                 </label>
@@ -207,7 +207,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
               <div className="mb-5 w-full px-3 sm:w-1/2">
                 <label
                   htmlFor="name"
-                  className="mb-3 block text-base font-medium text-new_dark_blue"
+                  className="mb-3 block text-base font-medium text-new_red"
                 >
                   Owner Last Name
                 </label>
@@ -226,7 +226,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
             <div className="mb-5">
               <label
                 htmlFor="email"
-                className="mb-3 block text-base font-medium text-new_dark_blue"
+                className="mb-3 block text-base font-medium text-new_red"
               >
                 Business Email Address
               </label>
@@ -246,7 +246,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <div className="mb-5">
                   <label
                     htmlFor="date"
-                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                    className="mb-3 block text-base font-medium text-new_red"
                   >
                     Password
                   </label>
@@ -265,7 +265,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <div className="mb-5">
                   <label
                     htmlFor="time"
-                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                    className="mb-3 block text-base font-medium text-new_red"
                   >
                     Confirm Password
                   </label>
@@ -281,7 +281,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 </div>
               </div>
             </div>
-            <label className="mb-5 block text-base font-semibold text-new_dark_blue sm:text-xl">
+            <label className="mb-5 block text-base font-semibold text-new_red sm:text-xl">
               Company Info:
             </label>
             <div className="-mx-3 flex flex-wrap">
@@ -289,7 +289,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <div className="mb-5">
                   <label
                     htmlFor="name"
-                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                    className="mb-3 block text-base font-medium text-new_red"
                   >
                     Business Name
                   </label>
@@ -308,7 +308,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
               <div className="w-full px-3 sm:w-1/2">
                 <label
                   htmlFor="Iva"
-                  className="mb-3 block text-base font-medium text-new_dark_blue"
+                  className="mb-3 block text-base font-medium text-new_red"
                 >
                   Business P-Iva
                 </label>
@@ -327,7 +327,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
             <div className="mb-5">
               <label
                 htmlFor="email"
-                className="mb-3 block text-base font-medium text-new_dark_blue"
+                className="mb-3 block text-base font-medium text-new_red"
               >
                 Business Address
               </label>
@@ -347,7 +347,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <div className="w-full px-3 sm:w-1/2">
                   <label
                     htmlFor="city"
-                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                    className="mb-3 block text-base font-medium text-new_red"
                   >
                     Business City
                   </label>
@@ -372,7 +372,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
                 <div className="mb-5 w-full px-3 sm:w-1/2">
                   <label
                     htmlFor="cap"
-                    className="mb-3 block text-base font-medium text-new_dark_blue"
+                    className="mb-3 block text-base font-medium text-new_red"
                   >
                     Cap
                   </label>
@@ -391,7 +391,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
             </div>
 
             <div>
-              <button className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+              <button className="hover:shadow-form w-full rounded-md bg-[#d62828] py-3 px-8 text-center text-base font-semibold text-white outline-none">
                 Get Started
               </button>
             </div>

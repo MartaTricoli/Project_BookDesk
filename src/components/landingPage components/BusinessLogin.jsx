@@ -122,7 +122,7 @@ const BusinessLogin = ({ handleCloseLoginModal }) => {
                     cx="359.29443"
                     cy="229.27966"
                     r="85.24289"
-                    fill="#0077b5"
+                    fill="#d62828"
                   />
                   <g>
                     <path
@@ -242,7 +242,7 @@ const BusinessLogin = ({ handleCloseLoginModal }) => {
                       </div>
                       <button
                         type="submit"
-                        className="w-full text-white bg-new_pastel_blue hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        className="w-full text-white bg-new_red hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                       >
                         Sign In
                       </button>

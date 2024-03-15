@@ -91,6 +91,7 @@ export default {
         shadowCardShop: "2px 0px 5px 0px #219ebc",
         shadowCardShop1: "4px 4px 10px 2px #219ebc",
         shadowCardPricing: "2px 2px 10px 2px #219ebc",
+        BusinessshadowCardPricing: "2px 2px 10px 2px #d62828",
       },
       spacing: {
         1480: "92.5",
