@@ -1,9 +1,8 @@
-import BgGradient from "../shared/BgGradientDx";
 import { useState } from "react";
-import GetStarted from "../landingPage components/GetStarted";
-import DarkModeToggle from "../shared/DarkmodeToggle";
+import BusinessBgGradientDx from "../shared/BusinessBgGradientDx ";
+import BusinessGetStarted from "./BusinessGetStarted";
 
-const LandingPageHeader = () => {
+const BusinessLandingPageHeader = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleGetStartedBtnClick = () => {
@@ -32,7 +31,7 @@ const LandingPageHeader = () => {
       <header className="relative bg-white sm:w-full max-w-[1480px] w-full min-h-[40vh] flex flex-col justify-center gap-8 items-start p-10 rounded-3xl mb-12 sm:mb-24 mt-20 sm:mt-40 dark:bg-new_navy_blue">
         <div className="w-full h-full font-extrabold text-3xl sm:text-6xl [text-wrap:balance] bg-clip-text text-transparent bg-new_dark_blue dark:bg-new_yellow z-10">
           Trusted by the most passionate <br /> readers in:
-          <span className="ml-4 text-new_pastel_blue dark:text-white inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.normal))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden">
+          <span className="ml-4 text-new_red dark:text-white inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.normal))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.relaxed))] overflow-hidden">
             <ul className="block animate-text-slide text-left leading-normal sm:leading-relaxed [&_li]:block">
               <li>Literary Discoveries</li>
               <li>Bookworm Communities</li>
@@ -46,9 +45,9 @@ const LandingPageHeader = () => {
         <a
           onClick={handleGetStartedBtnClick}
           href="#_"
-          className="relative inline-flex sm:w-[200px] w-[180px] items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_pastel_blue dark:border-new_light_blue rounded-full shadow-md group"
+          className="relative inline-flex sm:w-[200px] w-[180px] items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-2xl text-indigo-600 transition duration-300 ease-out border-2 border-new_red dark:border-new_light_blue rounded-full shadow-md group"
         >
-          <span className="absolute inset-0 flex items-center justify-center sm:w-full h-full text-white duration-300 -translate-x-full bg-new_pastel_blue dark:bg-new_light_blue group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center sm:w-full h-full text-white duration-300 -translate-x-full bg-new_red dark:bg-new_light_blue group-hover:translate-x-0 ease">
             <svg
               className="w-8 h-8"
               fill="none"
@@ -64,7 +63,7 @@ const LandingPageHeader = () => {
               ></path>
             </svg>
           </span>
-          <span className="absolute flex items-center justify-center sm:text-2xl text-xl h-full text-new_pastel_blue dark:text-new_light_blue transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center sm:text-2xl text-xl h-full text-new_red dark:text-new_light_blue transition-all duration-300 transform group-hover:translate-x-full ease">
             Get Started
           </span>
           <span className="relative invisible">Get Started</span>
@@ -104,7 +103,7 @@ const LandingPageHeader = () => {
             id="linguetta"
             d="M624.56456,268.06762a30.05968,30.05968,0,0,1,30.02549-30.02549h49.60733a30.02549,30.02549,0,1,1,0,60.051H654.59005A30.05968,30.05968,0,0,1,624.56456,268.06762Z"
             transform="translate(-224.43432 -171.79265)"
-            fill="#0077b5"
+            fill="#d62828"
           />
           <path
             d="M554.66992,454.00457c4.98069-63.72268,30.44665-94.08347,14.14038-113.123-15.61943-18.23757-59.61664-14.47019-87.87233,3.03008-76.21224,47.20238-104.13353,235.33248-6.06016,327.24868C568.07246,758.50409,744.69459,730.52967,783.946,659.04c9.15849-16.6806,16.43412-45.92231,3.03008-63.63168-33.27833-43.96718-154.271,35.66934-208.06552-14.14038C547.03,551.749,551.93653,488.97545,554.66992,454.00457Z"
@@ -119,7 +118,7 @@ const LandingPageHeader = () => {
           <path
             d="M612.91423,460.00518c1.07063.94943-1.89886,2.12109-5.04.27273-.89894-.53529-1.28276-.75752-1.38374-.6161-.2525.35348,1.2221,2.95937.82823,8.7468-.24245,3.45434-5.9794,9.9488-12.49408,16.28163-8.80741,8.56507-19.04909,16.82708-19.04909,16.82708l-3.5957-2.87862-37.70431-30.23009-6.36316-8.8074a62.68137,62.68137,0,0,1,2.616-10.23158,111.54646,111.54646,0,0,1,5.67634-13.47378c1.1716-2.37354,2.37354-4.636,3.525-6.71665l20.20054,22.261,16.92806,18.64512s4.92893-7.9388,8.7468-10.10027a3.636,3.636,0,0,1,1.61608-.5555c3.85831-.18186,4.0906-2.28267-.38381-6.85812-4.47441-4.57539,1.1716-.303,5.15111-1.5352,3.97951-1.23227,0,0,.83834-3.08063.83834-3.08057,11.99912-9.26193,11.99912-9.26193l.46464.41408,8.4337,7.444,2.414,2.13114s-2.63622,7.23176-3.36341,8.75691C612.24758,458.96488,611.85371,459.0457,612.91423,460.00518Z"
             transform="translate(-224.43432 -171.79265)"
-            fill="#0077b5"
+            fill="#d62828"
           />
           <polygon
             points="610.804 428.521 611.215 417.38 568.439 410.493 567.832 426.935 610.804 428.521"
@@ -152,7 +151,7 @@ const LandingPageHeader = () => {
           <path
             d="M595.01652,491.306a32.35389,32.35389,0,0,1-.6161,4.30266,25.39005,25.39005,0,0,1-1.97961,5.939s0,2.111-4.04011,9.18117,1.01,4.0401,4.04011,9.29226c3.03008,5.242,0,2.82806-3.36341,6.20151a7.7216,7.7216,0,0,0-1.909,7.60553s-43.39078.03033-51.471-2.99975-9.91841-20.09955-2.67653-21.78628c7.23176-1.68679-2.19175-3.36341-6.444-7.252-4.25224-3.88864,4.25223-10.25179,4.25223-10.25179s-3.50482-6.05-3.21193-26.36168a40.02917,40.02917,0,0,1,.51512-5.57536,62.68137,62.68137,0,0,1,2.616-10.23158,111.54646,111.54646,0,0,1,5.67634-13.47378c1.1716-2.37354,2.37354-4.636,3.525-6.71665.1818-.32321.35349-.63632.53535-.94942,2.19174-3.87853,4.19157-7.05,5.51471-9.08013,1.02013-1.57564,1.63623-2.46447,1.63623-2.46447l7.353-12.787,24.54364,11.50422-1.39385,18.81681,4.232,14.19086,1.94934,6.53491,1.50493,5.04,2.32311,7.80749s-.63632.03033.1212,1.07062a34.48445,34.48445,0,0,1,6.57523,15.82711A32.22705,32.22705,0,0,1,595.01652,491.306Z"
             transform="translate(-224.43432 -171.79265)"
-            fill="#0077b5"
+            fill="#d62828"
           />
           <path
             d="M665.89583,493.33387l-.46062-.1489-58.74434-18.91675,21.64693-71.01669a9.76773,9.76773,0,0,1,14.31159-5.56184l37.5399,22.17917a14.71548,14.71548,0,0,1,6.31875,17.78792Z"
@@ -162,7 +161,7 @@ const LandingPageHeader = () => {
           <path
             d="M666.13449,497.84853l-59.21706-19.069,21.64693-71.01669A9.76774,9.76774,0,0,1,642.876,402.201l39.33218,19.63747c5.909,3.4901,5.77083,12.5236,3.0271,19.93565Z"
             transform="translate(-224.43432 -171.79265)"
-            fill="#0077b5"
+            fill="#d62828"
           />
           <path
             d="M660.20576,502.98871a11.29067,11.29067,0,0,1-9.05.90014l-37.85-12.189A11.70354,11.70354,0,0,1,605.7309,477.21l18.9763-62.255a9.767,9.767,0,0,1,12.3904-6.43128l39.22419,12.879a14.72181,14.72181,0,0,1,9.26517,18.95877l-20.28935,56.56519A11.30443,11.30443,0,0,1,660.20576,502.98871Z"
@@ -213,7 +212,7 @@ const LandingPageHeader = () => {
           <path
             d="M626.32591,494.27915c-.62864-.84208-.89874-1.19462-1.04164-1.09788-.36793.222-.01389,3.19725-2.60182,8.38274-3.64349,7.28491-41.844,18.44233-41.844,18.44233l-4.70333-8.61053-20.68782-37.83969-7.13063-30.32979a13.53056,13.53056,0,0,1-.36077-3.2277,128.177,128.177,0,0,1,20.17133-11.61092,13.5043,13.5043,0,0,1,6.06057,7.22046l14.24065,39.92911,5.68258,15.9421s10.02413-7.16788,13.66019-5.85219c3.63018,1.324,4.66184-.53234,2.28889-6.47485-2.373-5.94254,1.1888.17448,5.3336.56321,4.1531.39462,0,0,1.96174-2.52163s14.64468-3.94046,14.64468-3.94046l.26955.56271,4.915,10.11037,1.40707,2.90478s-5.21062,5.65345-6.46781,6.78012c-1.26307,1.135-1.65316,1.05648-1.03474,2.34947C631.69936,497.24805,628.50906,497.18951,626.32591,494.27915Z"
             transform="translate(-224.43432 -171.79265)"
-            fill="#0077b5"
+            fill="#d62828"
           />
         </svg>
         {/* Sign Up Modal */}
@@ -222,13 +221,13 @@ const LandingPageHeader = () => {
             id="getStarted_container"
             className="absolute -top-40 -left-80 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 z-[1000]"
           >
-            <GetStarted handleCloseGetStartedModal={handleCloseModal} />
+            <BusinessGetStarted handleCloseGetStartedModal={handleCloseModal} />
           </div>
         )}
       </header>
-      <BgGradient />
+      <BusinessBgGradientDx />
     </>
   );
 };
 
-export default LandingPageHeader;
+export default BusinessLandingPageHeader;
