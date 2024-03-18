@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import { DevAtWork } from "./components/__componet/DevAtWork";
 import { BasePage } from "./pages/BasePage";
-import Shop from "./pages/Shop";
 import { Feed } from "./components/__componet/Feed";
 import { Follow } from "./components/__componet/Follow";
 import { AllUsers } from "./components/__componet/AllUsers";
@@ -14,11 +13,9 @@ import FavouriteBooks from "./pages/FavouriteBooks";
 import Wishlist from "./pages/Wishlist";
 import ScrollToTop from "./hooks/ScrollToTop";
 import StatsPage from "./pages/StatPage";
-import User from "./layout/User";
 import BusinessLandingPage from "./pages/BusinessLandingPage";
 import { useSelector } from "react-redux";
 import BookInfo from "./pages/BookInfo";
-import Pokedex2 from "./components/shared/BookSearchEMilio";
 import BookSearchEMilio from "./components/shared/BookSearchEMilio";
 
 const App = () => {
@@ -58,6 +55,13 @@ const App = () => {
           <Route path="/myfavouritebooks" element={<FavouriteBooks />} />
           <Route path="/mywishlist" element={<Wishlist />} />
           <Route path="/infobook" element={<BookInfo bookCover="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg" bookTitle="The light beyond the garden wall" author="Scott Whitehead" />} />
+        </Route>
+        <Route path="/business" element={
+          <ProtectedRoute>
+            <BasePage />
+          </ProtectedRoute>
+        }>
+
         </Route>
       </Routes>
     </>
