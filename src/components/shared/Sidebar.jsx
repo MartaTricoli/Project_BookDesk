@@ -100,11 +100,6 @@ const Sidebar = () => {
                         My Reads
                       </Link>
                     </li>
-                    <li>
-                      <span className="text-sm text-white hover:text-black">
-                        Letture negli anni
-                      </span>
-                    </li>
                   </ul>
                 )}
               </li>
@@ -122,7 +117,7 @@ const Sidebar = () => {
                     </svg>
                   </div>
                   <span className="ms-3 max-[1080px]:hidden text-white">
-                    Impostazioni
+                    Settings
                   </span>
                 </div>
               </li>
@@ -141,7 +136,7 @@ const Sidebar = () => {
                     </svg>
                   </div>
                   <span className="ms-3 max-[1080px]:hidden text-white">
-                    libreria
+                    My Books
                   </span>
                 </div>
               </li>
@@ -227,7 +222,7 @@ const Sidebar = () => {
                       </svg>
                     </div>
                     <span className="ms-3 max-[1080px]:hidden text-white">
-                      Mercato
+                      Market
                     </span>
                   </div>
 
