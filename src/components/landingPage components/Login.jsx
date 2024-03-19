@@ -51,7 +51,7 @@ const Login = ({ handleCloseLoginModal }) => {
             >
               X
             </button>
-            <div className="absolute left-20">
+            <div className="absolute left-20 pointer-events-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
