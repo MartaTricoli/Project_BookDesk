@@ -122,7 +122,7 @@ const BusinessLogin = ({ handleCloseLoginModal }) => {
                     cx="359.29443"
                     cy="229.27966"
                     r="85.24289"
-                    fill="#d62828"
+                    fill="#A93226"
                   />
                   <g>
                     <path
