@@ -1,9 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { Footer } from "../components/shared/Footer";
-import Sidebar from "../components/shared/Sidebar";
 import { useState } from "react";
 import BusinessInternNavbar from "../components/shared/BusinessInternNavbar";
 import BusinessSidebar from "../components/shared/BusinessSidebar";
+import { BusinessFooter } from "../components/shared/BusinessFooter";
 
 export const BasePage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -21,7 +20,7 @@ export const BasePage = () => {
         />
       </div>
       <Outlet />
-      <Footer />
+      <BusinessFooter />
     </>
   );
 };
