@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [showGetStartedModal, setShowGetStartedModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+    setShowLoginModal(false); // Chiudi il modal di login dopo il login
+  };
 
   const handleGetStartedBtnClick = () => {
     setShowGetStartedModal(!showGetStartedModal);
@@ -37,8 +42,18 @@ const Navbar = () => {
           "
         >
           <a className="hover:text-new_light_blue" href="#">
-            Home
+            <Link
+              to="myprofile"
+              className="text-gray-100 hover:text-black"
+            >
+              Profile
+            </Link>
           </a>
+          {isLoggedIn && (
+            <a className="hover:text-new_light_blue" href="#">
+              Profile
+            </a>
+          )}
           <a className="hover:text-new_light_blue" href="#">
             About
           </a>
