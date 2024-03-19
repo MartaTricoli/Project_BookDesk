@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import 'chart.js/auto'
 import { Doughnut } from "react-chartjs-2";
 
-const Torta = () => {
-  const [dataValues, setDataValues] = useState([2, 3, 4]);
+const Torta = ({ libriLetiCount, libriDaLeggereCount, libriInLetturaCount }) => {
+  const [dataValues, setDataValues] = useState([libriLetiCount, libriDaLeggereCount, libriInLetturaCount]);
   const labels = ["Libri Letti", "Libri da Leggere", "Libri in lettura"];
+
+  useEffect(() => {
+    setDataValues([libriLetiCount, libriDaLeggereCount, libriInLetturaCount]);
+  }, [libriLetiCount, libriDaLeggereCount, libriInLetturaCount]);
 
   const handleChange = (index, value) => {
     setDataValues((prevValues) => {

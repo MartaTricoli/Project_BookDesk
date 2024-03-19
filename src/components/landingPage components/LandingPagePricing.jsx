@@ -134,7 +134,7 @@ const LandingPagePricing = () => {
               Entreprise
             </p>
             <p className="text-3xl font-bold text-gray-900 dark:text-white">
-              $9,49
+              $19,49
               <span className="text-sm text-gray-300">/ month</span>
             </p>
             <p className="mt-4 text-xs text-gray-600 dark:text-gray-100">
@@ -251,7 +251,7 @@ const LandingPagePricing = () => {
               Entreprise
             </p>
             <p className="text-3xl font-bold text-gray-900 dark:text-white">
-              $9,49
+              $29,49
               <span className="text-sm text-gray-300">/ month</span>
             </p>
             <p className="mt-4 text-xs text-gray-600 dark:text-gray-100">

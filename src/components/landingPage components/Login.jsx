@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../store/reducers/authSlice";
+import { constants } from "../../constants";
 
 const Login = ({ handleCloseLoginModal }) => {
   const dispatch = useDispatch();
@@ -26,14 +27,14 @@ const Login = ({ handleCloseLoginModal }) => {
 
     try {
       const results = await axios({
-        url: "http://localhost:3000/auth/publisher/token",
+        url: `${constants.API_HOST}/auth/users/token`,
         method: "POST",
         data: form,
       });
 
       const data = results.data;
       dispatch(login(data));
-      navigate("/business/myprofile");
+      navigate("/myprofile");
     } catch (err) {
       console.error(err);
     }

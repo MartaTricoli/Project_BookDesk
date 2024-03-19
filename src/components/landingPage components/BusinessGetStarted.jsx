@@ -85,7 +85,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
               ry="120"
               fill="#3f3d56"
             />
-            <rect x="235" y="592.11354" width="70" height="64" fill="#d62828" />
+            <rect x="235" y="592.11354" width="70" height="64" fill="#A93226" />
             <polygon
               points="396.5 607.614 392.5 629.614 418.5 633.614 435.5 623.614 434.5 607.614 396.5 607.614"
               fill="#575a89"
@@ -144,7 +144,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
             <path
               d="M562.38171,372.55677l-41,57,59,29s5.51572,3,9.75786,0l39.24214-18,37-53-37,19s-4-8-12-4Z"
               transform="translate(-272.88171 -108.94323)"
-              fill="#d62828"
+              fill="#A93226"
             />
             <path
               d="M625.38171,473.55677l8-21s18-23,8-34-21,32-21,32Z"
@@ -373,7 +373,7 @@ const BusinessGetStarted = ({ handleCloseGetStartedModal }) => {
             </div>
 
             <div>
-              <button className="hover:shadow-form w-full rounded-md bg-[#d62828] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+              <button className="hover:shadow-form w-full rounded-md bg-[#A93226] py-3 px-8 text-center text-base font-semibold text-white outline-none">
                 Get Started
               </button>
             </div>
