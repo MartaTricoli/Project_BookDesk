@@ -17,6 +17,8 @@ import BusinessLandingPage from "./pages/BusinessLandingPage";
 import { useSelector } from "react-redux";
 import BookInfo from "./pages/BookInfo";
 import BookSearchEMilio from "./components/shared/BookSearchEMilio";
+import { BusinessBasePage } from "./pages/BusinessBasePage";
+import BusinessProfile from "./pages/BusinessProfile";
 
 const App = () => {
 
@@ -54,14 +56,14 @@ const App = () => {
           <Route path="/mybooksnotread" element={<BooksNotRead />} />
           <Route path="/myfavouritebooks" element={<FavouriteBooks />} />
           <Route path="/mywishlist" element={<Wishlist />} />
-          <Route path="/infobook" element={<BookInfo bookCover="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg" bookTitle="The light beyond the garden wall" author="Scott Whitehead" />} />
+          <Route path="/infobook" element={<BookInfo />} />
         </Route>
         <Route path="/business" element={
-          <ProtectedRoute>
-            <BasePage />
+          <ProtectedRoute identity="publisher">
+            <BusinessBasePage />
           </ProtectedRoute>
         }>
-
+          <Route path="/business/myprofile" element={<BusinessProfile />} />
         </Route>
       </Routes>
     </>

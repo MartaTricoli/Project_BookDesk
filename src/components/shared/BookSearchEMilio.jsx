@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 
 import { constants } from "../../constants";
 import axios from "axios";
+import { useSelector } from "react-redux";
+import { createNewUserBook } from "../../utilities/books";
 
 
 const BookSearchEMilio = () => {
     const [bookName, setbookName] = useState("");
     const [bookData, setbookData] = useState(null);
     const [error, setError] = useState(null);
+    const token = useSelector((state) => state.auth.token);
 
     useEffect(() => {
         if (bookData) {
@@ -51,6 +54,40 @@ const BookSearchEMilio = () => {
 
         } catch (error) {
             console.log(error);
+        }
+    }
+
+    const handleAddToBookshelf = async (index) => {
+        // const userbook = {
+        //     isbn: bookData.docs[index].isbn[0],
+        //     tag: "ALL",
+        //     headers: token
+        // }
+
+        // createNewUserBook(userbook, (error, response) => {
+        //     if (error) {
+        //         console.log(error);
+        //         return;
+        //     }
+
+        //     alert("book added to your bookshelf.");
+        //     console.log(response);
+        // })
+        
+        try {
+            const result = await axios({
+                url: `${constants.API_HOST}/${constants.API_USERBOOK}`,
+                method: "POST",
+                data: {
+                    isbn: bookData.docs[index].isbn[0],
+                    tag: "ALL"
+                },
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+        } catch (error) {
+            console.log(error); 
         }
     }
 
@@ -103,8 +140,8 @@ const BookSearchEMilio = () => {
                     {error && <h1>{error}</h1>}
 
                     <div className="flex flex-row flex-wrap justify-between ">
-                        {bookData?.docs && bookData.docs.length > 0 && bookData.docs.map((docs) => (
-                            <div className="w-full flex min-[1400px]:w-1/4 mb-12 justify-center" key={docs.isbn}>
+                        {bookData?.docs && bookData.docs.length > 0 && bookData.docs.map((docs, index) => (
+                            <div className="w-full flex flex-col min-[1400px]:w-1/4 mb-12 justify-center items-center" key={index}>
                                 <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 shadow-shadowCardShop hover:shadow-shadowCardShop1">
                                     <a href="#">
                                         <div className={`relative h-80 w-72 object-cover rounded-t-xl z-10 overflow-hidden`}>
@@ -179,6 +216,7 @@ const BookSearchEMilio = () => {
                                         </div>
                                     </a>
                                 </div>
+                                <button className="border-2 hover:border-new_yellow w-64 mt-4" onClick={() => handleAddToBookshelf(index)}>Add to your bookshelf</button>
                             </div>
                         ))
                         }
