@@ -17,6 +17,8 @@ import BusinessLandingPage from "./pages/BusinessLandingPage";
 import { useSelector } from "react-redux";
 import BookInfo from "./pages/BookInfo";
 import BookSearchEMilio from "./components/shared/BookSearchEMilio";
+import { BusinessBasePage } from "./pages/BusinessBasePage";
+import BusinessProfile from "./pages/BusinessProfile";
 
 const App = () => {
 
@@ -57,11 +59,11 @@ const App = () => {
           <Route path="/infobook" element={<BookInfo />} />
         </Route>
         <Route path="/business" element={
-          <ProtectedRoute>
-            <BasePage />
+          <ProtectedRoute identity="publisher">
+            <BusinessBasePage />
           </ProtectedRoute>
         }>
-
+          <Route path="/business/myprofile" element={<BusinessProfile />} />
         </Route>
       </Routes>
     </>
