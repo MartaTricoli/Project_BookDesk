@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Logo from "../shared/Logo";
 import axios from "axios";
 import { useDispatch } from "react-redux";
@@ -36,7 +35,7 @@ const Login = ({ handleCloseLoginModal }) => {
       dispatch(login(data));
       navigate("/myprofile");
     } catch (err) {
-      console.error(err);
+      alert('Utente o/e Password errati');
     }
   };
 

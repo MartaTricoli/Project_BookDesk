@@ -5,7 +5,7 @@ import { BasePage } from "./pages/BasePage";
 import { Feed } from "./components/__componet/Feed";
 import { Follow } from "./components/__componet/Follow";
 import { AllUsers } from "./components/__componet/AllUsers";
-import MySelf from "./pages/Profile";
+import Profile from "./pages/Profile";
 import AllMyBooks from "./pages/AllMyBooks";
 import BooksRead from "./pages/BooksRead";
 import BooksNotRead from "./pages/BooksNotRead";
@@ -17,16 +17,17 @@ import BusinessLandingPage from "./pages/BusinessLandingPage";
 import { useSelector } from "react-redux";
 import BookInfo from "./pages/BookInfo";
 import BookSearchEMilio from "./components/shared/BookSearchEMilio";
+import BusinessProfile from "./pages/BusinessProfile";
 
 const App = () => {
 
   const ProtectedRoute = ({ children, identity }) => {
     const auth = useSelector((state) => state.auth);
-  
+
     if (auth.token === null || auth.identity !== identity) {
       return <Navigate to="/" />;
     }
-  
+
     return children;
   };
 
@@ -43,7 +44,7 @@ const App = () => {
         >
           <Route path="/devatwork" element={<DevAtWork />} />
           <Route path="/shop" element={<BookSearchEMilio />} />
-          <Route path="/myprofile" element={<MySelf />} />
+          <Route path="/myprofile" element={<Profile />} />
           <Route path="/feed" element={<Feed />}>
             <Route path="/feed/follow" element={<Follow />} />
             <Route path="/feed/allusers" element={<AllUsers />} />
@@ -56,12 +57,13 @@ const App = () => {
           <Route path="/mywishlist" element={<Wishlist />} />
           <Route path="/infobook" element={<BookInfo bookCover="https://i.pinimg.com/originals/a1/f8/87/a1f88733921c820db477d054fe96afbb.jpg" bookTitle="The light beyond the garden wall" author="Scott Whitehead" />} />
         </Route>
+
         <Route path="/business" element={
           <ProtectedRoute>
             <BasePage />
           </ProtectedRoute>
         }>
-
+          <Route path="/businessProfile" element={<BusinessProfile />} />
         </Route>
       </Routes>
     </>

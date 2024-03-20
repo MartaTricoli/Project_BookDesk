@@ -102,9 +102,9 @@ const BookSearchEMilio = () => {
                     </div>
                     {error && <h1>{error}</h1>}
 
-                    <div className="flex flex-row flex-wrap justify-between ">
+                    <div className="flex flex-wrap justify-between">
                         {bookData?.docs && bookData.docs.length > 0 && bookData.docs.map((docs) => (
-                            <div className="w-full flex min-[1400px]:w-1/4 mb-12 justify-center" key={docs.isbn}>
+                            <div class=" min[1400px]w-1/4 mb-12" key={docs.cover_i}>
                                 <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 shadow-shadowCardShop hover:shadow-shadowCardShop1">
                                     <a href="#">
                                         <div className={`relative h-80 w-72 object-cover rounded-t-xl z-10 overflow-hidden`}>

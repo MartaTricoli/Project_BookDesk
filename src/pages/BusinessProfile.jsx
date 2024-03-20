@@ -1,14 +1,13 @@
 import Tabs from "../components/__componet/Tabs"
-import ActualBook from "../components/shared/ActualBook"
 import { useSelector } from "react-redux"
 import { getAgeFromDate } from "../utilities/dates"
 
-const Profile = () => {
+const BusinessProfile = () => {
     const user = useSelector((state) => state.auth.user)
 
     return (
         <>
-            <div className="dark:bg-new_navy_blue ml-[142px]">
+            <div className="dark:bg-new_navy_blue">
                 <div className="p-24">
                     <div className="p-8 bg-white shadow mt-24 max-sm:-mt-8 dark:bg-new_navy_blue">
                         <div className="grid grid-cols-1 md:grid-cols-3">
@@ -46,9 +45,7 @@ const Profile = () => {
 
                     </div>
                 </div>
-                <div className="flex justify-center items-center p-8">
-                    <ActualBook />
-                </div>
+
 
 
             </div>
@@ -56,4 +53,4 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default BusinessProfile
