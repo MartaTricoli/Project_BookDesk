@@ -139,15 +139,10 @@ const BookSearchEMilio = () => {
                     </div>
                     {error && <h1>{error}</h1>}
 
-<<<<<<< HEAD
-                    <div className="flex flex-wrap justify-between">
-                        {bookData?.docs && bookData.docs.length > 0 && bookData.docs.map((docs) => (
-                            <div class=" min[1400px]w-1/4 mb-12" key={docs.cover_i}>
-=======
+
                     <div className="flex flex-row flex-wrap justify-between ">
                         {bookData?.docs && bookData.docs.length > 0 && bookData.docs.map((docs, index) => (
                             <div className="w-full flex flex-col min-[1400px]:w-1/4 mb-12 justify-center items-center" key={index}>
->>>>>>> b2de24797e44bf1a3c179ba347069cc8ea4cd964
                                 <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 shadow-shadowCardShop hover:shadow-shadowCardShop1">
                                     <a href="#">
                                         <div className={`relative h-80 w-72 object-cover rounded-t-xl z-10 overflow-hidden`}>
