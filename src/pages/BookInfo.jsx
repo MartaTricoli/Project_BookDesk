@@ -22,76 +22,25 @@ const BookInfo = () => {
     const three_stars = document.getElementById("three_stars");
     const four_stars = document.getElementById("four_stars");
     const five_stars = document.getElementById("five_stars");
+
+    const stars = [one_star, two_stars, three_stars, four_stars, five_stars];
     
-    
-    if (one_star.classList.contains("text-new_yellow")) {
-            one_star.classList.remove("text-new_yellow");
-            one_star.classList.add("text-gray-300");
-    }
-    if (two_stars.classList.contains("text-new_yellow")) {
-            two_stars.classList.remove("text-new_yellow");
-            two_stars.classList.add("text-gray-300");
-    }
-    if (three_stars.classList.contains("text-new_yellow")) {
-            three_stars.classList.remove("text-new_yellow");
-            three_stars.classList.add("text-gray-300");
-    }
-    if (four_stars.classList.contains("text-new_yellow")) {
-            four_stars.classList.remove("text-new_yellow");
-            four_stars.classList.add("text-gray-300");
-    }
-    if (five_stars.classList.contains("text-new_yellow")) {
-            five_stars.classList.remove("text-new_yellow");
-            five_stars.classList.add("text-gray-300");
-    }
+    stars.forEach(star => {
+      if (star.classList.contains("text-new_yellow")) {
+        star.classList.remove("text-new_yellow");
+        star.classList.add("text-gray-300");
+      }
+    });
 
     if (element.classList.contains("hidden")) {
-        element.classList.remove("hidden");
+      element.classList.remove("hidden");
     }
 
-    switch (event.target.value) {
-        case "one_star":
-            one_star.classList.remove("text-gray-300");
-            one_star.classList.add("text-new_yellow");
-            break;
-        case "two_stars":
-            one_star.classList.remove("text-gray-300");
-            one_star.classList.add("text-new_yellow");
-            two_stars.classList.remove("text-gray-300");
-            two_stars.classList.add("text-new_yellow");
-            break;
-        case "three_stars":
-            one_star.classList.remove("text-gray-300");
-            one_star.classList.add("text-new_yellow");
-            two_stars.classList.remove("text-gray-300");
-            two_stars.classList.add("text-new_yellow");
-            three_stars.classList.remove("text-gray-300");
-            three_stars.classList.add("text-new_yellow");
-            break;
-        case "four_stars":
-            one_star.classList.remove("text-gray-300");
-            one_star.classList.add("text-new_yellow");
-            two_stars.classList.remove("text-gray-300");
-            two_stars.classList.add("text-new_yellow");
-            three_stars.classList.remove("text-gray-300");
-            three_stars.classList.add("text-new_yellow");
-            four_stars.classList.remove("text-gray-300");
-            four_stars.classList.add("text-new_yellow");
-            break;
-        case "five_stars":
-            one_star.classList.remove("text-gray-300");
-            one_star.classList.add("text-new_yellow");
-            two_stars.classList.remove("text-gray-300");
-            two_stars.classList.add("text-new_yellow");
-            three_stars.classList.remove("text-gray-300");
-            three_stars.classList.add("text-new_yellow");
-            four_stars.classList.remove("text-gray-300");
-            four_stars.classList.add("text-new_yellow");
-            five_stars.classList.remove("text-gray-300");
-            five_stars.classList.add("text-new_yellow");
-            break;
-        default:
-        break;
+    const index = stars.findIndex(star => event.target.value === star.id);
+
+    for (let i = 0; i <= index; i++) {
+      stars[i].classList.remove("text-gray-300");
+      stars[i].classList.add("text-new_yellow");
     }
   }
 
