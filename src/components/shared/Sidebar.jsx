@@ -136,55 +136,12 @@ const Sidebar = () => {
                     </svg>
                   </div>
                   <span className="ms-3 max-[1080px]:hidden text-white">
-                    My Books
+                    <Link to="allmybooks">
+                      My Books
+                    </Link>
                   </span>
                 </div>
               </li>
-              {dropdownsOpen[2] && (
-                <ul className="pl-4">
-                  <li>
-                    <Link
-                      to="allmybooks"
-                      className="text-gray-100 hover:text-black"
-                    >
-                      Tutti
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="mybooksread"
-                      className="text-gray-100 hover:text-black"
-                    >
-                      Letti
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="mybooksnotread"
-                      className="text-gray-100 hover:text-black"
-                    >
-                      Da leggere
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="myfavouritebooks"
-                      className="text-gray-100 hover:text-black"
-                    >
-                      Preferiti
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="mywishlist"
-                      className="text-gray-100 hover:text-black"
-                    >
-                      Wishlist
-                    </Link>
-                  </li>
-                </ul>
-              )}
-
               <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
               <Link to="shop">
                 <li>

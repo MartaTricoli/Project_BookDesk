@@ -55,11 +55,6 @@ const App = () => {
           </Route>
           <Route path="/mystats" element={<StatsPage />} />
           <Route path="/allmybooks" element={<AllMyBooks />} />
-          <Route path="/mybooksread" element={<BooksRead />} />
-          <Route path="/mybooksnotread" element={<BooksNotRead />} />
-          <Route path="/myfavouritebooks" element={<FavouriteBooks />} />
-          <Route path="/mywishlist" element={<Wishlist />} />
-          <Route path="/infobook" element={<BookInfo />} />
         </Route>
         <Route path="/business" element={
           <ProtectedRoute identity="publisher">
