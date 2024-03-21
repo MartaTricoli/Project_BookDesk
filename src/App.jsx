@@ -20,17 +20,20 @@ import BookSearchEMilio from "./components/shared/BookSearchEMilio";
 import { BusinessBasePage } from "./pages/BusinessBasePage";
 import BusinessProfile from "./pages/BusinessProfile";
 
-const App = () => {
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-  const ProtectedRoute = ({ children, identity }) => {
-    const auth = useSelector((state) => state.auth);
-  
-    if (auth.token === null || auth.identity !== identity) {
-      return <Navigate to="/" />;
-    }
-  
-    return children;
-  };
+const ProtectedRoute = ({ children, identity }) => {
+  const auth = useSelector((state) => state.auth);
+
+  if (auth.token === null || auth.identity !== identity) {
+    return <Navigate to="/" />;
+  }
+
+  return children;
+};
+
+const App = () => {
 
   return (
     <>
@@ -52,11 +55,6 @@ const App = () => {
           </Route>
           <Route path="/mystats" element={<StatsPage />} />
           <Route path="/allmybooks" element={<AllMyBooks />} />
-          <Route path="/mybooksread" element={<BooksRead />} />
-          <Route path="/mybooksnotread" element={<BooksNotRead />} />
-          <Route path="/myfavouritebooks" element={<FavouriteBooks />} />
-          <Route path="/mywishlist" element={<Wishlist />} />
-          <Route path="/infobook" element={<BookInfo />} />
         </Route>
         <Route path="/business" element={
           <ProtectedRoute identity="publisher">
@@ -66,6 +64,7 @@ const App = () => {
           <Route path="/business/myprofile" element={<BusinessProfile />} />
         </Route>
       </Routes>
+      <ToastContainer />
     </>
   );
 };
