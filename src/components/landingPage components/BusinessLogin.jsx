@@ -34,7 +34,7 @@ const BusinessLogin = ({ handleCloseLoginModal }) => {
 
       const data = results.data;
       dispatch(login(data));
-      navigate("/businessProfile");
+      navigate("/business/myprofile");
     } catch (err) {
       alert('Business o/e Password errati');
     }
