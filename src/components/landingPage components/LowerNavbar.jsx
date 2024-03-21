@@ -69,7 +69,7 @@ const LowerNavbar = () => {
               version="1.1"
               id="Capa_1"
               viewBox="0 0 26.39 26.39"
-              xml:space="preserve"
+              xmlSpace="preserve"
             >
               <g>
                 <g id="c14_house">
@@ -96,7 +96,7 @@ const LowerNavbar = () => {
               y="0px"
               viewBox="0 0 24 24"
               enableBackground="new 0 0 24 24"
-              xml:space="preserve"
+              xmlSpace="preserve"
             >
               <g id="Contact-Us-Filled">
                 <path d="M1,1v17h4v4l8.5-4H22V1H1z M8,11H5V8h3V11z M13,11h-3V8h3V11z M18,11h-3V8h3V11z" />
