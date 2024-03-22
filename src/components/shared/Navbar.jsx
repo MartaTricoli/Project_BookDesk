@@ -41,14 +41,14 @@ const Navbar = () => {
           className="hidden sm:flex items-center font-medium gap-20 text-2xl
           "
         >
-          <a className="hover:text-new_light_blue" href="#">
+          <div className="hover:text-new_light_blue" href="#">
             <Link
               to="myprofile"
               className="text-gray-100 hover:text-black"
             >
               Profile
             </Link>
-          </a>
+          </div>
           {isLoggedIn && (
             <a className="hover:text-new_light_blue" href="#">
               Profile
