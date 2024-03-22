@@ -6,7 +6,6 @@ export const Footer = () => {
   return (
     <>
       <footer className="mb-20 sm:mb-0 bg-new_navy_blue flex flex-col items-center">
-      <footer className="mb-20 sm:mb-0 bg-new_navy_blue flex flex-col items-center">
         <div className="flex text-white p-6 justify-center gap-24 border-white border-b w-[1480px] max-[1500px]:w-[1100px] max-[1120px]:w-[700px] max-[1120px]:flex-wrap max-[1120px]:px-24 max-[1120px]:gap-10 max-[740px]:w-[500px] max-[510px]:flex-col max-[510px]:w-[350px]">
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
             <h3 className="font-bold text-new_light_blue">Info:</h3>
