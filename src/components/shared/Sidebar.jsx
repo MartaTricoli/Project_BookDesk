@@ -111,7 +111,7 @@ const Sidebar = () => {
                 <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-new_dark_blue dark:hover:bg-gray-700 group cursor-pointer">
                   <div className="w-6 h-6">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                      viewBox="0 0 64 64" enableBackground="new 0 0 64 64" xml:space="preserve">
+                      viewBox="0 0 64 64" enableBackground="new 0 0 64 64" xmlSpace="preserve">
                       <g>
                         <polygon fill="white" stroke="white" strokeWidth="2" strokeMiterlimit="10" points="32,1 26,1 26,10 20,12 14,6 6,14 12,20 
 		10,26 1,26 1,38 10,38 12,44 6,50 14,58 20,52 26,54 26,63 32,63 38,63 38,54 44,52 50,58 58,50 52,44 54,38 63,38 63,26 54,26 
