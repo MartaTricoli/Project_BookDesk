@@ -9,6 +9,7 @@ const AllMyBooks = () => {
     const [loading, setLoading] = useState(false);
     const [books, setBooks] = useState([]);
     const token = useSelector((state) => state.auth.token);
+    const user = useSelector((state) => state.auth.user);
 
     const fetchAllBooks = async () => {
         setError(false);
@@ -32,18 +33,20 @@ const AllMyBooks = () => {
 
     const refetchAllBooks = () => {
         allBook.map(async book => {
-            try {
-                const result = await axios({
-                    url: `${constants.API_HOST}/${constants.API_USERBOOK}/${book.book}`,
-                    method: "GET",
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                })
-               
-                setBooks(book => [...book, result.data]);
-            } catch (error) {
-                console.log(error);
+            if (book.user === user._id) {
+                try {
+                    const result = await axios({
+                        url: `${constants.API_HOST}/${constants.API_USERBOOK}/${book.book}`,
+                        method: "GET",
+                        headers: {
+                            Authorization: `Bearer ${token}`
+                        }
+                    })
+                   
+                    setBooks(book => [...book, result.data]);
+                } catch (error) {
+                    console.log(error);
+                }
             }
         });
     }
@@ -63,12 +66,17 @@ const AllMyBooks = () => {
                 <button className="border-2 border-black px-4 py-2">FAVOURITES</button>
                 <button className="border-2 border-black px-4 py-2">WHISHLIST</button>
             </div>
-            <div className="flex flex-wrap justify-start w-[1480px] ml-auto mb-4">
+            <div className="flex flex-wrap justify-start w-[1480px] ml-52 mb-96">
                 {error && <p className="pl-52">There was an error, books not available.</p>}
-                {loading && allBook.length === 0 && <p className="pl-52">Loading...</p>}
+                {loading && allBook.length === 0 && 
+                    <div>
+                        <p className="pl-52">Loading...</p>
+                        <p className="h-screen"></p>
+                    </div>
+                }
                 {!loading && !error && allBook.length === 0 && <p className="pl-52">You have not add any book yet.</p>}
-                {books.length !== allBook.length && <div className="h-screen"></div>}
-                {books.length === allBook.length && books.map(book => (
+                {!loading && !error && books.length === 0 && <p className="h-screen"></p>}
+                {books.length > 0 && books.map(book => (
                     <div key={book._id}>
                         <div className=" bg-white p-8 rounded-lg shadow-sm hover:shadow-lg hover:shadow-new_pastel_blue shadow-new_pastel_blue max-w-md m-4">
                             <div className="mb-4 flex justify-center">
