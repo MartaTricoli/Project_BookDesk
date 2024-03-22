@@ -6,7 +6,7 @@ const SearchBar = () => {
                 <div
                     className="relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:px-16 sm:shadow-sm dark:bg-transparent">
                     <p className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-new_navy_blue dark:text-gray-200 sm:text-4xl">
-                        Trova il libro perfetto per te!
+                    Find the perfect book for you!
                     </p>
                     <form action="/search">
                         <label
@@ -19,7 +19,7 @@ const SearchBar = () => {
                                 className="w-full md:w-auto px-6 py-3 bg-new_navy_blue border-new_navy_blue text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all">
                                 <div className="flex items-center transition-all opacity-1">
                                     <span className="text-sm font-semibold whitespace-nowrap truncate mx-auto">
-                                        Cerca
+                                        Search
                                     </span>
                                 </div>
                             </button>
@@ -40,8 +40,8 @@ const SearchBar = () => {
                 </div>
             </div>
             <div className="text-center p-10">
-                <h1 className="font-bold text-4xl mb-4 text-new_dark_blue">Scorri tra una vasta selezione di libri per trovare il tuo prossimo preferito!</h1>
-                <h1 className="text-3xl text-new_navy_blue">-Libri in primo piano ed offerte speciali-</h1>
+                <h1 className="font-bold text-4xl mb-4 text-new_dark_blue">Scroll through a huge selection of books to find your next favorite!</h1>
+                <h1 className="text-3xl text-new_navy_blue">-Featured books and special offers-</h1>
             </div>
         </>
     )

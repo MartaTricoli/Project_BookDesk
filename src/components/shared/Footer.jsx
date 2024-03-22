@@ -8,9 +8,10 @@ export const Footer = () => {
       <footer className="mb-20 sm:mb-0 bg-new_navy_blue flex flex-col items-center">
         <div className="flex text-white p-6 justify-center gap-24 border-white border-b w-[1480px] max-[1500px]:w-[1100px] max-[1120px]:w-[700px] max-[1120px]:flex-wrap max-[1120px]:px-24 max-[1120px]:gap-10 max-[740px]:w-[500px] max-[510px]:flex-col max-[510px]:w-[350px]">
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_light_blue">Info</h3>
+            <h3 className="font-bold text-new_light_blue">Info:</h3>
             <ul className="mt-4">
               <li className="hover:text-new_light_blue">
+                <Link to="devatwork">About Us</Link>
                 <Link to="devatwork">About Us</Link>
               </li>
               <li className="hover:text-new_light_blue">
@@ -19,9 +20,10 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_light_blue">Work with Us</h3>
+            <h3 className="font-bold text-new_light_blue">Work with Us:</h3>
             <ul className="mt-4">
               <li className="hover:text-new_light_blue">
+                <Link to="devatwork">Publisher</Link>
                 <Link to="devatwork">Publisher</Link>
               </li>
               <li className="hover:text-new_light_blue">
@@ -30,9 +32,10 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_light_blue">Legal Notes</h3>
+            <h3 className="font-bold text-new_light_blue">Legal Notes:</h3>
             <ul className="mt-4">
               <li className="hover:text-new_light_blue">
+                <Link to="devatwork">Terms & Conditions</Link>
                 <Link to="devatwork">Terms & Conditions</Link>
               </li>
               <li className="hover:text-new_light_blue">
@@ -44,7 +47,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_light_blue">Need Help</h3>
+            <h3 className="font-bold text-new_light_blue">Need Help:</h3>
             <ul className="mt-4">
               <li className="hover:text-new_light_blue">
                 <Link to="devatwork">FAQ</Link>
@@ -52,10 +55,13 @@ export const Footer = () => {
               <li className="hover:text-new_light_blue">
                 <Link to="devatwork">Contact Us</Link>
               </li>
+              <li className="hover:text-new_light_blue">
+                <Link to="devatwork">Contact Us</Link>
+              </li>
             </ul>
           </div>
           <div className="max-[1120px]:w-3/12 max-[740px]:w-4/12 max-[510px]:w-full">
-            <h3 className="font-bold text-new_light_blue">Languages</h3>
+            <h3 className="font-bold text-new_light_blue">Languages:</h3>
             <ul className="mt-4">
               <li className="hover:text-new_light_blue">
                 <Link to="devatwork">ENG</Link>
