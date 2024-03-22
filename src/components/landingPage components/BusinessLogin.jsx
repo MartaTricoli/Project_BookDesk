@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
 import Logo from "../shared/Logo";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../store/reducers/authSlice";
+import { constants } from "../../constants";
+
 
 const BusinessLogin = ({ handleCloseLoginModal }) => {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const BusinessLogin = ({ handleCloseLoginModal }) => {
 
     try {
       const results = await axios({
-        url: "http://localhost:3000/auth/publishers/token",
+        url: `${constants.API_HOST}/auth/publishers/token`,
         method: "POST",
         data: form,
       });
@@ -35,7 +36,7 @@ const BusinessLogin = ({ handleCloseLoginModal }) => {
       dispatch(login(data));
       navigate("/business/myprofile");
     } catch (err) {
-      console.error(err);
+      alert('Business o/e Password errati');
     }
   };
 

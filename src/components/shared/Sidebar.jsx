@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux"
+
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -17,6 +19,8 @@ const Sidebar = () => {
     );
     setDropdownsOpen(updatedDropdowns);
   };
+  const user = useSelector((state) => state.auth.user)
+
 
   return (
     <>
@@ -89,7 +93,7 @@ const Sidebar = () => {
                         to="myprofile"
                         className="text-gray-100 hover:text-black"
                       >
-                        Profile
+                       {user.first_name} {user.last_name}
                       </Link>
                     </li>
                     <li>

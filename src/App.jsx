@@ -5,7 +5,7 @@ import { BasePage } from "./pages/BasePage";
 import { Feed } from "./components/__componet/Feed";
 import { Follow } from "./components/__componet/Follow";
 import { AllUsers } from "./components/__componet/AllUsers";
-import MySelf from "./pages/Profile";
+import Profile from "./pages/Profile";
 import AllMyBooks from "./pages/AllMyBooks";
 import BooksRead from "./pages/BooksRead";
 import BooksNotRead from "./pages/BooksNotRead";
@@ -22,6 +22,7 @@ import BusinessProfile from "./pages/BusinessProfile";
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 const ProtectedRoute = ({ children, identity }) => {
   const auth = useSelector((state) => state.auth);
@@ -48,7 +49,7 @@ const App = () => {
         >
           <Route path="/devatwork" element={<DevAtWork />} />
           <Route path="/shop" element={<BookSearchEMilio />} />
-          <Route path="/myprofile" element={<MySelf />} />
+          <Route path="/myprofile" element={<Profile />} />
           <Route path="/feed" element={<Feed />}>
             <Route path="/feed/follow" element={<Follow />} />
             <Route path="/feed/allusers" element={<AllUsers />} />
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/mystats" element={<StatsPage />} />
           <Route path="/allmybooks" element={<AllMyBooks />} />
         </Route>
+
         <Route path="/business" element={
           <ProtectedRoute identity="publisher">
             <BusinessBasePage />
