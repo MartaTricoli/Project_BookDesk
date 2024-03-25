@@ -4,26 +4,26 @@ import { Doughnut } from "react-chartjs-2";
 
 const Torta = () => {
   const [libriLetiCount, setLibriLetiCount] = useState(() => {
-    return parseInt(localStorage.getItem('libriLetiCount')) || 0;
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    return userData ? userData.libriLetiCount : 0;
   });
   const [libriDaLeggereCount, setLibriDaLeggereCount] = useState(() => {
-    return parseInt(localStorage.getItem('libriDaLeggereCount')) || 0;
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    return userData ? userData.libriDaLeggereCount : 0;
   });
   const [libriInLetturaCount, setLibriInLetturaCount] = useState(() => {
-    return parseInt(localStorage.getItem('libriInLetturaCount')) || 0;
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    return userData ? userData.libriInLetturaCount : 0;
   });
 
   useEffect(() => {
-    localStorage.setItem('libriLetiCount', libriLetiCount.toString());
-  }, [libriLetiCount]);
-
-  useEffect(() => {
-    localStorage.setItem('libriDaLeggereCount', libriDaLeggereCount.toString());
-  }, [libriDaLeggereCount]);
-
-  useEffect(() => {
-    localStorage.setItem('libriInLetturaCount', libriInLetturaCount.toString());
-  }, [libriInLetturaCount]);
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    if (userData) {
+      setLibriLetiCount(userData.libriLetiCount);
+      setLibriDaLeggereCount(userData.libriDaLeggereCount);
+      setLibriInLetturaCount(userData.libriInLetturaCount);
+    }
+  }, []);
 
   const labels = ["Libri Letti", "Libri da Leggere", "Libri in lettura"];
 
@@ -41,6 +41,14 @@ const Torta = () => {
       default:
         break;
     }
+
+    // Salva le statistiche aggiornate nel localStorage
+    const userData = {
+      libriLetiCount,
+      libriDaLeggereCount,
+      libriInLetturaCount
+    };
+    localStorage.setItem('userData', JSON.stringify(userData));
   };
 
   const handleIncrement = (index) => {

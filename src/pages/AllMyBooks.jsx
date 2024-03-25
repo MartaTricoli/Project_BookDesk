@@ -120,6 +120,7 @@ const AllMyBooks = () => {
                 {!loading && !error && books.length === 0 && <p className="h-screen"></p>}
                 {books.length > 0 && books.map(book => (
                     <div key={book._id}>
+                        {console.log(books)}
                         <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg hover:shadow-new_pastel_blue shadow-new_pastel_blue max-w-md m-4">
                             <div className="mb-4 flex justify-center">
                                 <img src={book.cover} alt="Post Image" className="h-48 object-cover rounded-md cursor-pointer" />
