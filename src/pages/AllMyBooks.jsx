@@ -42,7 +42,7 @@ const AllMyBooks = () => {
         event.target.classList.add("bg-gray-300");
         setBooks([]);
         allBook.forEach(async book => {
-            if (book.user === user._id && book.tags[1] === event.target.name || book.user === user._id && book.tags[0] === event.target.name) {
+            if (book.user === user._id && book.tags[0] === event.target.name || book.user === user._id && book.tags[1] === event.target.name) {
                 try {
                     const result = await axios({
                         url: `${constants.API_HOST}/${constants.API_USERBOOK}/${book.book}`,
@@ -85,7 +85,26 @@ const AllMyBooks = () => {
 
 
 
-    const handleBookStatusChange = (bookId, status) => {
+    const handleBookStatusChange = async (bookId, status) => {
+        const bookToUpdate = allBook.filter(book => bookId === book.book);
+        try {
+            const result = await axios({
+                url: `${constants.API_HOST}/${constants.API_USERBOOK}/${bookToUpdate[0].id}?action=${status}`,
+                method: "PUT",
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            console.log(result);
+            toast.success("Book status updated successfully!", {
+                position: "bottom-right"
+            });
+            setTimeout(() => {
+                window.location.reload();
+            }, [2000]);
+        } catch (error) {
+            console.log(error);
+        }
         setSelectedBookStatuses(prevState => ({
             ...prevState,
             [bookId]: status
@@ -104,25 +123,33 @@ const AllMyBooks = () => {
         }));
     };
 
-    const handleDeleteBook = async (book_isbn) => {
-        console.log(book_isbn);
+    const handleRemoveBook = async(book_id) => {
         try {
             const result = await axios({
-                url: `${constants.API_HOST}/${constants.API_USERBOOK}/${book_isbn}`,
+                url: `${constants.API_HOST}/${constants.API_USERBOOK}`,
                 method: "DELETE",
+                data: {
+                    user: user._id,
+                    book: book_id
+                },
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
-            })
-            toast.success("Book deleted successfully", {
+            });
+            toast.success("Book deleted successfully!", {
                 position: "bottom-right"
             });
+            setTimeout(() => {
+                window.location.reload();
+            }, [2000]);
         } catch (error) {
             console.log(error);
         }
-        setTimeout(() => {
-            window.location.reload();
-        }, [2000])
+        setSelectedBookStatuses(prevState => ({
+            ...prevState,
+            [book_id]: ""
+        }))
+        console.log(selectedBookStatuses);
     }
 
     return (
@@ -175,13 +202,15 @@ const AllMyBooks = () => {
                                         className="border border-gray-300 rounded-md px-2 py-1 mt-2"
                                     >
                                         <option value="" disabled>Select status</option>
-                                        <option value="read">Read</option>
-                                        <option value="reading">Reading</option>
-                                        <option value="to read">To Read</option>
+                                        <option value="READ">Read</option>
+                                        <option value="READING">Reading</option>
+                                        <option value="TO_READ">To Read</option>
+                                        <option value="FAVOURITES">Favourites</option>
+                                        <option value="WHISHLIST">Whishlist</option>
                                     </select>
                                 </div>
                             </div>
-                            <button className="border p-2 rounded-xl border-new_pastel_blue hover:bg-new_red hover:text-white" onClick={() => handleDeleteBook(book.isbn)}>{book.isbn}</button>
+                            <button className="border p-2 rounded-xl border-new_pastel_blue hover:bg-new_red hover:text-white" onClick={() => handleRemoveBook(book._id)}>Remove</button>
                         </div>
                     </div>
                 ))}
